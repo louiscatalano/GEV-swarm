@@ -1,0 +1,1 @@
+/mnt/c/Users/lcata/organic_ws/build/environment_msgs/rosidl_generator_cpp/environment_msgs/msg/detail/agent_state__traits.hpp

@@ -1,0 +1,312 @@
+[0.491s] Invoking command in '/mnt/c/Users/lcata/organic_ws/build/environment_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/mnt/c/Users/lcata/organic_ws/install/my_agent:/opt/ros/kilted /usr/bin/cmake /mnt/c/Users/lcata/organic_ws/src/environment_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/mnt/c/Users/lcata/organic_ws/install/environment_msgs
+[1.765s] -- The C compiler identification is GNU 13.3.0
+[2.510s] -- The CXX compiler identification is GNU 13.3.0
+[3.117s] -- Detecting C compiler ABI info
+[4.455s] -- Detecting C compiler ABI info - done
+[4.491s] -- Check for working C compiler: /usr/bin/cc - skipped
+[4.492s] -- Detecting C compile features
+[4.493s] -- Detecting C compile features - done
+[5.008s] -- Detecting CXX compiler ABI info
+[8.767s] -- Detecting CXX compiler ABI info - done
+[8.817s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[8.818s] -- Detecting CXX compile features
+[8.819s] -- Detecting CXX compile features - done
+[8.901s] -- Found ament_cmake: 2.7.3 (/opt/ros/kilted/share/ament_cmake/cmake)
+[10.440s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[10.929s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[12.177s] -- Found rosidl_default_generators: 1.7.1 (/opt/ros/kilted/share/rosidl_default_generators/cmake)
+[12.252s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[12.811s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[13.237s] -- Found rosidl_adapter: 4.9.5 (/opt/ros/kilted/share/rosidl_adapter/cmake)
+[19.263s] -- Found ament_cmake_ros_core: 0.14.5 (/opt/ros/kilted/share/ament_cmake_ros_core/cmake)
+[24.176s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[30.076s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[32.370s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+[40.743s] -- Configuring done (40.1s)
+[50.646s] -- Generating done (8.5s)
+[54.581s] -- Build files have been written to: /mnt/c/Users/lcata/organic_ws/build/environment_msgs
+[54.603s] Invoked command in '/mnt/c/Users/lcata/organic_ws/build/environment_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/mnt/c/Users/lcata/organic_ws/install/my_agent:/opt/ros/kilted /usr/bin/cmake /mnt/c/Users/lcata/organic_ws/src/environment_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/mnt/c/Users/lcata/organic_ws/install/environment_msgs
+[54.662s] Invoking command in '/mnt/c/Users/lcata/organic_ws/build/environment_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/mnt/c/Users/lcata/organic_ws/install/my_agent:/opt/ros/kilted /usr/bin/cmake --build /mnt/c/Users/lcata/organic_ws/build/environment_msgs -- -j8 -l8
+[56.451s] [  1%] [34m[1mGenerating type hashes for ROS interfaces[0m
+[56.469s] [  1%] Built target ament_cmake_python_symlink_environment_msgs
+[57.153s] [  1%] Built target environment_msgs__rosidl_generator_type_description
+[57.269s] running egg_info
+[57.272s] creating environment_msgs.egg-info
+[57.292s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[57.315s] writing environment_msgs.egg-info/PKG-INFO
+[57.321s] writing dependency_links to environment_msgs.egg-info/dependency_links.txt
+[57.333s] writing top-level names to environment_msgs.egg-info/top_level.txt
+[57.341s] writing manifest file 'environment_msgs.egg-info/SOURCES.txt'
+[57.426s] [  4%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[57.482s] reading manifest file 'environment_msgs.egg-info/SOURCES.txt'
+[57.527s] writing manifest file 'environment_msgs.egg-info/SOURCES.txt'
+[57.609s] [  4%] Built target ament_cmake_python_build_environment_msgs_egg
+[58.932s] [  4%] Built target environment_msgs__cpp
+[60.066s] [  5%] [32mBuilding C object CMakeFiles/environment_msgs__rosidl_generator_c.dir/rosidl_generator_c/environment_msgs/msg/detail/environment_state__description.c.o[0m
+[60.072s] [  6%] [32mBuilding C object CMakeFiles/environment_msgs__rosidl_generator_c.dir/rosidl_generator_c/environment_msgs/msg/detail/environment_state__functions.c.o[0m
+[60.097s] [  9%] [32mBuilding C object CMakeFiles/environment_msgs__rosidl_generator_c.dir/rosidl_generator_c/environment_msgs/msg/detail/agent_state__description.c.o[0m
+[60.101s] [  9%] [32mBuilding C object CMakeFiles/environment_msgs__rosidl_generator_c.dir/rosidl_generator_c/environment_msgs/msg/detail/environment_state__type_support.c.o[0m
+[60.112s] [ 10%] [32mBuilding C object CMakeFiles/environment_msgs__rosidl_generator_c.dir/rosidl_generator_c/environment_msgs/msg/detail/agent_state__functions.c.o[0m
+[60.128s] [ 12%] [32mBuilding C object CMakeFiles/environment_msgs__rosidl_generator_c.dir/rosidl_generator_c/environment_msgs/msg/detail/agent_state__type_support.c.o[0m
+[60.139s] [ 13%] [32mBuilding C object CMakeFiles/environment_msgs__rosidl_generator_c.dir/rosidl_generator_c/environment_msgs/msg/detail/local_map_update__description.c.o[0m
+[60.155s] [ 14%] [32mBuilding C object CMakeFiles/environment_msgs__rosidl_generator_c.dir/rosidl_generator_c/environment_msgs/msg/detail/local_map_update__functions.c.o[0m
+[60.340s] [ 18%] [32mBuilding C object CMakeFiles/environment_msgs__rosidl_generator_c.dir/rosidl_generator_c/environment_msgs/msg/detail/local_map_update__type_support.c.o[0m
+[60.342s] [ 18%] [32mBuilding C object CMakeFiles/environment_msgs__rosidl_generator_c.dir/rosidl_generator_c/environment_msgs/msg/detail/predicted_map__functions.c.o[0m
+[60.346s] [ 18%] [32mBuilding C object CMakeFiles/environment_msgs__rosidl_generator_c.dir/rosidl_generator_c/environment_msgs/msg/detail/predicted_map__description.c.o[0m
+[60.357s] [ 20%] [32mBuilding C object CMakeFiles/environment_msgs__rosidl_generator_c.dir/rosidl_generator_c/environment_msgs/msg/detail/predicted_map__type_support.c.o[0m
+[60.363s] [ 22%] [32mBuilding C object CMakeFiles/environment_msgs__rosidl_generator_c.dir/rosidl_generator_c/environment_msgs/msg/detail/guidance_field__description.c.o[0m
+[60.367s] [ 22%] [32mBuilding C object CMakeFiles/environment_msgs__rosidl_generator_c.dir/rosidl_generator_c/environment_msgs/msg/detail/guidance_field__functions.c.o[0m
+[60.408s] [ 24%] [32mBuilding C object CMakeFiles/environment_msgs__rosidl_generator_c.dir/rosidl_generator_c/environment_msgs/msg/detail/guidance_field__type_support.c.o[0m
+[60.658s] [ 25%] [32m[1mLinking C shared library libenvironment_msgs__rosidl_generator_c.so[0m
+[61.397s] [ 25%] Built target environment_msgs__rosidl_generator_c
+[61.486s] [ 28%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[61.499s] [ 32%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[61.501s] [ 32%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[61.508s] [ 32%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[61.509s] [ 32%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[61.527s] [ 33%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[62.550s] [ 35%] [32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/environment_msgs/msg/environment_state__type_support.cpp.o[0m
+[62.590s] [ 37%] [32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/environment_msgs/msg/environment_state__type_support.cpp.o[0m
+[62.592s] [ 37%] [32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/environment_msgs/msg/agent_state__type_support.cpp.o[0m
+[62.675s] [ 39%] [32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/environment_msgs/msg/agent_state__type_support.cpp.o[0m
+[63.012s] [ 40%] [32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/environment_msgs/msg/detail/environment_state__type_support.cpp.o[0m
+[63.082s] [ 41%] [32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/environment_msgs/msg/local_map_update__type_support.cpp.o[0m
+[63.097s] [ 43%] [32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/environment_msgs/msg/predicted_map__type_support.cpp.o[0m
+[63.287s] [ 44%] [32mBuilding C object CMakeFiles/environment_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/environment_msgs/msg/detail/environment_state__type_support.c.o[0m
+[63.488s] [ 45%] [32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/environment_msgs/msg/detail/environment_state__type_support_c.cpp.o[0m
+[63.550s] [ 47%] [32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/environment_msgs/msg/detail/agent_state__type_support_c.cpp.o[0m
+[63.561s] [ 48%] [32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/environment_msgs/msg/guidance_field__type_support.cpp.o[0m
+[63.589s] [ 50%] [32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/environment_msgs/msg/detail/dds_fastrtps/environment_state__type_support.cpp.o[0m
+[64.015s] [ 51%] [32mBuilding C object CMakeFiles/environment_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/environment_msgs/msg/detail/agent_state__type_support.c.o[0m
+[64.173s] [ 52%] [32m[1mLinking CXX shared library libenvironment_msgs__rosidl_typesupport_c.so[0m
+[64.242s] [ 54%] [32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/environment_msgs/msg/local_map_update__type_support.cpp.o[0m
+[64.263s] [ 55%] [32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/environment_msgs/msg/detail/local_map_update__type_support_c.cpp.o[0m
+[64.720s] [ 56%] [32mBuilding C object CMakeFiles/environment_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/environment_msgs/msg/detail/local_map_update__type_support.c.o[0m
+[64.841s] [ 56%] Built target environment_msgs__rosidl_typesupport_c
+[64.919s] [ 58%] [32mBuilding C object CMakeFiles/environment_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/environment_msgs/msg/detail/predicted_map__type_support.c.o[0m
+[65.441s] [ 59%] [32mBuilding C object CMakeFiles/environment_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/environment_msgs/msg/detail/guidance_field__type_support.c.o[0m
+[65.641s] [ 60%] [32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/environment_msgs/msg/detail/predicted_map__type_support_c.cpp.o[0m
+[65.677s] [ 62%] [32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/environment_msgs/msg/detail/agent_state__type_support.cpp.o[0m
+[65.698s] [ 63%] [32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/environment_msgs/msg/detail/local_map_update__type_support.cpp.o[0m
+[65.746s] [ 64%] [32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/environment_msgs/msg/detail/dds_fastrtps/agent_state__type_support.cpp.o[0m
+[65.967s] [ 66%] [32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/environment_msgs/msg/predicted_map__type_support.cpp.o[0m
+[66.324s] [ 67%] [32m[1mLinking C shared library libenvironment_msgs__rosidl_typesupport_introspection_c.so[0m
+[66.394s] [ 68%] [32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/environment_msgs/msg/guidance_field__type_support.cpp.o[0m
+[66.609s] [ 70%] [32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/environment_msgs/msg/detail/predicted_map__type_support.cpp.o[0m
+[66.979s] [ 70%] Built target environment_msgs__rosidl_typesupport_introspection_c
+[67.044s] [ 71%] [32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/environment_msgs/msg/detail/guidance_field__type_support.cpp.o[0m
+[67.560s] [ 72%] [32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/environment_msgs/msg/detail/guidance_field__type_support_c.cpp.o[0m
+[67.752s] [ 75%] [32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/environment_msgs/msg/detail/dds_fastrtps/local_map_update__type_support.cpp.o[0m
+[67.758s] [ 75%] [32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/environment_msgs/msg/detail/dds_fastrtps/predicted_map__type_support.cpp.o[0m
+[67.910s] [ 77%] [32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/environment_msgs/msg/detail/dds_fastrtps/guidance_field__type_support.cpp.o[0m
+[68.111s] [ 78%] [32m[1mLinking CXX shared library libenvironment_msgs__rosidl_typesupport_cpp.so[0m
+[68.734s] [ 78%] Built target environment_msgs__rosidl_typesupport_cpp
+[69.159s] [ 79%] [32m[1mLinking CXX shared library libenvironment_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[69.574s] [ 81%] [32m[1mLinking CXX shared library libenvironment_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[69.941s] [ 81%] Built target environment_msgs__rosidl_typesupport_introspection_cpp
+[70.223s] [ 81%] Built target environment_msgs__rosidl_typesupport_fastrtps_c
+[70.339s] [ 82%] [32m[1mLinking CXX shared library libenvironment_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[72.394s] [ 82%] Built target environment_msgs__rosidl_typesupport_fastrtps_cpp
+[72.892s] [ 82%] Built target environment_msgs
+[73.579s] [ 83%] [34m[1mGenerating Python code for ROS interfaces[0m
+[75.597s] [ 83%] Built target environment_msgs__py
+[76.317s] [ 85%] [32mBuilding C object CMakeFiles/environment_msgs__rosidl_generator_py.dir/rosidl_generator_py/environment_msgs/msg/_environment_state_s.c.o[0m
+[76.330s] [ 86%] [32mBuilding C object CMakeFiles/environment_msgs__rosidl_generator_py.dir/rosidl_generator_py/environment_msgs/msg/_agent_state_s.c.o[0m
+[76.340s] [ 87%] [32mBuilding C object CMakeFiles/environment_msgs__rosidl_generator_py.dir/rosidl_generator_py/environment_msgs/msg/_local_map_update_s.c.o[0m
+[76.357s] [ 89%] [32mBuilding C object CMakeFiles/environment_msgs__rosidl_generator_py.dir/rosidl_generator_py/environment_msgs/msg/_predicted_map_s.c.o[0m
+[76.364s] [ 90%] [32mBuilding C object CMakeFiles/environment_msgs__rosidl_generator_py.dir/rosidl_generator_py/environment_msgs/msg/_guidance_field_s.c.o[0m
+[77.187s] [ 91%] [32m[1mLinking C shared library libenvironment_msgs__rosidl_generator_py.so[0m
+[78.753s] [ 91%] Built target environment_msgs__rosidl_generator_py
+[79.020s] [ 93%] [32mBuilding C object CMakeFiles/environment_msgs_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/environment_msgs/_environment_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[79.025s] [ 94%] [32mBuilding C object CMakeFiles/environment_msgs_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/environment_msgs/_environment_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[79.045s] [ 95%] [32mBuilding C object CMakeFiles/environment_msgs_s__rosidl_typesupport_c.dir/rosidl_generator_py/environment_msgs/_environment_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[79.806s] [ 97%] [32m[1mLinking C shared module rosidl_generator_py/environment_msgs/environment_msgs_s__rosidl_typesupport_c.so[0m
+[79.932s] [ 98%] [32m[1mLinking C shared module rosidl_generator_py/environment_msgs/environment_msgs_s__rosidl_typesupport_introspection_c.so[0m
+[79.955s] [100%] [32m[1mLinking C shared module rosidl_generator_py/environment_msgs/environment_msgs_s__rosidl_typesupport_fastrtps_c.so[0m
+[80.153s] [100%] Built target environment_msgs_s__rosidl_typesupport_c
+[80.238s] [100%] Built target environment_msgs_s__rosidl_typesupport_introspection_c
+[80.245s] [100%] Built target environment_msgs_s__rosidl_typesupport_fastrtps_c
+[80.636s] Invoked command in '/mnt/c/Users/lcata/organic_ws/build/environment_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/mnt/c/Users/lcata/organic_ws/install/my_agent:/opt/ros/kilted /usr/bin/cmake --build /mnt/c/Users/lcata/organic_ws/build/environment_msgs -- -j8 -l8
+[80.693s] Invoking command in '/mnt/c/Users/lcata/organic_ws/build/environment_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/mnt/c/Users/lcata/organic_ws/install/my_agent:/opt/ros/kilted /usr/bin/cmake --install /mnt/c/Users/lcata/organic_ws/build/environment_msgs
+[80.738s] -- Install configuration: ""
+[80.773s] -- Execute custom install script
+[80.936s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/ament_index/resource_index/rosidl_interfaces/environment_msgs
+[81.337s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/msg/EnvironmentState.json
+[81.675s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/msg/AgentState.json
+[82.007s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/msg/LocalMapUpdate.json
+[82.313s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/msg/PredictedMap.json
+[82.583s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/msg/GuidanceField.json
+[84.284s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/agent_state.h
+[84.378s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/agent_state__functions.h
+[84.449s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/agent_state__struct.h
+[84.521s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/agent_state__type_support.h
+[84.747s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/environment_state__functions.h
+[85.062s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/environment_state__struct.h
+[85.382s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/environment_state__type_support.h
+[85.711s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/guidance_field__functions.h
+[85.927s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/guidance_field__struct.h
+[86.163s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/guidance_field__type_support.h
+[86.464s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/local_map_update__functions.h
+[86.557s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/local_map_update__struct.h
+[86.628s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/local_map_update__type_support.h
+[86.698s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/predicted_map__functions.h
+[86.785s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/predicted_map__struct.h
+[86.857s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/predicted_map__type_support.h
+[86.932s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/environment_state.h
+[87.120s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/guidance_field.h
+[87.258s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/local_map_update.h
+[87.339s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/predicted_map.h
+[87.407s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/rosidl_generator_c__visibility_control.h
+[87.497s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/environment/library_path.sh
+[87.564s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/environment/library_path.dsv
+[87.836s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/agent_state__rosidl_typesupport_fastrtps_c.h
+[87.910s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/environment_state__rosidl_typesupport_fastrtps_c.h
+[88.063s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/guidance_field__rosidl_typesupport_fastrtps_c.h
+[88.172s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/local_map_update__rosidl_typesupport_fastrtps_c.h
+[88.244s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/predicted_map__rosidl_typesupport_fastrtps_c.h
+[88.332s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[88.521s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/agent_state__rosidl_typesupport_introspection_c.h
+[88.596s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/environment_state__rosidl_typesupport_introspection_c.h
+[88.670s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/guidance_field__rosidl_typesupport_introspection_c.h
+[88.740s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/local_map_update__rosidl_typesupport_introspection_c.h
+[88.813s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/predicted_map__rosidl_typesupport_introspection_c.h
+[88.977s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[89.450s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/agent_state.hpp
+[89.528s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/agent_state__builder.hpp
+[89.612s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/agent_state__struct.hpp
+[89.741s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/agent_state__traits.hpp
+[89.835s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/agent_state__type_support.hpp
+[89.923s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/environment_state__builder.hpp
+[89.999s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/environment_state__struct.hpp
+[90.107s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/environment_state__traits.hpp
+[90.262s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/environment_state__type_support.hpp
+[90.355s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/guidance_field__builder.hpp
+[90.437s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/guidance_field__struct.hpp
+[90.516s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/guidance_field__traits.hpp
+[90.687s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/guidance_field__type_support.hpp
+[90.782s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/local_map_update__builder.hpp
+[90.867s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/local_map_update__struct.hpp
+[90.947s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/local_map_update__traits.hpp
+[91.026s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/local_map_update__type_support.hpp
+[91.120s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/predicted_map__builder.hpp
+[91.203s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/predicted_map__struct.hpp
+[91.289s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/predicted_map__traits.hpp
+[91.434s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/predicted_map__type_support.hpp
+[91.682s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/environment_state.hpp
+[91.865s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/guidance_field.hpp
+[91.945s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/local_map_update.hpp
+[92.031s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/predicted_map.hpp
+[92.142s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[92.608s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/agent_state__rosidl_typesupport_fastrtps_cpp.hpp
+[92.695s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/environment_state__rosidl_typesupport_fastrtps_cpp.hpp
+[92.779s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/guidance_field__rosidl_typesupport_fastrtps_cpp.hpp
+[92.871s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/local_map_update__rosidl_typesupport_fastrtps_cpp.hpp
+[92.961s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/predicted_map__rosidl_typesupport_fastrtps_cpp.hpp
+[93.055s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[93.813s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/agent_state__rosidl_typesupport_introspection_cpp.hpp
+[93.976s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/environment_state__rosidl_typesupport_introspection_cpp.hpp
+[94.067s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/guidance_field__rosidl_typesupport_introspection_cpp.hpp
+[94.176s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/local_map_update__rosidl_typesupport_introspection_cpp.hpp
+[94.265s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/predicted_map__rosidl_typesupport_introspection_cpp.hpp
+[94.348s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/environment/pythonpath.sh
+[94.459s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/environment/pythonpath.dsv
+[94.599s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs-0.0.0-py3.12.egg-info/PKG-INFO
+[94.782s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs-0.0.0-py3.12.egg-info/SOURCES.txt
+[95.007s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs-0.0.0-py3.12.egg-info/dependency_links.txt
+[95.295s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs-0.0.0-py3.12.egg-info/top_level.txt
+[96.050s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/__init__.py
+[96.268s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/_environment_msgs_s.ep.rosidl_typesupport_c.c
+[96.463s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/_environment_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[96.639s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/_environment_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[96.835s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/environment_msgs_s__rosidl_typesupport_c.so
+[97.009s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/environment_msgs_s__rosidl_typesupport_fastrtps_c.so
+[97.187s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/environment_msgs_s__rosidl_typesupport_introspection_c.so
+[97.394s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/msg/__init__.py
+[97.585s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/msg/_agent_state.py
+[98.160s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/msg/_agent_state_s.c
+[98.572s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/msg/_environment_state.py
+[98.755s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/msg/_environment_state_s.c
+[98.951s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/msg/_guidance_field.py
+[99.136s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/msg/_guidance_field_s.c
+[99.309s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/msg/_local_map_update.py
+[99.747s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/msg/_local_map_update_s.c
+[100.443s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/msg/_predicted_map.py
+[100.621s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/msg/_predicted_map_s.c
+[100.856s] -- Up-to-date symlink: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/environment_msgs_s__rosidl_typesupport_fastrtps_c.so
+[100.918s] -- Up-to-date symlink: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/environment_msgs_s__rosidl_typesupport_introspection_c.so
+[100.977s] -- Up-to-date symlink: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/environment_msgs_s__rosidl_typesupport_c.so
+[100.999s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/msg/EnvironmentState.idl
+[101.185s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/msg/AgentState.idl
+[101.391s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/msg/LocalMapUpdate.idl
+[101.562s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/msg/PredictedMap.idl
+[101.745s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/msg/GuidanceField.idl
+[101.923s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/msg/EnvironmentState.msg
+[102.141s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/msg/AgentState.msg
+[102.373s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/msg/LocalMapUpdate.msg
+[102.553s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/msg/PredictedMap.msg
+[103.212s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/msg/GuidanceField.msg
+[103.414s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/ament_index/resource_index/package_run_dependencies/environment_msgs
+[103.632s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/ament_index/resource_index/parent_prefix_path/environment_msgs
+[103.825s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/environment/ament_prefix_path.sh
+[104.012s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/environment/ament_prefix_path.dsv
+[104.386s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/environment/path.sh
+[104.867s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/environment/path.dsv
+[105.060s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/local_setup.bash
+[105.240s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/local_setup.sh
+[105.423s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/local_setup.zsh
+[105.594s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/local_setup.dsv
+[105.764s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/package.dsv
+[105.958s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/ament_index/resource_index/packages/environment_msgs
+[106.160s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/rosidl_cmake-extras.cmake
+[106.342s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[106.512s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[106.716s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[107.018s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[107.226s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[107.414s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[107.593s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/environment_msgsConfig.cmake
+[107.815s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/environment_msgsConfig-version.cmake
+[108.010s] -- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/package.xml
+[108.187s] -- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/libenvironment_msgs__rosidl_generator_c.so
+[108.306s] -- Set non-toolchain portion of runtime path of "/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/libenvironment_msgs__rosidl_generator_c.so" to ""
+[108.328s] -- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/libenvironment_msgs__rosidl_typesupport_fastrtps_c.so
+[108.447s] -- Set non-toolchain portion of runtime path of "/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/libenvironment_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[108.471s] -- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/libenvironment_msgs__rosidl_typesupport_introspection_c.so
+[108.584s] -- Set non-toolchain portion of runtime path of "/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/libenvironment_msgs__rosidl_typesupport_introspection_c.so" to ""
+[108.609s] -- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/libenvironment_msgs__rosidl_typesupport_c.so
+[108.749s] -- Set non-toolchain portion of runtime path of "/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/libenvironment_msgs__rosidl_typesupport_c.so" to ""
+[108.780s] -- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/libenvironment_msgs__rosidl_typesupport_fastrtps_cpp.so
+[108.929s] -- Set non-toolchain portion of runtime path of "/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/libenvironment_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[108.958s] -- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/libenvironment_msgs__rosidl_typesupport_introspection_cpp.so
+[109.090s] -- Set non-toolchain portion of runtime path of "/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/libenvironment_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[109.117s] -- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/libenvironment_msgs__rosidl_typesupport_cpp.so
+[109.241s] -- Set non-toolchain portion of runtime path of "/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/libenvironment_msgs__rosidl_typesupport_cpp.so" to ""
+[111.358s] Listing '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs'...
+[111.358s] Compiling '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/__init__.py'...
+[111.359s] Listing '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/msg'...
+[111.360s] Compiling '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/msg/__init__.py'...
+[111.361s] Compiling '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/msg/_agent_state.py'...
+[111.361s] Compiling '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/msg/_environment_state.py'...
+[111.362s] Compiling '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/msg/_guidance_field.py'...
+[111.363s] Compiling '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/msg/_local_map_update.py'...
+[111.364s] Compiling '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/msg/_predicted_map.py'...
+[111.383s] -- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/libenvironment_msgs__rosidl_generator_py.so
+[111.523s] -- Set non-toolchain portion of runtime path of "/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/libenvironment_msgs__rosidl_generator_py.so" to ""
+[111.590s] -- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/export_environment_msgs__rosidl_generator_cExport.cmake
+[112.114s] -- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/export_environment_msgs__rosidl_generator_cExport-noconfig.cmake
+[112.677s] -- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/export_environment_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[113.225s] -- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/export_environment_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[113.764s] -- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/environment_msgs__rosidl_typesupport_introspection_cExport.cmake
+[113.892s] -- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/environment_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[114.270s] -- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/environment_msgs__rosidl_typesupport_cExport.cmake
+[114.478s] -- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/environment_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[114.603s] -- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/export_environment_msgs__rosidl_generator_cppExport.cmake
+[114.713s] -- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/export_environment_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[115.070s] -- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/export_environment_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[115.207s] -- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/environment_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[115.320s] -- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/environment_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[115.447s] -- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/environment_msgs__rosidl_typesupport_cppExport.cmake
+[115.634s] -- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/environment_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[115.750s] -- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/export_environment_msgs__rosidl_generator_pyExport.cmake
+[115.858s] -- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/export_environment_msgs__rosidl_generator_pyExport-noconfig.cmake
+[115.963s] Invoked command in '/mnt/c/Users/lcata/organic_ws/build/environment_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/mnt/c/Users/lcata/organic_ws/install/my_agent:/opt/ros/kilted /usr/bin/cmake --install /mnt/c/Users/lcata/organic_ws/build/environment_msgs

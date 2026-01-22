@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_files("/mnt/c/Users/lcata/organic_ws/src/environment_msgs" FILES "/mnt/c/Users/lcata/organic_ws/build/environment_msgs/rosidl_generator_type_description/environment_msgs/msg/AgentState.json" "DESTINATION" "share/environment_msgs/msg")

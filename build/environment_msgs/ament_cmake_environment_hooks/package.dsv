@@ -1,0 +1,4 @@
+source;share/environment_msgs/local_setup.bash
+source;share/environment_msgs/local_setup.dsv
+source;share/environment_msgs/local_setup.sh
+source;share/environment_msgs/local_setup.zsh

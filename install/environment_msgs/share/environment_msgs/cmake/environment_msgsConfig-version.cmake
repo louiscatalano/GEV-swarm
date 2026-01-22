@@ -1,0 +1,1 @@
+/mnt/c/Users/lcata/organic_ws/build/environment_msgs/ament_cmake_core/environment_msgsConfig-version.cmake

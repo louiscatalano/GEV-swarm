@@ -1,0 +1,32 @@
+{
+  "package_name": "environment_msgs",
+  "output_dir": "/mnt/c/Users/lcata/organic_ws/build/environment_msgs/rosidl_generator_py/environment_msgs",
+  "template_dir": "/opt/ros/kilted/share/rosidl_generator_py/cmake/../resource",
+  "idl_tuples": [
+    "/mnt/c/Users/lcata/organic_ws/build/environment_msgs/rosidl_adapter/environment_msgs:msg/EnvironmentState.idl",
+    "/mnt/c/Users/lcata/organic_ws/build/environment_msgs/rosidl_adapter/environment_msgs:msg/AgentState.idl",
+    "/mnt/c/Users/lcata/organic_ws/build/environment_msgs/rosidl_adapter/environment_msgs:msg/LocalMapUpdate.idl",
+    "/mnt/c/Users/lcata/organic_ws/build/environment_msgs/rosidl_adapter/environment_msgs:msg/PredictedMap.idl",
+    "/mnt/c/Users/lcata/organic_ws/build/environment_msgs/rosidl_adapter/environment_msgs:msg/GuidanceField.idl"
+  ],
+  "target_dependencies": [
+    "/opt/ros/kilted/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py",
+    "/opt/ros/kilted/lib/python3.12/site-packages/rosidl_generator_py/__init__.py",
+    "/opt/ros/kilted/lib/python3.12/site-packages/rosidl_generator_py/generate_py_impl.py",
+    "/opt/ros/kilted/share/rosidl_generator_py/cmake/../resource/_action_pkg_typesupport_entry_point.c.em",
+    "/opt/ros/kilted/share/rosidl_generator_py/cmake/../resource/_action.py.em",
+    "/opt/ros/kilted/share/rosidl_generator_py/cmake/../resource/_idl_pkg_typesupport_entry_point.c.em",
+    "/opt/ros/kilted/share/rosidl_generator_py/cmake/../resource/_idl_support.c.em",
+    "/opt/ros/kilted/share/rosidl_generator_py/cmake/../resource/_idl.py.em",
+    "/opt/ros/kilted/share/rosidl_generator_py/cmake/../resource/_msg_pkg_typesupport_entry_point.c.em",
+    "/opt/ros/kilted/share/rosidl_generator_py/cmake/../resource/_msg_support.c.em",
+    "/opt/ros/kilted/share/rosidl_generator_py/cmake/../resource/_msg.py.em",
+    "/opt/ros/kilted/share/rosidl_generator_py/cmake/../resource/_srv_pkg_typesupport_entry_point.c.em",
+    "/opt/ros/kilted/share/rosidl_generator_py/cmake/../resource/_srv.py.em",
+    "/mnt/c/Users/lcata/organic_ws/build/environment_msgs/rosidl_adapter/environment_msgs/msg/EnvironmentState.idl",
+    "/mnt/c/Users/lcata/organic_ws/build/environment_msgs/rosidl_adapter/environment_msgs/msg/AgentState.idl",
+    "/mnt/c/Users/lcata/organic_ws/build/environment_msgs/rosidl_adapter/environment_msgs/msg/LocalMapUpdate.idl",
+    "/mnt/c/Users/lcata/organic_ws/build/environment_msgs/rosidl_adapter/environment_msgs/msg/PredictedMap.idl",
+    "/mnt/c/Users/lcata/organic_ws/build/environment_msgs/rosidl_adapter/environment_msgs/msg/GuidanceField.idl"
+  ]
+}

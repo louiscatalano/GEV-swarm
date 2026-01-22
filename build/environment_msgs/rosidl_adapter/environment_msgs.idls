@@ -1,0 +1,5 @@
+/mnt/c/Users/lcata/organic_ws/build/environment_msgs/rosidl_adapter/environment_msgs:msg/EnvironmentState.idl
+/mnt/c/Users/lcata/organic_ws/build/environment_msgs/rosidl_adapter/environment_msgs:msg/AgentState.idl
+/mnt/c/Users/lcata/organic_ws/build/environment_msgs/rosidl_adapter/environment_msgs:msg/LocalMapUpdate.idl
+/mnt/c/Users/lcata/organic_ws/build/environment_msgs/rosidl_adapter/environment_msgs:msg/PredictedMap.idl
+/mnt/c/Users/lcata/organic_ws/build/environment_msgs/rosidl_adapter/environment_msgs:msg/GuidanceField.idl

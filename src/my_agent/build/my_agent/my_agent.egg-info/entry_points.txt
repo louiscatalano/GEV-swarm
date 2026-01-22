@@ -1,0 +1,2 @@
+[console_scripts]
+environment_publisher = my_agent.agent_node:main

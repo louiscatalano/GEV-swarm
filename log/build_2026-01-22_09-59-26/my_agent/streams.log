@@ -1,0 +1,29 @@
+[6.300s] Invoking command in '/mnt/c/Users/lcata/organic_ws/build/my_agent': PYTHONPATH=/mnt/c/Users/lcata/organic_ws/build/my_agent/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/mnt/c/Users/lcata/organic_ws/install/my_agent/lib/python3.12/site-packages:/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages:/mnt/c/Users/lcata/organic_ws/build/my_agent:/mnt/c/Users/lcata/organic_ws/install/my_agent/lib/python3.12/site-packages:/opt/ros/kilted/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /mnt/c/Users/lcata/organic_ws/build/my_agent/build --no-deps symlink_data
+[8.194s] running develop
+[8.772s] running egg_info
+[8.773s] creating my_agent.egg-info
+[8.803s] writing my_agent.egg-info/PKG-INFO
+[8.821s] writing dependency_links to my_agent.egg-info/dependency_links.txt
+[8.828s] writing entry points to my_agent.egg-info/entry_points.txt
+[8.840s] writing requirements to my_agent.egg-info/requires.txt
+[8.844s] writing top-level names to my_agent.egg-info/top_level.txt
+[8.849s] writing manifest file 'my_agent.egg-info/SOURCES.txt'
+[9.013s] reading manifest file 'my_agent.egg-info/SOURCES.txt'
+[9.097s] writing manifest file 'my_agent.egg-info/SOURCES.txt'
+[9.152s] running build_ext
+[9.158s] Creating /mnt/c/Users/lcata/organic_ws/install/my_agent/lib/python3.12/site-packages/my-agent.egg-link (link to .)
+[9.183s] Installing agent_node script to /mnt/c/Users/lcata/organic_ws/install/my_agent/lib/my_agent
+[9.205s] Installing environment_publisher script to /mnt/c/Users/lcata/organic_ws/install/my_agent/lib/my_agent
+[9.238s] Installing swarm_cli script to /mnt/c/Users/lcata/organic_ws/install/my_agent/lib/my_agent
+[9.280s] Installing swarm_visualizer script to /mnt/c/Users/lcata/organic_ws/install/my_agent/lib/my_agent
+[9.336s] 
+[9.338s] Installed /mnt/c/Users/lcata/organic_ws/build/my_agent
+[9.346s] running symlink_data
+[9.365s] creating /mnt/c/Users/lcata/organic_ws/install/my_agent/share/ament_index
+[9.369s] creating /mnt/c/Users/lcata/organic_ws/install/my_agent/share/ament_index/resource_index
+[9.376s] creating /mnt/c/Users/lcata/organic_ws/install/my_agent/share/ament_index/resource_index/packages
+[9.407s] symbolically linking /mnt/c/Users/lcata/organic_ws/build/my_agent/resource/my_agent -> /mnt/c/Users/lcata/organic_ws/install/my_agent/share/ament_index/resource_index/packages
+[9.428s] symbolically linking /mnt/c/Users/lcata/organic_ws/build/my_agent/package.xml -> /mnt/c/Users/lcata/organic_ws/install/my_agent/share/my_agent
+[9.436s] creating /mnt/c/Users/lcata/organic_ws/install/my_agent/share/my_agent/launch
+[9.456s] symbolically linking /mnt/c/Users/lcata/organic_ws/build/my_agent/launch/multi_agent.launch.py -> /mnt/c/Users/lcata/organic_ws/install/my_agent/share/my_agent/launch
+[9.502s] Invoked command in '/mnt/c/Users/lcata/organic_ws/build/my_agent' returned '0': PYTHONPATH=/mnt/c/Users/lcata/organic_ws/build/my_agent/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/mnt/c/Users/lcata/organic_ws/install/my_agent/lib/python3.12/site-packages:/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages:/mnt/c/Users/lcata/organic_ws/build/my_agent:/mnt/c/Users/lcata/organic_ws/install/my_agent/lib/python3.12/site-packages:/opt/ros/kilted/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /mnt/c/Users/lcata/organic_ws/build/my_agent/build --no-deps symlink_data

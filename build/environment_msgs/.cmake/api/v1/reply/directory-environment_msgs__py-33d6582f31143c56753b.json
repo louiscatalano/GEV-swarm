@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "environment_msgs__py",
+		"source" : "/mnt/c/Users/lcata/organic_ws/build/environment_msgs/environment_msgs__py"
+	}
+}

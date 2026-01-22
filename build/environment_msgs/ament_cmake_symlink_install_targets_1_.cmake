@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/mnt/c/Users/lcata/organic_ws/build/environment_msgs/rosidl_generator_py/environment_msgs/environment_msgs_s__rosidl_typesupport_introspection_c.so" "TARGETS" "environment_msgs_s__rosidl_typesupport_introspection_c" "DESTINATION" "lib/python3.12/site-packages/environment_msgs")

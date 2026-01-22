@@ -1,0 +1,100 @@
+import rclpy
+from rclpy.node import Node
+import numpy as np
+
+from environment_msgs.msg import EnvironmentState, AgentState
+from geometry_msgs.msg import Point
+
+class AgentNode(Node):
+
+    def __init__(self):
+        super().__init__('agent_node')
+
+        # Parameters
+        self.declare_parameter('agent_id', 0)
+        self.declare_parameter('i0', 32)
+        self.declare_parameter('j0', 32)
+
+        self.agent_id = self.get_parameter('agent_id').value
+        self.i = self.get_parameter('i0').value
+        self.j = self.get_parameter('j0').value
+
+        self.prev_i = None
+        self.prev_j = None
+
+        self.subscription = self.create_subscription(
+            EnvironmentState,
+            '/environment_state',
+            self.environment_callback,
+            10
+        )
+
+        self.get_logger().info(
+            f'Agent {self.agent_id} started at ({self.i}, {self.j})'
+        )
+
+        self.pose_pub = self.create_publisher(
+            Point,
+            f'/agent_{self.agent_id}/pose',
+            10
+        )
+        self.state_pub = self.create_publisher(
+            AgentState,
+            'state',
+            10
+        )
+
+
+    def environment_callback(self, msg):
+        field = np.array(msg.data).reshape(msg.height, msg.width)
+
+        neighbors = [(-1,0),(1,0),(0,-1),(0,1)]
+        current = field[self.i, self.j]
+
+        best_val = current
+        best_pos = None
+
+        for di, dj in neighbors:
+            ni = (self.i + di) % msg.height
+            nj = (self.j + dj) % msg.width
+
+            if self.prev_i is not None and (ni, nj) == (self.prev_i, self.prev_j):
+                continue
+
+            v = field[ni, nj]
+            if v < best_val:
+                best_val = v
+                best_pos = (ni, nj)
+
+        if best_pos is not None:
+            self.prev_i, self.prev_j = self.i, self.j
+            self.i, self.j = best_pos
+
+        self.get_logger().info(
+            f'Agent {self.agent_id} | pos=({self.i},{self.j}) | value={field[self.i, self.j]:.3f}'
+        )
+
+        p = Point()
+        p.x = float(self.i)
+        p.y = float(self.j)
+        p.z = 0.0
+        self.pose_pub.publish(p)
+
+        state = AgentState()
+        state.agent_id = self.agent_id
+        state.i = self.i
+        state.j = self.j
+        self.get_logger().warn("ABOUT TO PUBLISH AgentState")
+        self.state_pub.publish(state)
+        self.get_logger().warn("JUST PUBLISHED AgentState")
+
+def main():
+    rclpy.init()
+    node = AgentNode()
+    rclpy.spin(node)
+    node.destroy_node()
+    rclpy.shutdown()
+
+
+if __name__ == '__main__':
+    main()

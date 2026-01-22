@@ -1,0 +1,27 @@
+{
+  "package_name": "environment_msgs",
+  "output_dir": "/mnt/c/Users/lcata/organic_ws/build/environment_msgs/rosidl_typesupport_fastrtps_cpp/environment_msgs",
+  "template_dir": "/opt/ros/kilted/share/rosidl_typesupport_fastrtps_cpp/resource",
+  "idl_tuples": [
+    "/mnt/c/Users/lcata/organic_ws/build/environment_msgs/rosidl_adapter/environment_msgs:msg/EnvironmentState.idl",
+    "/mnt/c/Users/lcata/organic_ws/build/environment_msgs/rosidl_adapter/environment_msgs:msg/AgentState.idl",
+    "/mnt/c/Users/lcata/organic_ws/build/environment_msgs/rosidl_adapter/environment_msgs:msg/LocalMapUpdate.idl",
+    "/mnt/c/Users/lcata/organic_ws/build/environment_msgs/rosidl_adapter/environment_msgs:msg/PredictedMap.idl",
+    "/mnt/c/Users/lcata/organic_ws/build/environment_msgs/rosidl_adapter/environment_msgs:msg/GuidanceField.idl"
+  ],
+  "target_dependencies": [
+    "/opt/ros/kilted/lib/rosidl_typesupport_fastrtps_cpp/rosidl_typesupport_fastrtps_cpp",
+    "/opt/ros/kilted/lib/python3.12/site-packages/rosidl_typesupport_fastrtps_cpp/__init__.py",
+    "/opt/ros/kilted/share/rosidl_typesupport_fastrtps_cpp/resource/idl__rosidl_typesupport_fastrtps_cpp.hpp.em",
+    "/opt/ros/kilted/share/rosidl_typesupport_fastrtps_cpp/resource/idl__type_support.cpp.em",
+    "/opt/ros/kilted/share/rosidl_typesupport_fastrtps_cpp/resource/msg__rosidl_typesupport_fastrtps_cpp.hpp.em",
+    "/opt/ros/kilted/share/rosidl_typesupport_fastrtps_cpp/resource/msg__type_support.cpp.em",
+    "/opt/ros/kilted/share/rosidl_typesupport_fastrtps_cpp/resource/srv__rosidl_typesupport_fastrtps_cpp.hpp.em",
+    "/opt/ros/kilted/share/rosidl_typesupport_fastrtps_cpp/resource/srv__type_support.cpp.em",
+    "/mnt/c/Users/lcata/organic_ws/build/environment_msgs/rosidl_adapter/environment_msgs/msg/EnvironmentState.idl",
+    "/mnt/c/Users/lcata/organic_ws/build/environment_msgs/rosidl_adapter/environment_msgs/msg/AgentState.idl",
+    "/mnt/c/Users/lcata/organic_ws/build/environment_msgs/rosidl_adapter/environment_msgs/msg/LocalMapUpdate.idl",
+    "/mnt/c/Users/lcata/organic_ws/build/environment_msgs/rosidl_adapter/environment_msgs/msg/PredictedMap.idl",
+    "/mnt/c/Users/lcata/organic_ws/build/environment_msgs/rosidl_adapter/environment_msgs/msg/GuidanceField.idl"
+  ]
+}

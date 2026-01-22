@@ -1,0 +1,1643 @@
+[0.000000] (-) TimerEvent: {}
+[0.001588] (environment_msgs) JobQueued: {'identifier': 'environment_msgs', 'dependencies': OrderedDict()}
+[0.002336] (my_agent) JobQueued: {'identifier': 'my_agent', 'dependencies': OrderedDict({'environment_msgs': '/mnt/c/Users/lcata/organic_ws/install/environment_msgs'})}
+[0.003080] (environment_msgs) JobStarted: {'identifier': 'environment_msgs'}
+[0.093625] (-) TimerEvent: {}
+[0.195143] (-) TimerEvent: {}
+[0.229061] (environment_msgs) JobProgress: {'identifier': 'environment_msgs', 'progress': 'cmake'}
+[0.295450] (-) TimerEvent: {}
+[0.396907] (-) TimerEvent: {}
+[0.442393] (environment_msgs) Command: {'cmd': ['/usr/bin/cmake', '/mnt/c/Users/lcata/organic_ws/src/environment_msgs', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/mnt/c/Users/lcata/organic_ws/install/environment_msgs'], 'cwd': '/mnt/c/Users/lcata/organic_ws/build/environment_msgs', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'lcata', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib:/opt/ros/kilted/opt/zenoh_cpp_vendor/lib:/opt/ros/kilted/opt/gz_math_vendor/lib:/opt/ros/kilted/opt/gz_utils_vendor/lib:/opt/ros/kilted/opt/rviz_ogre_vendor/lib:/opt/ros/kilted/lib/x86_64-linux-gnu:/opt/ros/kilted/opt/gz_cmake_vendor/lib:/opt/ros/kilted/lib', 'HOME': '/home/lcata', 'OLDPWD': '/mnt/c/Users/lcata', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/mnt/c/Users/lcata/organic_ws/install', 'ROS_DISTRO': 'kilted', 'LOGNAME': 'lcata', 'NAME': 'LaptopStudio', 'WSL_INTEROP': '/run/WSL/7434_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/opt/ros/kilted/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/mnt/c/Program Files/MATLAB/R2023b/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/lcata/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/lcata/.dotnet/tools:/mnt/c/Users/lcata/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/lcata/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/lcata/AppData/Local/Programs/MiKTeX/miktex/bin/x64/:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/mnt/c/Users/lcata/organic_ws/install/my_agent:/mnt/c/Users/lcata/organic_ws/install/environment_msgs:/opt/ros/kilted', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/mnt/c/Users/lcata/organic_ws/build/environment_msgs', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/mnt/c/Users/lcata/organic_ws/build/my_agent:/mnt/c/Users/lcata/organic_ws/install/my_agent/lib/python3.12/site-packages:/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages:/opt/ros/kilted/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/mnt/c/Users/lcata/organic_ws/install/environment_msgs:/opt/ros/kilted/opt/gz_math_vendor:/opt/ros/kilted/opt/gz_utils_vendor:/opt/ros/kilted/opt/gz_cmake_vendor:/mnt/c/Users/lcata/organic_ws/install/my_agent:/opt/ros/kilted', 'WSLENV': ''}), 'shell': False}
+[0.497153] (-) TimerEvent: {}
+[0.598418] (-) TimerEvent: {}
+[0.700001] (-) TimerEvent: {}
+[0.801637] (-) TimerEvent: {}
+[0.903250] (-) TimerEvent: {}
+[1.005352] (-) TimerEvent: {}
+[1.107024] (-) TimerEvent: {}
+[1.208429] (-) TimerEvent: {}
+[1.310074] (-) TimerEvent: {}
+[1.411589] (-) TimerEvent: {}
+[1.513172] (-) TimerEvent: {}
+[1.614254] (-) TimerEvent: {}
+[1.714879] (-) TimerEvent: {}
+[1.767775] (environment_msgs) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[1.814999] (-) TimerEvent: {}
+[1.915493] (-) TimerEvent: {}
+[2.015950] (-) TimerEvent: {}
+[2.116480] (-) TimerEvent: {}
+[2.216949] (-) TimerEvent: {}
+[2.317402] (-) TimerEvent: {}
+[2.418255] (-) TimerEvent: {}
+[2.513048] (environment_msgs) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[2.518348] (-) TimerEvent: {}
+[2.618836] (-) TimerEvent: {}
+[2.719262] (-) TimerEvent: {}
+[2.819803] (-) TimerEvent: {}
+[2.920748] (-) TimerEvent: {}
+[3.021658] (-) TimerEvent: {}
+[3.120142] (environment_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[3.121761] (-) TimerEvent: {}
+[3.222417] (-) TimerEvent: {}
+[3.323162] (-) TimerEvent: {}
+[3.423892] (-) TimerEvent: {}
+[3.524724] (-) TimerEvent: {}
+[3.625451] (-) TimerEvent: {}
+[3.726454] (-) TimerEvent: {}
+[3.827129] (-) TimerEvent: {}
+[3.928023] (-) TimerEvent: {}
+[4.028678] (-) TimerEvent: {}
+[4.129911] (-) TimerEvent: {}
+[4.230442] (-) TimerEvent: {}
+[4.330937] (-) TimerEvent: {}
+[4.431536] (-) TimerEvent: {}
+[4.458195] (environment_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[4.493969] (environment_msgs) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[4.495030] (environment_msgs) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[4.495826] (environment_msgs) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[4.531654] (-) TimerEvent: {}
+[4.632412] (-) TimerEvent: {}
+[4.733509] (-) TimerEvent: {}
+[4.835298] (-) TimerEvent: {}
+[4.937050] (-) TimerEvent: {}
+[5.009111] (environment_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[5.037355] (-) TimerEvent: {}
+[5.139042] (-) TimerEvent: {}
+[5.240894] (-) TimerEvent: {}
+[5.342439] (-) TimerEvent: {}
+[5.443824] (-) TimerEvent: {}
+[5.545427] (-) TimerEvent: {}
+[5.647162] (-) TimerEvent: {}
+[5.748651] (-) TimerEvent: {}
+[5.849813] (-) TimerEvent: {}
+[5.950986] (-) TimerEvent: {}
+[6.052368] (-) TimerEvent: {}
+[6.153538] (-) TimerEvent: {}
+[6.254709] (-) TimerEvent: {}
+[6.355853] (-) TimerEvent: {}
+[6.457113] (-) TimerEvent: {}
+[6.558501] (-) TimerEvent: {}
+[6.660638] (-) TimerEvent: {}
+[6.762330] (-) TimerEvent: {}
+[6.863963] (-) TimerEvent: {}
+[6.965475] (-) TimerEvent: {}
+[7.067110] (-) TimerEvent: {}
+[7.168493] (-) TimerEvent: {}
+[7.269907] (-) TimerEvent: {}
+[7.371576] (-) TimerEvent: {}
+[7.473121] (-) TimerEvent: {}
+[7.574700] (-) TimerEvent: {}
+[7.676220] (-) TimerEvent: {}
+[7.777768] (-) TimerEvent: {}
+[7.879642] (-) TimerEvent: {}
+[7.981156] (-) TimerEvent: {}
+[8.082656] (-) TimerEvent: {}
+[8.184593] (-) TimerEvent: {}
+[8.286331] (-) TimerEvent: {}
+[8.389213] (-) TimerEvent: {}
+[8.490650] (-) TimerEvent: {}
+[8.591843] (-) TimerEvent: {}
+[8.692506] (-) TimerEvent: {}
+[8.770305] (environment_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[8.792604] (-) TimerEvent: {}
+[8.819459] (environment_msgs) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[8.820804] (environment_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[8.821984] (environment_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[8.892740] (-) TimerEvent: {}
+[8.904102] (environment_msgs) StdoutLine: {'line': b'-- Found ament_cmake: 2.7.3 (/opt/ros/kilted/share/ament_cmake/cmake)\n'}
+[8.992950] (-) TimerEvent: {}
+[9.093587] (-) TimerEvent: {}
+[9.194058] (-) TimerEvent: {}
+[9.294479] (-) TimerEvent: {}
+[9.395122] (-) TimerEvent: {}
+[9.495751] (-) TimerEvent: {}
+[9.596564] (-) TimerEvent: {}
+[9.697359] (-) TimerEvent: {}
+[9.797963] (-) TimerEvent: {}
+[9.898453] (-) TimerEvent: {}
+[9.998960] (-) TimerEvent: {}
+[10.099968] (-) TimerEvent: {}
+[10.200952] (-) TimerEvent: {}
+[10.302491] (-) TimerEvent: {}
+[10.403902] (-) TimerEvent: {}
+[10.436537] (environment_msgs) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[10.504257] (-) TimerEvent: {}
+[10.605734] (-) TimerEvent: {}
+[10.706838] (-) TimerEvent: {}
+[10.808189] (-) TimerEvent: {}
+[10.909806] (-) TimerEvent: {}
+[10.929559] (environment_msgs) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[11.010099] (-) TimerEvent: {}
+[11.111298] (-) TimerEvent: {}
+[11.213163] (-) TimerEvent: {}
+[11.314644] (-) TimerEvent: {}
+[11.416532] (-) TimerEvent: {}
+[11.517083] (-) TimerEvent: {}
+[11.617817] (-) TimerEvent: {}
+[11.718953] (-) TimerEvent: {}
+[11.820327] (-) TimerEvent: {}
+[11.921968] (-) TimerEvent: {}
+[12.022980] (-) TimerEvent: {}
+[12.123690] (-) TimerEvent: {}
+[12.180057] (environment_msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.7.1 (/opt/ros/kilted/share/rosidl_default_generators/cmake)\n'}
+[12.223926] (-) TimerEvent: {}
+[12.254738] (environment_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[12.324228] (-) TimerEvent: {}
+[12.424874] (-) TimerEvent: {}
+[12.525383] (-) TimerEvent: {}
+[12.626017] (-) TimerEvent: {}
+[12.726730] (-) TimerEvent: {}
+[12.814032] (environment_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[12.826905] (-) TimerEvent: {}
+[12.927696] (-) TimerEvent: {}
+[13.028351] (-) TimerEvent: {}
+[13.129048] (-) TimerEvent: {}
+[13.230121] (-) TimerEvent: {}
+[13.239924] (environment_msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 4.9.5 (/opt/ros/kilted/share/rosidl_adapter/cmake)\n'}
+[13.330264] (-) TimerEvent: {}
+[13.431077] (-) TimerEvent: {}
+[13.531858] (-) TimerEvent: {}
+[13.632828] (-) TimerEvent: {}
+[13.733908] (-) TimerEvent: {}
+[13.834852] (-) TimerEvent: {}
+[13.936372] (-) TimerEvent: {}
+[14.037270] (-) TimerEvent: {}
+[14.138927] (-) TimerEvent: {}
+[14.240938] (-) TimerEvent: {}
+[14.342860] (-) TimerEvent: {}
+[14.444362] (-) TimerEvent: {}
+[14.545600] (-) TimerEvent: {}
+[14.646472] (-) TimerEvent: {}
+[14.746975] (-) TimerEvent: {}
+[14.847714] (-) TimerEvent: {}
+[14.949059] (-) TimerEvent: {}
+[15.050921] (-) TimerEvent: {}
+[15.152149] (-) TimerEvent: {}
+[15.253710] (-) TimerEvent: {}
+[15.355845] (-) TimerEvent: {}
+[15.458115] (-) TimerEvent: {}
+[15.560138] (-) TimerEvent: {}
+[15.662197] (-) TimerEvent: {}
+[15.763995] (-) TimerEvent: {}
+[15.865728] (-) TimerEvent: {}
+[15.967585] (-) TimerEvent: {}
+[16.069626] (-) TimerEvent: {}
+[16.171172] (-) TimerEvent: {}
+[16.272756] (-) TimerEvent: {}
+[16.374336] (-) TimerEvent: {}
+[16.475511] (-) TimerEvent: {}
+[16.577112] (-) TimerEvent: {}
+[16.678480] (-) TimerEvent: {}
+[16.779645] (-) TimerEvent: {}
+[16.881593] (-) TimerEvent: {}
+[16.983099] (-) TimerEvent: {}
+[17.085064] (-) TimerEvent: {}
+[17.186505] (-) TimerEvent: {}
+[17.287955] (-) TimerEvent: {}
+[17.389615] (-) TimerEvent: {}
+[17.491292] (-) TimerEvent: {}
+[17.592721] (-) TimerEvent: {}
+[17.695112] (-) TimerEvent: {}
+[17.796938] (-) TimerEvent: {}
+[17.898461] (-) TimerEvent: {}
+[18.000047] (-) TimerEvent: {}
+[18.101012] (-) TimerEvent: {}
+[18.201853] (-) TimerEvent: {}
+[18.303791] (-) TimerEvent: {}
+[18.405530] (-) TimerEvent: {}
+[18.507812] (-) TimerEvent: {}
+[18.609556] (-) TimerEvent: {}
+[18.711626] (-) TimerEvent: {}
+[18.813941] (-) TimerEvent: {}
+[18.916246] (-) TimerEvent: {}
+[19.017693] (-) TimerEvent: {}
+[19.119884] (-) TimerEvent: {}
+[19.221758] (-) TimerEvent: {}
+[19.263084] (environment_msgs) StdoutLine: {'line': b'-- Found ament_cmake_ros_core: 0.14.5 (/opt/ros/kilted/share/ament_cmake_ros_core/cmake)\n'}
+[19.322060] (-) TimerEvent: {}
+[19.424214] (-) TimerEvent: {}
+[19.526384] (-) TimerEvent: {}
+[19.628498] (-) TimerEvent: {}
+[19.730403] (-) TimerEvent: {}
+[19.831773] (-) TimerEvent: {}
+[19.934026] (-) TimerEvent: {}
+[20.036176] (-) TimerEvent: {}
+[20.138638] (-) TimerEvent: {}
+[20.241190] (-) TimerEvent: {}
+[20.342859] (-) TimerEvent: {}
+[20.444024] (-) TimerEvent: {}
+[20.545049] (-) TimerEvent: {}
+[20.646319] (-) TimerEvent: {}
+[20.748333] (-) TimerEvent: {}
+[20.850553] (-) TimerEvent: {}
+[20.952101] (-) TimerEvent: {}
+[21.054492] (-) TimerEvent: {}
+[21.156527] (-) TimerEvent: {}
+[21.259141] (-) TimerEvent: {}
+[21.361489] (-) TimerEvent: {}
+[21.463283] (-) TimerEvent: {}
+[21.564403] (-) TimerEvent: {}
+[21.665599] (-) TimerEvent: {}
+[21.767254] (-) TimerEvent: {}
+[21.869554] (-) TimerEvent: {}
+[21.971296] (-) TimerEvent: {}
+[22.073133] (-) TimerEvent: {}
+[22.174660] (-) TimerEvent: {}
+[22.275846] (-) TimerEvent: {}
+[22.377704] (-) TimerEvent: {}
+[22.479696] (-) TimerEvent: {}
+[22.582014] (-) TimerEvent: {}
+[22.684459] (-) TimerEvent: {}
+[22.786201] (-) TimerEvent: {}
+[22.887589] (-) TimerEvent: {}
+[22.989249] (-) TimerEvent: {}
+[23.091636] (-) TimerEvent: {}
+[23.194174] (-) TimerEvent: {}
+[23.296521] (-) TimerEvent: {}
+[23.398463] (-) TimerEvent: {}
+[23.500810] (-) TimerEvent: {}
+[23.603151] (-) TimerEvent: {}
+[23.705400] (-) TimerEvent: {}
+[23.807600] (-) TimerEvent: {}
+[23.909367] (-) TimerEvent: {}
+[24.010443] (-) TimerEvent: {}
+[24.112230] (-) TimerEvent: {}
+[24.176729] (environment_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[24.212591] (-) TimerEvent: {}
+[24.315071] (-) TimerEvent: {}
+[24.417110] (-) TimerEvent: {}
+[24.519229] (-) TimerEvent: {}
+[24.621051] (-) TimerEvent: {}
+[24.722716] (-) TimerEvent: {}
+[24.824602] (-) TimerEvent: {}
+[24.927029] (-) TimerEvent: {}
+[25.028575] (-) TimerEvent: {}
+[25.130608] (-) TimerEvent: {}
+[25.231784] (-) TimerEvent: {}
+[25.333673] (-) TimerEvent: {}
+[25.435072] (-) TimerEvent: {}
+[25.536665] (-) TimerEvent: {}
+[25.638544] (-) TimerEvent: {}
+[25.740121] (-) TimerEvent: {}
+[25.841886] (-) TimerEvent: {}
+[25.943369] (-) TimerEvent: {}
+[26.045245] (-) TimerEvent: {}
+[26.146982] (-) TimerEvent: {}
+[26.247787] (-) TimerEvent: {}
+[26.349065] (-) TimerEvent: {}
+[26.450687] (-) TimerEvent: {}
+[26.552244] (-) TimerEvent: {}
+[26.653747] (-) TimerEvent: {}
+[26.755013] (-) TimerEvent: {}
+[26.856175] (-) TimerEvent: {}
+[26.958183] (-) TimerEvent: {}
+[27.059942] (-) TimerEvent: {}
+[27.161474] (-) TimerEvent: {}
+[27.262890] (-) TimerEvent: {}
+[27.364547] (-) TimerEvent: {}
+[27.465796] (-) TimerEvent: {}
+[27.567200] (-) TimerEvent: {}
+[27.668889] (-) TimerEvent: {}
+[27.769847] (-) TimerEvent: {}
+[27.870917] (-) TimerEvent: {}
+[27.973078] (-) TimerEvent: {}
+[28.074437] (-) TimerEvent: {}
+[28.175436] (-) TimerEvent: {}
+[28.276511] (-) TimerEvent: {}
+[28.377532] (-) TimerEvent: {}
+[28.478869] (-) TimerEvent: {}
+[28.580576] (-) TimerEvent: {}
+[28.682461] (-) TimerEvent: {}
+[28.783409] (-) TimerEvent: {}
+[28.884323] (-) TimerEvent: {}
+[28.985534] (-) TimerEvent: {}
+[29.087108] (-) TimerEvent: {}
+[29.188401] (-) TimerEvent: {}
+[29.289822] (-) TimerEvent: {}
+[29.391996] (-) TimerEvent: {}
+[29.493574] (-) TimerEvent: {}
+[29.595346] (-) TimerEvent: {}
+[29.697376] (-) TimerEvent: {}
+[29.798994] (-) TimerEvent: {}
+[29.900358] (-) TimerEvent: {}
+[30.001538] (-) TimerEvent: {}
+[30.076503] (environment_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[30.101910] (-) TimerEvent: {}
+[30.203543] (-) TimerEvent: {}
+[30.305162] (-) TimerEvent: {}
+[30.406958] (-) TimerEvent: {}
+[30.509373] (-) TimerEvent: {}
+[30.610589] (-) TimerEvent: {}
+[30.711509] (-) TimerEvent: {}
+[30.812961] (-) TimerEvent: {}
+[30.914057] (-) TimerEvent: {}
+[31.015254] (-) TimerEvent: {}
+[31.116475] (-) TimerEvent: {}
+[31.218752] (-) TimerEvent: {}
+[31.321253] (-) TimerEvent: {}
+[31.423694] (-) TimerEvent: {}
+[31.526383] (-) TimerEvent: {}
+[31.628006] (-) TimerEvent: {}
+[31.730188] (-) TimerEvent: {}
+[31.832225] (-) TimerEvent: {}
+[31.934686] (-) TimerEvent: {}
+[32.036951] (-) TimerEvent: {}
+[32.138145] (-) TimerEvent: {}
+[32.239192] (-) TimerEvent: {}
+[32.340435] (-) TimerEvent: {}
+[32.373188] (environment_msgs) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed \n'}
+[32.440845] (-) TimerEvent: {}
+[32.542588] (-) TimerEvent: {}
+[32.644132] (-) TimerEvent: {}
+[32.744959] (-) TimerEvent: {}
+[32.846451] (-) TimerEvent: {}
+[32.948145] (-) TimerEvent: {}
+[33.049806] (-) TimerEvent: {}
+[33.151180] (-) TimerEvent: {}
+[33.252719] (-) TimerEvent: {}
+[33.354496] (-) TimerEvent: {}
+[33.456131] (-) TimerEvent: {}
+[33.557436] (-) TimerEvent: {}
+[33.658990] (-) TimerEvent: {}
+[33.760465] (-) TimerEvent: {}
+[33.862219] (-) TimerEvent: {}
+[33.963814] (-) TimerEvent: {}
+[34.065403] (-) TimerEvent: {}
+[34.167345] (-) TimerEvent: {}
+[34.269163] (-) TimerEvent: {}
+[34.370557] (-) TimerEvent: {}
+[34.472267] (-) TimerEvent: {}
+[34.573895] (-) TimerEvent: {}
+[34.675624] (-) TimerEvent: {}
+[34.776904] (-) TimerEvent: {}
+[34.878688] (-) TimerEvent: {}
+[34.980716] (-) TimerEvent: {}
+[35.082227] (-) TimerEvent: {}
+[35.183767] (-) TimerEvent: {}
+[35.285097] (-) TimerEvent: {}
+[35.386252] (-) TimerEvent: {}
+[35.488013] (-) TimerEvent: {}
+[35.589572] (-) TimerEvent: {}
+[35.691364] (-) TimerEvent: {}
+[35.793230] (-) TimerEvent: {}
+[35.894688] (-) TimerEvent: {}
+[35.996028] (-) TimerEvent: {}
+[36.097387] (-) TimerEvent: {}
+[36.198737] (-) TimerEvent: {}
+[36.300315] (-) TimerEvent: {}
+[36.401801] (-) TimerEvent: {}
+[36.503614] (-) TimerEvent: {}
+[36.605405] (-) TimerEvent: {}
+[36.706903] (-) TimerEvent: {}
+[36.808203] (-) TimerEvent: {}
+[36.909682] (-) TimerEvent: {}
+[37.011592] (-) TimerEvent: {}
+[37.112973] (-) TimerEvent: {}
+[37.214244] (-) TimerEvent: {}
+[37.316241] (-) TimerEvent: {}
+[37.417686] (-) TimerEvent: {}
+[37.519757] (-) TimerEvent: {}
+[37.622499] (-) TimerEvent: {}
+[37.724314] (-) TimerEvent: {}
+[37.825644] (-) TimerEvent: {}
+[37.927273] (-) TimerEvent: {}
+[38.028591] (-) TimerEvent: {}
+[38.129962] (-) TimerEvent: {}
+[38.231609] (-) TimerEvent: {}
+[38.333238] (-) TimerEvent: {}
+[38.434622] (-) TimerEvent: {}
+[38.535888] (-) TimerEvent: {}
+[38.637420] (-) TimerEvent: {}
+[38.738735] (-) TimerEvent: {}
+[38.840550] (-) TimerEvent: {}
+[38.942519] (-) TimerEvent: {}
+[39.044103] (-) TimerEvent: {}
+[39.145522] (-) TimerEvent: {}
+[39.248542] (-) TimerEvent: {}
+[39.349760] (-) TimerEvent: {}
+[39.451177] (-) TimerEvent: {}
+[39.552427] (-) TimerEvent: {}
+[39.654314] (-) TimerEvent: {}
+[39.756154] (-) TimerEvent: {}
+[39.857541] (-) TimerEvent: {}
+[39.959147] (-) TimerEvent: {}
+[40.060776] (-) TimerEvent: {}
+[40.162697] (-) TimerEvent: {}
+[40.264483] (-) TimerEvent: {}
+[40.366156] (-) TimerEvent: {}
+[40.467601] (-) TimerEvent: {}
+[40.569155] (-) TimerEvent: {}
+[40.670918] (-) TimerEvent: {}
+[40.743885] (environment_msgs) StdoutLine: {'line': b'-- Configuring done (40.1s)\n'}
+[40.771210] (-) TimerEvent: {}
+[40.872633] (-) TimerEvent: {}
+[40.974319] (-) TimerEvent: {}
+[41.075915] (-) TimerEvent: {}
+[41.177506] (-) TimerEvent: {}
+[41.278613] (-) TimerEvent: {}
+[41.379959] (-) TimerEvent: {}
+[41.481520] (-) TimerEvent: {}
+[41.583295] (-) TimerEvent: {}
+[41.684819] (-) TimerEvent: {}
+[41.786185] (-) TimerEvent: {}
+[41.888047] (-) TimerEvent: {}
+[41.989492] (-) TimerEvent: {}
+[42.090916] (-) TimerEvent: {}
+[42.191666] (-) TimerEvent: {}
+[42.292204] (-) TimerEvent: {}
+[42.392830] (-) TimerEvent: {}
+[42.493768] (-) TimerEvent: {}
+[42.594751] (-) TimerEvent: {}
+[42.696142] (-) TimerEvent: {}
+[42.797481] (-) TimerEvent: {}
+[42.899293] (-) TimerEvent: {}
+[43.000625] (-) TimerEvent: {}
+[43.101768] (-) TimerEvent: {}
+[43.203506] (-) TimerEvent: {}
+[43.304283] (-) TimerEvent: {}
+[43.405789] (-) TimerEvent: {}
+[43.507281] (-) TimerEvent: {}
+[43.608764] (-) TimerEvent: {}
+[43.710163] (-) TimerEvent: {}
+[43.811821] (-) TimerEvent: {}
+[43.913047] (-) TimerEvent: {}
+[44.014266] (-) TimerEvent: {}
+[44.115418] (-) TimerEvent: {}
+[44.216935] (-) TimerEvent: {}
+[44.318707] (-) TimerEvent: {}
+[44.420112] (-) TimerEvent: {}
+[44.521150] (-) TimerEvent: {}
+[44.622597] (-) TimerEvent: {}
+[44.724406] (-) TimerEvent: {}
+[44.826081] (-) TimerEvent: {}
+[44.927874] (-) TimerEvent: {}
+[45.029622] (-) TimerEvent: {}
+[45.131336] (-) TimerEvent: {}
+[45.233060] (-) TimerEvent: {}
+[45.334261] (-) TimerEvent: {}
+[45.435637] (-) TimerEvent: {}
+[45.537439] (-) TimerEvent: {}
+[45.638624] (-) TimerEvent: {}
+[45.740471] (-) TimerEvent: {}
+[45.841967] (-) TimerEvent: {}
+[45.943857] (-) TimerEvent: {}
+[46.045043] (-) TimerEvent: {}
+[46.146916] (-) TimerEvent: {}
+[46.248605] (-) TimerEvent: {}
+[46.350390] (-) TimerEvent: {}
+[46.451771] (-) TimerEvent: {}
+[46.553502] (-) TimerEvent: {}
+[46.654694] (-) TimerEvent: {}
+[46.755513] (-) TimerEvent: {}
+[46.856264] (-) TimerEvent: {}
+[46.957652] (-) TimerEvent: {}
+[47.058995] (-) TimerEvent: {}
+[47.160250] (-) TimerEvent: {}
+[47.261958] (-) TimerEvent: {}
+[47.363255] (-) TimerEvent: {}
+[47.464597] (-) TimerEvent: {}
+[47.565359] (-) TimerEvent: {}
+[47.666556] (-) TimerEvent: {}
+[47.767579] (-) TimerEvent: {}
+[47.869250] (-) TimerEvent: {}
+[47.971262] (-) TimerEvent: {}
+[48.072778] (-) TimerEvent: {}
+[48.174625] (-) TimerEvent: {}
+[48.276151] (-) TimerEvent: {}
+[48.377668] (-) TimerEvent: {}
+[48.479332] (-) TimerEvent: {}
+[48.580560] (-) TimerEvent: {}
+[48.682529] (-) TimerEvent: {}
+[48.784473] (-) TimerEvent: {}
+[48.885505] (-) TimerEvent: {}
+[48.987134] (-) TimerEvent: {}
+[49.088329] (-) TimerEvent: {}
+[49.189161] (-) TimerEvent: {}
+[49.290451] (-) TimerEvent: {}
+[49.391746] (-) TimerEvent: {}
+[49.493683] (-) TimerEvent: {}
+[49.595193] (-) TimerEvent: {}
+[49.697197] (-) TimerEvent: {}
+[49.798650] (-) TimerEvent: {}
+[49.900542] (-) TimerEvent: {}
+[50.001856] (-) TimerEvent: {}
+[50.103769] (-) TimerEvent: {}
+[50.205127] (-) TimerEvent: {}
+[50.307155] (-) TimerEvent: {}
+[50.409154] (-) TimerEvent: {}
+[50.511133] (-) TimerEvent: {}
+[50.612673] (-) TimerEvent: {}
+[50.647085] (environment_msgs) StdoutLine: {'line': b'-- Generating done (8.5s)\n'}
+[50.712978] (-) TimerEvent: {}
+[50.814665] (-) TimerEvent: {}
+[50.916513] (-) TimerEvent: {}
+[51.017943] (-) TimerEvent: {}
+[51.119852] (-) TimerEvent: {}
+[51.221308] (-) TimerEvent: {}
+[51.322943] (-) TimerEvent: {}
+[51.424186] (-) TimerEvent: {}
+[51.525678] (-) TimerEvent: {}
+[51.627893] (-) TimerEvent: {}
+[51.730289] (-) TimerEvent: {}
+[51.831809] (-) TimerEvent: {}
+[51.933827] (-) TimerEvent: {}
+[52.035423] (-) TimerEvent: {}
+[52.137747] (-) TimerEvent: {}
+[52.239245] (-) TimerEvent: {}
+[52.341736] (-) TimerEvent: {}
+[52.443226] (-) TimerEvent: {}
+[52.545509] (-) TimerEvent: {}
+[52.647567] (-) TimerEvent: {}
+[52.750222] (-) TimerEvent: {}
+[52.852352] (-) TimerEvent: {}
+[52.955010] (-) TimerEvent: {}
+[53.056869] (-) TimerEvent: {}
+[53.159413] (-) TimerEvent: {}
+[53.262197] (-) TimerEvent: {}
+[53.364807] (-) TimerEvent: {}
+[53.467019] (-) TimerEvent: {}
+[53.569977] (-) TimerEvent: {}
+[53.673025] (-) TimerEvent: {}
+[53.774557] (-) TimerEvent: {}
+[53.875949] (-) TimerEvent: {}
+[53.977971] (-) TimerEvent: {}
+[54.079928] (-) TimerEvent: {}
+[54.181805] (-) TimerEvent: {}
+[54.283701] (-) TimerEvent: {}
+[54.385714] (-) TimerEvent: {}
+[54.487556] (-) TimerEvent: {}
+[54.582092] (environment_msgs) StdoutLine: {'line': b'-- Build files have been written to: /mnt/c/Users/lcata/organic_ws/build/environment_msgs\n'}
+[54.587789] (-) TimerEvent: {}
+[54.604541] (environment_msgs) CommandEnded: {'returncode': 0}
+[54.632776] (environment_msgs) JobProgress: {'identifier': 'environment_msgs', 'progress': 'build'}
+[54.662996] (environment_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/mnt/c/Users/lcata/organic_ws/build/environment_msgs', '--', '-j8', '-l8'], 'cwd': '/mnt/c/Users/lcata/organic_ws/build/environment_msgs', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'lcata', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib:/opt/ros/kilted/opt/zenoh_cpp_vendor/lib:/opt/ros/kilted/opt/gz_math_vendor/lib:/opt/ros/kilted/opt/gz_utils_vendor/lib:/opt/ros/kilted/opt/rviz_ogre_vendor/lib:/opt/ros/kilted/lib/x86_64-linux-gnu:/opt/ros/kilted/opt/gz_cmake_vendor/lib:/opt/ros/kilted/lib', 'HOME': '/home/lcata', 'OLDPWD': '/mnt/c/Users/lcata', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/mnt/c/Users/lcata/organic_ws/install', 'ROS_DISTRO': 'kilted', 'LOGNAME': 'lcata', 'NAME': 'LaptopStudio', 'WSL_INTEROP': '/run/WSL/7434_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/opt/ros/kilted/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/mnt/c/Program Files/MATLAB/R2023b/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/lcata/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/lcata/.dotnet/tools:/mnt/c/Users/lcata/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/lcata/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/lcata/AppData/Local/Programs/MiKTeX/miktex/bin/x64/:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/mnt/c/Users/lcata/organic_ws/install/my_agent:/mnt/c/Users/lcata/organic_ws/install/environment_msgs:/opt/ros/kilted', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/mnt/c/Users/lcata/organic_ws/build/environment_msgs', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/mnt/c/Users/lcata/organic_ws/build/my_agent:/mnt/c/Users/lcata/organic_ws/install/my_agent/lib/python3.12/site-packages:/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages:/opt/ros/kilted/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/mnt/c/Users/lcata/organic_ws/install/environment_msgs:/opt/ros/kilted/opt/gz_math_vendor:/opt/ros/kilted/opt/gz_utils_vendor:/opt/ros/kilted/opt/gz_cmake_vendor:/mnt/c/Users/lcata/organic_ws/install/my_agent:/opt/ros/kilted', 'WSLENV': ''}), 'shell': False}
+[54.688075] (-) TimerEvent: {}
+[54.789836] (-) TimerEvent: {}
+[54.891760] (-) TimerEvent: {}
+[54.993521] (-) TimerEvent: {}
+[55.095567] (-) TimerEvent: {}
+[55.198034] (-) TimerEvent: {}
+[55.300457] (-) TimerEvent: {}
+[55.403025] (-) TimerEvent: {}
+[55.504949] (-) TimerEvent: {}
+[55.607158] (-) TimerEvent: {}
+[55.709003] (-) TimerEvent: {}
+[55.811653] (-) TimerEvent: {}
+[55.913816] (-) TimerEvent: {}
+[56.016509] (-) TimerEvent: {}
+[56.118165] (-) TimerEvent: {}
+[56.219601] (-) TimerEvent: {}
+[56.320931] (-) TimerEvent: {}
+[56.421904] (-) TimerEvent: {}
+[56.453576] (environment_msgs) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating type hashes for ROS interfaces\x1b[0m\n'}
+[56.471898] (environment_msgs) StdoutLine: {'line': b'[  1%] Built target ament_cmake_python_symlink_environment_msgs\n'}
+[56.522337] (-) TimerEvent: {}
+[56.623695] (-) TimerEvent: {}
+[56.725444] (-) TimerEvent: {}
+[56.826366] (-) TimerEvent: {}
+[56.927640] (-) TimerEvent: {}
+[57.029390] (-) TimerEvent: {}
+[57.131121] (-) TimerEvent: {}
+[57.154967] (environment_msgs) StdoutLine: {'line': b'[  1%] Built target environment_msgs__rosidl_generator_type_description\n'}
+[57.231258] (-) TimerEvent: {}
+[57.272194] (environment_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[57.274508] (environment_msgs) StdoutLine: {'line': b'creating environment_msgs.egg-info\n'}
+[57.295265] (environment_msgs) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[57.317621] (environment_msgs) StdoutLine: {'line': b'writing environment_msgs.egg-info/PKG-INFO\n'}
+[57.323914] (environment_msgs) StdoutLine: {'line': b'writing dependency_links to environment_msgs.egg-info/dependency_links.txt\n'}
+[57.331446] (-) TimerEvent: {}
+[57.335211] (environment_msgs) StdoutLine: {'line': b'writing top-level names to environment_msgs.egg-info/top_level.txt\n'}
+[57.343725] (environment_msgs) StdoutLine: {'line': b"writing manifest file 'environment_msgs.egg-info/SOURCES.txt'\n"}
+[57.428331] (environment_msgs) StdoutLine: {'line': b'[  4%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[57.431680] (-) TimerEvent: {}
+[57.484537] (environment_msgs) StdoutLine: {'line': b"reading manifest file 'environment_msgs.egg-info/SOURCES.txt'\n"}
+[57.530215] (environment_msgs) StdoutLine: {'line': b"writing manifest file 'environment_msgs.egg-info/SOURCES.txt'\n"}
+[57.531855] (-) TimerEvent: {}
+[57.612192] (environment_msgs) StdoutLine: {'line': b'[  4%] Built target ament_cmake_python_build_environment_msgs_egg\n'}
+[57.631993] (-) TimerEvent: {}
+[57.733262] (-) TimerEvent: {}
+[57.834273] (-) TimerEvent: {}
+[57.935632] (-) TimerEvent: {}
+[58.036871] (-) TimerEvent: {}
+[58.138247] (-) TimerEvent: {}
+[58.240114] (-) TimerEvent: {}
+[58.341589] (-) TimerEvent: {}
+[58.443471] (-) TimerEvent: {}
+[58.544550] (-) TimerEvent: {}
+[58.645527] (-) TimerEvent: {}
+[58.747240] (-) TimerEvent: {}
+[58.851128] (-) TimerEvent: {}
+[58.934026] (environment_msgs) StdoutLine: {'line': b'[  4%] Built target environment_msgs__cpp\n'}
+[58.951303] (-) TimerEvent: {}
+[59.052136] (-) TimerEvent: {}
+[59.152877] (-) TimerEvent: {}
+[59.254216] (-) TimerEvent: {}
+[59.355535] (-) TimerEvent: {}
+[59.456904] (-) TimerEvent: {}
+[59.559086] (-) TimerEvent: {}
+[59.661683] (-) TimerEvent: {}
+[59.762888] (-) TimerEvent: {}
+[59.863931] (-) TimerEvent: {}
+[59.965140] (-) TimerEvent: {}
+[60.065888] (-) TimerEvent: {}
+[60.068801] (environment_msgs) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding C object CMakeFiles/environment_msgs__rosidl_generator_c.dir/rosidl_generator_c/environment_msgs/msg/detail/environment_state__description.c.o\x1b[0m\n'}
+[60.074707] (environment_msgs) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/environment_msgs__rosidl_generator_c.dir/rosidl_generator_c/environment_msgs/msg/detail/environment_state__functions.c.o\x1b[0m\n'}
+[60.099162] (environment_msgs) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/environment_msgs__rosidl_generator_c.dir/rosidl_generator_c/environment_msgs/msg/detail/agent_state__description.c.o\x1b[0m\n'}
+[60.103951] (environment_msgs) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/environment_msgs__rosidl_generator_c.dir/rosidl_generator_c/environment_msgs/msg/detail/environment_state__type_support.c.o\x1b[0m\n'}
+[60.114753] (environment_msgs) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/environment_msgs__rosidl_generator_c.dir/rosidl_generator_c/environment_msgs/msg/detail/agent_state__functions.c.o\x1b[0m\n'}
+[60.130708] (environment_msgs) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/environment_msgs__rosidl_generator_c.dir/rosidl_generator_c/environment_msgs/msg/detail/agent_state__type_support.c.o\x1b[0m\n'}
+[60.141917] (environment_msgs) StdoutLine: {'line': b'[ 13%] \x1b[32mBuilding C object CMakeFiles/environment_msgs__rosidl_generator_c.dir/rosidl_generator_c/environment_msgs/msg/detail/local_map_update__description.c.o\x1b[0m\n'}
+[60.157228] (environment_msgs) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding C object CMakeFiles/environment_msgs__rosidl_generator_c.dir/rosidl_generator_c/environment_msgs/msg/detail/local_map_update__functions.c.o\x1b[0m\n'}
+[60.166068] (-) TimerEvent: {}
+[60.266945] (-) TimerEvent: {}
+[60.342740] (environment_msgs) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding C object CMakeFiles/environment_msgs__rosidl_generator_c.dir/rosidl_generator_c/environment_msgs/msg/detail/local_map_update__type_support.c.o\x1b[0m\n'}
+[60.344859] (environment_msgs) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding C object CMakeFiles/environment_msgs__rosidl_generator_c.dir/rosidl_generator_c/environment_msgs/msg/detail/predicted_map__functions.c.o\x1b[0m\n'}
+[60.346849] (environment_msgs) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding C object CMakeFiles/environment_msgs__rosidl_generator_c.dir/rosidl_generator_c/environment_msgs/msg/detail/predicted_map__description.c.o\x1b[0m\n'}
+[60.359398] (environment_msgs) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding C object CMakeFiles/environment_msgs__rosidl_generator_c.dir/rosidl_generator_c/environment_msgs/msg/detail/predicted_map__type_support.c.o\x1b[0m\n'}
+[60.366247] (environment_msgs) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding C object CMakeFiles/environment_msgs__rosidl_generator_c.dir/rosidl_generator_c/environment_msgs/msg/detail/guidance_field__description.c.o\x1b[0m\n'}
+[60.367712] (-) TimerEvent: {}
+[60.369942] (environment_msgs) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding C object CMakeFiles/environment_msgs__rosidl_generator_c.dir/rosidl_generator_c/environment_msgs/msg/detail/guidance_field__functions.c.o\x1b[0m\n'}
+[60.410426] (environment_msgs) StdoutLine: {'line': b'[ 24%] \x1b[32mBuilding C object CMakeFiles/environment_msgs__rosidl_generator_c.dir/rosidl_generator_c/environment_msgs/msg/detail/guidance_field__type_support.c.o\x1b[0m\n'}
+[60.467868] (-) TimerEvent: {}
+[60.568589] (-) TimerEvent: {}
+[60.660828] (environment_msgs) StdoutLine: {'line': b'[ 25%] \x1b[32m\x1b[1mLinking C shared library libenvironment_msgs__rosidl_generator_c.so\x1b[0m\n'}
+[60.668739] (-) TimerEvent: {}
+[60.769703] (-) TimerEvent: {}
+[60.870283] (-) TimerEvent: {}
+[60.970952] (-) TimerEvent: {}
+[61.071645] (-) TimerEvent: {}
+[61.172933] (-) TimerEvent: {}
+[61.274504] (-) TimerEvent: {}
+[61.375219] (-) TimerEvent: {}
+[61.400279] (environment_msgs) StdoutLine: {'line': b'[ 25%] Built target environment_msgs__rosidl_generator_c\n'}
+[61.475384] (-) TimerEvent: {}
+[61.488742] (environment_msgs) StdoutLine: {'line': b'[ 28%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[61.500925] (environment_msgs) StdoutLine: {'line': b'[ 32%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[61.503316] (environment_msgs) StdoutLine: {'line': b'[ 32%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[61.504781] (environment_msgs) StdoutLine: {'line': b'[ 32%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[61.511952] (environment_msgs) StdoutLine: {'line': b'[ 32%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[61.529504] (environment_msgs) StdoutLine: {'line': b'[ 33%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[61.575542] (-) TimerEvent: {}
+[61.676326] (-) TimerEvent: {}
+[61.778839] (-) TimerEvent: {}
+[61.879675] (-) TimerEvent: {}
+[61.980973] (-) TimerEvent: {}
+[62.081700] (-) TimerEvent: {}
+[62.182373] (-) TimerEvent: {}
+[62.283216] (-) TimerEvent: {}
+[62.383959] (-) TimerEvent: {}
+[62.485687] (-) TimerEvent: {}
+[62.552608] (environment_msgs) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/environment_msgs/msg/environment_state__type_support.cpp.o\x1b[0m\n'}
+[62.585871] (-) TimerEvent: {}
+[62.591268] (environment_msgs) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/environment_msgs/msg/environment_state__type_support.cpp.o\x1b[0m\n'}
+[62.594073] (environment_msgs) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/environment_msgs/msg/agent_state__type_support.cpp.o\x1b[0m\n'}
+[62.677402] (environment_msgs) StdoutLine: {'line': b'[ 39%] \x1b[32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/environment_msgs/msg/agent_state__type_support.cpp.o\x1b[0m\n'}
+[62.686051] (-) TimerEvent: {}
+[62.786753] (-) TimerEvent: {}
+[62.887799] (-) TimerEvent: {}
+[62.989803] (-) TimerEvent: {}
+[63.012727] (environment_msgs) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/environment_msgs/msg/detail/environment_state__type_support.cpp.o\x1b[0m\n'}
+[63.084663] (environment_msgs) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/environment_msgs/msg/local_map_update__type_support.cpp.o\x1b[0m\n'}
+[63.089961] (-) TimerEvent: {}
+[63.098238] (environment_msgs) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/environment_msgs/msg/predicted_map__type_support.cpp.o\x1b[0m\n'}
+[63.190158] (-) TimerEvent: {}
+[63.289339] (environment_msgs) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding C object CMakeFiles/environment_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/environment_msgs/msg/detail/environment_state__type_support.c.o\x1b[0m\n'}
+[63.291876] (-) TimerEvent: {}
+[63.392673] (-) TimerEvent: {}
+[63.490115] (environment_msgs) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/environment_msgs/msg/detail/environment_state__type_support_c.cpp.o\x1b[0m\n'}
+[63.492788] (-) TimerEvent: {}
+[63.552337] (environment_msgs) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/environment_msgs/msg/detail/agent_state__type_support_c.cpp.o\x1b[0m\n'}
+[63.564314] (environment_msgs) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/environment_msgs/msg/guidance_field__type_support.cpp.o\x1b[0m\n'}
+[63.591292] (environment_msgs) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/environment_msgs/msg/detail/dds_fastrtps/environment_state__type_support.cpp.o\x1b[0m\n'}
+[63.593417] (-) TimerEvent: {}
+[63.694051] (-) TimerEvent: {}
+[63.794747] (-) TimerEvent: {}
+[63.895612] (-) TimerEvent: {}
+[63.996437] (-) TimerEvent: {}
+[64.016269] (environment_msgs) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding C object CMakeFiles/environment_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/environment_msgs/msg/detail/agent_state__type_support.c.o\x1b[0m\n'}
+[64.096602] (-) TimerEvent: {}
+[64.175454] (environment_msgs) StdoutLine: {'line': b'[ 52%] \x1b[32m\x1b[1mLinking CXX shared library libenvironment_msgs__rosidl_typesupport_c.so\x1b[0m\n'}
+[64.196752] (-) TimerEvent: {}
+[64.245328] (environment_msgs) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/environment_msgs/msg/local_map_update__type_support.cpp.o\x1b[0m\n'}
+[64.265321] (environment_msgs) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/environment_msgs/msg/detail/local_map_update__type_support_c.cpp.o\x1b[0m\n'}
+[64.296942] (-) TimerEvent: {}
+[64.397597] (-) TimerEvent: {}
+[64.498403] (-) TimerEvent: {}
+[64.599049] (-) TimerEvent: {}
+[64.699805] (-) TimerEvent: {}
+[64.720239] (environment_msgs) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding C object CMakeFiles/environment_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/environment_msgs/msg/detail/local_map_update__type_support.c.o\x1b[0m\n'}
+[64.799938] (-) TimerEvent: {}
+[64.843339] (environment_msgs) StdoutLine: {'line': b'[ 56%] Built target environment_msgs__rosidl_typesupport_c\n'}
+[64.900165] (-) TimerEvent: {}
+[64.921142] (environment_msgs) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding C object CMakeFiles/environment_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/environment_msgs/msg/detail/predicted_map__type_support.c.o\x1b[0m\n'}
+[65.000287] (-) TimerEvent: {}
+[65.100962] (-) TimerEvent: {}
+[65.203169] (-) TimerEvent: {}
+[65.304022] (-) TimerEvent: {}
+[65.404831] (-) TimerEvent: {}
+[65.443049] (environment_msgs) StdoutLine: {'line': b'[ 59%] \x1b[32mBuilding C object CMakeFiles/environment_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/environment_msgs/msg/detail/guidance_field__type_support.c.o\x1b[0m\n'}
+[65.505102] (-) TimerEvent: {}
+[65.606048] (-) TimerEvent: {}
+[65.642544] (environment_msgs) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/environment_msgs/msg/detail/predicted_map__type_support_c.cpp.o\x1b[0m\n'}
+[65.679540] (environment_msgs) StdoutLine: {'line': b'[ 62%] \x1b[32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/environment_msgs/msg/detail/agent_state__type_support.cpp.o\x1b[0m\n'}
+[65.696934] (environment_msgs) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/environment_msgs/msg/detail/local_map_update__type_support.cpp.o\x1b[0m\n'}
+[65.710839] (-) TimerEvent: {}
+[65.748635] (environment_msgs) StdoutLine: {'line': b'[ 64%] \x1b[32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/environment_msgs/msg/detail/dds_fastrtps/agent_state__type_support.cpp.o\x1b[0m\n'}
+[65.810995] (-) TimerEvent: {}
+[65.911756] (-) TimerEvent: {}
+[65.969510] (environment_msgs) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/environment_msgs/msg/predicted_map__type_support.cpp.o\x1b[0m\n'}
+[66.011882] (-) TimerEvent: {}
+[66.112526] (-) TimerEvent: {}
+[66.214078] (-) TimerEvent: {}
+[66.315033] (-) TimerEvent: {}
+[66.326666] (environment_msgs) StdoutLine: {'line': b'[ 67%] \x1b[32m\x1b[1mLinking C shared library libenvironment_msgs__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[66.396773] (environment_msgs) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/environment_msgs/msg/guidance_field__type_support.cpp.o\x1b[0m\n'}
+[66.415156] (-) TimerEvent: {}
+[66.516329] (-) TimerEvent: {}
+[66.610422] (environment_msgs) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/environment_msgs/msg/detail/predicted_map__type_support.cpp.o\x1b[0m\n'}
+[66.616453] (-) TimerEvent: {}
+[66.717347] (-) TimerEvent: {}
+[66.818195] (-) TimerEvent: {}
+[66.919769] (-) TimerEvent: {}
+[66.981597] (environment_msgs) StdoutLine: {'line': b'[ 70%] Built target environment_msgs__rosidl_typesupport_introspection_c\n'}
+[67.019921] (-) TimerEvent: {}
+[67.046335] (environment_msgs) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/environment_msgs/msg/detail/guidance_field__type_support.cpp.o\x1b[0m\n'}
+[67.120061] (-) TimerEvent: {}
+[67.222591] (-) TimerEvent: {}
+[67.323260] (-) TimerEvent: {}
+[67.424716] (-) TimerEvent: {}
+[67.527305] (-) TimerEvent: {}
+[67.562103] (environment_msgs) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/environment_msgs/msg/detail/guidance_field__type_support_c.cpp.o\x1b[0m\n'}
+[67.627485] (-) TimerEvent: {}
+[67.729224] (-) TimerEvent: {}
+[67.752662] (environment_msgs) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/environment_msgs/msg/detail/dds_fastrtps/local_map_update__type_support.cpp.o\x1b[0m\n'}
+[67.756781] (environment_msgs) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/environment_msgs/msg/detail/dds_fastrtps/predicted_map__type_support.cpp.o\x1b[0m\n'}
+[67.829386] (-) TimerEvent: {}
+[67.912427] (environment_msgs) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding CXX object CMakeFiles/environment_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/environment_msgs/msg/detail/dds_fastrtps/guidance_field__type_support.cpp.o\x1b[0m\n'}
+[67.929589] (-) TimerEvent: {}
+[68.030629] (-) TimerEvent: {}
+[68.113177] (environment_msgs) StdoutLine: {'line': b'[ 78%] \x1b[32m\x1b[1mLinking CXX shared library libenvironment_msgs__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[68.130820] (-) TimerEvent: {}
+[68.232089] (-) TimerEvent: {}
+[68.332696] (-) TimerEvent: {}
+[68.433338] (-) TimerEvent: {}
+[68.534012] (-) TimerEvent: {}
+[68.634619] (-) TimerEvent: {}
+[68.735889] (-) TimerEvent: {}
+[68.737163] (environment_msgs) StdoutLine: {'line': b'[ 78%] Built target environment_msgs__rosidl_typesupport_cpp\n'}
+[68.836032] (-) TimerEvent: {}
+[68.936627] (-) TimerEvent: {}
+[69.037453] (-) TimerEvent: {}
+[69.138426] (-) TimerEvent: {}
+[69.161521] (environment_msgs) StdoutLine: {'line': b'[ 79%] \x1b[32m\x1b[1mLinking CXX shared library libenvironment_msgs__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[69.238589] (-) TimerEvent: {}
+[69.340069] (-) TimerEvent: {}
+[69.441278] (-) TimerEvent: {}
+[69.542118] (-) TimerEvent: {}
+[69.576893] (environment_msgs) StdoutLine: {'line': b'[ 81%] \x1b[32m\x1b[1mLinking CXX shared library libenvironment_msgs__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[69.642253] (-) TimerEvent: {}
+[69.742883] (-) TimerEvent: {}
+[69.843600] (-) TimerEvent: {}
+[69.944033] (environment_msgs) StdoutLine: {'line': b'[ 81%] Built target environment_msgs__rosidl_typesupport_introspection_cpp\n'}
+[69.945333] (-) TimerEvent: {}
+[70.045835] (-) TimerEvent: {}
+[70.146503] (-) TimerEvent: {}
+[70.224945] (environment_msgs) StdoutLine: {'line': b'[ 81%] Built target environment_msgs__rosidl_typesupport_fastrtps_c\n'}
+[70.246848] (-) TimerEvent: {}
+[70.340176] (environment_msgs) StdoutLine: {'line': b'[ 82%] \x1b[32m\x1b[1mLinking CXX shared library libenvironment_msgs__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[70.347020] (-) TimerEvent: {}
+[70.448099] (-) TimerEvent: {}
+[70.549241] (-) TimerEvent: {}
+[70.650162] (-) TimerEvent: {}
+[70.751278] (-) TimerEvent: {}
+[70.852704] (-) TimerEvent: {}
+[70.954299] (-) TimerEvent: {}
+[71.055955] (-) TimerEvent: {}
+[71.157843] (-) TimerEvent: {}
+[71.259866] (-) TimerEvent: {}
+[71.361900] (-) TimerEvent: {}
+[71.463473] (-) TimerEvent: {}
+[71.565082] (-) TimerEvent: {}
+[71.666560] (-) TimerEvent: {}
+[71.768030] (-) TimerEvent: {}
+[71.869738] (-) TimerEvent: {}
+[71.971248] (-) TimerEvent: {}
+[72.072716] (-) TimerEvent: {}
+[72.174296] (-) TimerEvent: {}
+[72.275990] (-) TimerEvent: {}
+[72.377642] (-) TimerEvent: {}
+[72.395191] (environment_msgs) StdoutLine: {'line': b'[ 82%] Built target environment_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[72.477810] (-) TimerEvent: {}
+[72.579722] (-) TimerEvent: {}
+[72.681519] (-) TimerEvent: {}
+[72.783424] (-) TimerEvent: {}
+[72.884751] (-) TimerEvent: {}
+[72.894685] (environment_msgs) StdoutLine: {'line': b'[ 82%] Built target environment_msgs\n'}
+[72.985032] (-) TimerEvent: {}
+[73.086380] (-) TimerEvent: {}
+[73.188013] (-) TimerEvent: {}
+[73.289542] (-) TimerEvent: {}
+[73.391368] (-) TimerEvent: {}
+[73.493173] (-) TimerEvent: {}
+[73.579893] (environment_msgs) StdoutLine: {'line': b'[ 83%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[73.593645] (-) TimerEvent: {}
+[73.695760] (-) TimerEvent: {}
+[73.797655] (-) TimerEvent: {}
+[73.899756] (-) TimerEvent: {}
+[74.000644] (-) TimerEvent: {}
+[74.102466] (-) TimerEvent: {}
+[74.204011] (-) TimerEvent: {}
+[74.305464] (-) TimerEvent: {}
+[74.407501] (-) TimerEvent: {}
+[74.509099] (-) TimerEvent: {}
+[74.611026] (-) TimerEvent: {}
+[74.712631] (-) TimerEvent: {}
+[74.814288] (-) TimerEvent: {}
+[74.915022] (-) TimerEvent: {}
+[75.016023] (-) TimerEvent: {}
+[75.117543] (-) TimerEvent: {}
+[75.219035] (-) TimerEvent: {}
+[75.320260] (-) TimerEvent: {}
+[75.421683] (-) TimerEvent: {}
+[75.528104] (-) TimerEvent: {}
+[75.597668] (environment_msgs) StdoutLine: {'line': b'[ 83%] Built target environment_msgs__py\n'}
+[75.628579] (-) TimerEvent: {}
+[75.730481] (-) TimerEvent: {}
+[75.832122] (-) TimerEvent: {}
+[75.934206] (-) TimerEvent: {}
+[76.035846] (-) TimerEvent: {}
+[76.137662] (-) TimerEvent: {}
+[76.239506] (-) TimerEvent: {}
+[76.318969] (environment_msgs) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/environment_msgs__rosidl_generator_py.dir/rosidl_generator_py/environment_msgs/msg/_environment_state_s.c.o\x1b[0m\n'}
+[76.332268] (environment_msgs) StdoutLine: {'line': b'[ 86%] \x1b[32mBuilding C object CMakeFiles/environment_msgs__rosidl_generator_py.dir/rosidl_generator_py/environment_msgs/msg/_agent_state_s.c.o\x1b[0m\n'}
+[76.339679] (-) TimerEvent: {}
+[76.342570] (environment_msgs) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/environment_msgs__rosidl_generator_py.dir/rosidl_generator_py/environment_msgs/msg/_local_map_update_s.c.o\x1b[0m\n'}
+[76.359423] (environment_msgs) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/environment_msgs__rosidl_generator_py.dir/rosidl_generator_py/environment_msgs/msg/_predicted_map_s.c.o\x1b[0m\n'}
+[76.366696] (environment_msgs) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/environment_msgs__rosidl_generator_py.dir/rosidl_generator_py/environment_msgs/msg/_guidance_field_s.c.o\x1b[0m\n'}
+[76.439882] (-) TimerEvent: {}
+[76.540916] (-) TimerEvent: {}
+[76.641827] (-) TimerEvent: {}
+[76.743110] (-) TimerEvent: {}
+[76.844276] (-) TimerEvent: {}
+[76.945252] (-) TimerEvent: {}
+[77.046008] (-) TimerEvent: {}
+[77.146692] (-) TimerEvent: {}
+[77.189245] (environment_msgs) StdoutLine: {'line': b'[ 91%] \x1b[32m\x1b[1mLinking C shared library libenvironment_msgs__rosidl_generator_py.so\x1b[0m\n'}
+[77.246995] (-) TimerEvent: {}
+[77.348323] (-) TimerEvent: {}
+[77.449795] (-) TimerEvent: {}
+[77.551537] (-) TimerEvent: {}
+[77.652968] (-) TimerEvent: {}
+[77.754409] (-) TimerEvent: {}
+[77.856085] (-) TimerEvent: {}
+[77.957924] (-) TimerEvent: {}
+[78.059869] (-) TimerEvent: {}
+[78.162042] (-) TimerEvent: {}
+[78.263860] (-) TimerEvent: {}
+[78.366043] (-) TimerEvent: {}
+[78.469585] (-) TimerEvent: {}
+[78.571235] (-) TimerEvent: {}
+[78.672933] (-) TimerEvent: {}
+[78.752325] (environment_msgs) StdoutLine: {'line': b'[ 91%] Built target environment_msgs__rosidl_generator_py\n'}
+[78.773327] (-) TimerEvent: {}
+[78.874997] (-) TimerEvent: {}
+[78.976012] (-) TimerEvent: {}
+[79.022984] (environment_msgs) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/environment_msgs_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/environment_msgs/_environment_msgs_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[79.028629] (environment_msgs) StdoutLine: {'line': b'[ 94%] \x1b[32mBuilding C object CMakeFiles/environment_msgs_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/environment_msgs/_environment_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[79.047378] (environment_msgs) StdoutLine: {'line': b'[ 95%] \x1b[32mBuilding C object CMakeFiles/environment_msgs_s__rosidl_typesupport_c.dir/rosidl_generator_py/environment_msgs/_environment_msgs_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[79.076197] (-) TimerEvent: {}
+[79.177195] (-) TimerEvent: {}
+[79.277821] (-) TimerEvent: {}
+[79.378611] (-) TimerEvent: {}
+[79.479690] (-) TimerEvent: {}
+[79.580673] (-) TimerEvent: {}
+[79.681366] (-) TimerEvent: {}
+[79.782236] (-) TimerEvent: {}
+[79.809147] (environment_msgs) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/environment_msgs/environment_msgs_s__rosidl_typesupport_c.so\x1b[0m\n'}
+[79.882526] (-) TimerEvent: {}
+[79.935257] (environment_msgs) StdoutLine: {'line': b'[ 98%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/environment_msgs/environment_msgs_s__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[79.958138] (environment_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/environment_msgs/environment_msgs_s__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[79.982747] (-) TimerEvent: {}
+[80.083683] (-) TimerEvent: {}
+[80.155622] (environment_msgs) StdoutLine: {'line': b'[100%] Built target environment_msgs_s__rosidl_typesupport_c\n'}
+[80.183899] (-) TimerEvent: {}
+[80.241359] (environment_msgs) StdoutLine: {'line': b'[100%] Built target environment_msgs_s__rosidl_typesupport_introspection_c\n'}
+[80.246998] (environment_msgs) StdoutLine: {'line': b'[100%] Built target environment_msgs_s__rosidl_typesupport_fastrtps_c\n'}
+[80.284103] (-) TimerEvent: {}
+[80.385353] (-) TimerEvent: {}
+[80.486306] (-) TimerEvent: {}
+[80.587177] (-) TimerEvent: {}
+[80.638953] (environment_msgs) CommandEnded: {'returncode': 0}
+[80.662791] (environment_msgs) JobProgress: {'identifier': 'environment_msgs', 'progress': 'install'}
+[80.687459] (-) TimerEvent: {}
+[80.695691] (environment_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/mnt/c/Users/lcata/organic_ws/build/environment_msgs'], 'cwd': '/mnt/c/Users/lcata/organic_ws/build/environment_msgs', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'lcata', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib:/opt/ros/kilted/opt/zenoh_cpp_vendor/lib:/opt/ros/kilted/opt/gz_math_vendor/lib:/opt/ros/kilted/opt/gz_utils_vendor/lib:/opt/ros/kilted/opt/rviz_ogre_vendor/lib:/opt/ros/kilted/lib/x86_64-linux-gnu:/opt/ros/kilted/opt/gz_cmake_vendor/lib:/opt/ros/kilted/lib', 'HOME': '/home/lcata', 'OLDPWD': '/mnt/c/Users/lcata', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/mnt/c/Users/lcata/organic_ws/install', 'ROS_DISTRO': 'kilted', 'LOGNAME': 'lcata', 'NAME': 'LaptopStudio', 'WSL_INTEROP': '/run/WSL/7434_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/opt/ros/kilted/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/mnt/c/Program Files/MATLAB/R2023b/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/lcata/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/lcata/.dotnet/tools:/mnt/c/Users/lcata/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/lcata/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/lcata/AppData/Local/Programs/MiKTeX/miktex/bin/x64/:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/mnt/c/Users/lcata/organic_ws/install/my_agent:/mnt/c/Users/lcata/organic_ws/install/environment_msgs:/opt/ros/kilted', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/mnt/c/Users/lcata/organic_ws/build/environment_msgs', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/mnt/c/Users/lcata/organic_ws/build/my_agent:/mnt/c/Users/lcata/organic_ws/install/my_agent/lib/python3.12/site-packages:/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages:/opt/ros/kilted/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/mnt/c/Users/lcata/organic_ws/install/environment_msgs:/opt/ros/kilted/opt/gz_math_vendor:/opt/ros/kilted/opt/gz_utils_vendor:/opt/ros/kilted/opt/gz_cmake_vendor:/mnt/c/Users/lcata/organic_ws/install/my_agent:/opt/ros/kilted', 'WSLENV': ''}), 'shell': False}
+[80.740311] (environment_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[80.775434] (environment_msgs) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[80.787859] (-) TimerEvent: {}
+[80.889642] (-) TimerEvent: {}
+[80.936703] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/ament_index/resource_index/rosidl_interfaces/environment_msgs\n'}
+[80.990052] (-) TimerEvent: {}
+[81.092194] (-) TimerEvent: {}
+[81.194954] (-) TimerEvent: {}
+[81.296946] (-) TimerEvent: {}
+[81.337787] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/msg/EnvironmentState.json\n'}
+[81.397493] (-) TimerEvent: {}
+[81.499697] (-) TimerEvent: {}
+[81.602036] (-) TimerEvent: {}
+[81.675908] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/msg/AgentState.json\n'}
+[81.702404] (-) TimerEvent: {}
+[81.804759] (-) TimerEvent: {}
+[81.906401] (-) TimerEvent: {}
+[82.007163] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/msg/LocalMapUpdate.json\n'}
+[82.011542] (-) TimerEvent: {}
+[82.113663] (-) TimerEvent: {}
+[82.215674] (-) TimerEvent: {}
+[82.313306] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/msg/PredictedMap.json\n'}
+[82.317549] (-) TimerEvent: {}
+[82.419446] (-) TimerEvent: {}
+[82.521121] (-) TimerEvent: {}
+[82.584850] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/msg/GuidanceField.json\n'}
+[82.621585] (-) TimerEvent: {}
+[82.723598] (-) TimerEvent: {}
+[82.825848] (-) TimerEvent: {}
+[82.928229] (-) TimerEvent: {}
+[83.030325] (-) TimerEvent: {}
+[83.132868] (-) TimerEvent: {}
+[83.235231] (-) TimerEvent: {}
+[83.338053] (-) TimerEvent: {}
+[83.440131] (-) TimerEvent: {}
+[83.542255] (-) TimerEvent: {}
+[83.644137] (-) TimerEvent: {}
+[83.746175] (-) TimerEvent: {}
+[83.847540] (-) TimerEvent: {}
+[83.949628] (-) TimerEvent: {}
+[84.051529] (-) TimerEvent: {}
+[84.153137] (-) TimerEvent: {}
+[84.255218] (-) TimerEvent: {}
+[84.287610] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/agent_state.h\n'}
+[84.355707] (-) TimerEvent: {}
+[84.381730] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/agent_state__functions.h\n'}
+[84.452251] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/agent_state__struct.h\n'}
+[84.455811] (-) TimerEvent: {}
+[84.524465] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/agent_state__type_support.h\n'}
+[84.556254] (-) TimerEvent: {}
+[84.657824] (-) TimerEvent: {}
+[84.748946] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/environment_state__functions.h\n'}
+[84.758260] (-) TimerEvent: {}
+[84.859772] (-) TimerEvent: {}
+[84.961446] (-) TimerEvent: {}
+[85.063128] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/environment_state__struct.h\n'}
+[85.067528] (-) TimerEvent: {}
+[85.169511] (-) TimerEvent: {}
+[85.271997] (-) TimerEvent: {}
+[85.374382] (-) TimerEvent: {}
+[85.382559] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/environment_state__type_support.h\n'}
+[85.475102] (-) TimerEvent: {}
+[85.577080] (-) TimerEvent: {}
+[85.679430] (-) TimerEvent: {}
+[85.711623] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/guidance_field__functions.h\n'}
+[85.779937] (-) TimerEvent: {}
+[85.882194] (-) TimerEvent: {}
+[85.929884] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/guidance_field__struct.h\n'}
+[85.982890] (-) TimerEvent: {}
+[86.085293] (-) TimerEvent: {}
+[86.164150] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/guidance_field__type_support.h\n'}
+[86.185672] (-) TimerEvent: {}
+[86.288244] (-) TimerEvent: {}
+[86.390971] (-) TimerEvent: {}
+[86.467074] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/local_map_update__functions.h\n'}
+[86.491294] (-) TimerEvent: {}
+[86.560595] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/local_map_update__struct.h\n'}
+[86.591628] (-) TimerEvent: {}
+[86.630880] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/local_map_update__type_support.h\n'}
+[86.692162] (-) TimerEvent: {}
+[86.701335] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/predicted_map__functions.h\n'}
+[86.788644] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/predicted_map__struct.h\n'}
+[86.792300] (-) TimerEvent: {}
+[86.860086] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/predicted_map__type_support.h\n'}
+[86.892676] (-) TimerEvent: {}
+[86.935363] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/environment_state.h\n'}
+[86.993436] (-) TimerEvent: {}
+[87.094894] (-) TimerEvent: {}
+[87.121676] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/guidance_field.h\n'}
+[87.195637] (-) TimerEvent: {}
+[87.260703] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/local_map_update.h\n'}
+[87.295814] (-) TimerEvent: {}
+[87.342484] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/predicted_map.h\n'}
+[87.396352] (-) TimerEvent: {}
+[87.410285] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[87.497061] (-) TimerEvent: {}
+[87.500361] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/environment/library_path.sh\n'}
+[87.567821] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/environment/library_path.dsv\n'}
+[87.597443] (-) TimerEvent: {}
+[87.698853] (-) TimerEvent: {}
+[87.800207] (-) TimerEvent: {}
+[87.839622] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/agent_state__rosidl_typesupport_fastrtps_c.h\n'}
+[87.900771] (-) TimerEvent: {}
+[87.913295] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/environment_state__rosidl_typesupport_fastrtps_c.h\n'}
+[88.001590] (-) TimerEvent: {}
+[88.064518] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/guidance_field__rosidl_typesupport_fastrtps_c.h\n'}
+[88.101915] (-) TimerEvent: {}
+[88.175093] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/local_map_update__rosidl_typesupport_fastrtps_c.h\n'}
+[88.202258] (-) TimerEvent: {}
+[88.247248] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/predicted_map__rosidl_typesupport_fastrtps_c.h\n'}
+[88.302952] (-) TimerEvent: {}
+[88.334829] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[88.403094] (-) TimerEvent: {}
+[88.504119] (-) TimerEvent: {}
+[88.523958] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/agent_state__rosidl_typesupport_introspection_c.h\n'}
+[88.598848] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/environment_state__rosidl_typesupport_introspection_c.h\n'}
+[88.604298] (-) TimerEvent: {}
+[88.672908] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/guidance_field__rosidl_typesupport_introspection_c.h\n'}
+[88.704689] (-) TimerEvent: {}
+[88.743530] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/local_map_update__rosidl_typesupport_introspection_c.h\n'}
+[88.805257] (-) TimerEvent: {}
+[88.816020] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/predicted_map__rosidl_typesupport_introspection_c.h\n'}
+[88.905476] (-) TimerEvent: {}
+[88.978482] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[89.005934] (-) TimerEvent: {}
+[89.108141] (-) TimerEvent: {}
+[89.209950] (-) TimerEvent: {}
+[89.311317] (-) TimerEvent: {}
+[89.412656] (-) TimerEvent: {}
+[89.452488] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/agent_state.hpp\n'}
+[89.512811] (-) TimerEvent: {}
+[89.531341] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/agent_state__builder.hpp\n'}
+[89.612972] (-) TimerEvent: {}
+[89.615787] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/agent_state__struct.hpp\n'}
+[89.713122] (-) TimerEvent: {}
+[89.744144] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/agent_state__traits.hpp\n'}
+[89.813332] (-) TimerEvent: {}
+[89.837269] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/agent_state__type_support.hpp\n'}
+[89.913636] (-) TimerEvent: {}
+[89.926370] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/environment_state__builder.hpp\n'}
+[90.002237] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/environment_state__struct.hpp\n'}
+[90.013811] (-) TimerEvent: {}
+[90.108691] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/environment_state__traits.hpp\n'}
+[90.114075] (-) TimerEvent: {}
+[90.215029] (-) TimerEvent: {}
+[90.265294] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/environment_state__type_support.hpp\n'}
+[90.315189] (-) TimerEvent: {}
+[90.358491] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/guidance_field__builder.hpp\n'}
+[90.415338] (-) TimerEvent: {}
+[90.439129] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/guidance_field__struct.hpp\n'}
+[90.515482] (-) TimerEvent: {}
+[90.518963] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/guidance_field__traits.hpp\n'}
+[90.615663] (-) TimerEvent: {}
+[90.689147] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/guidance_field__type_support.hpp\n'}
+[90.715890] (-) TimerEvent: {}
+[90.785349] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/local_map_update__builder.hpp\n'}
+[90.816054] (-) TimerEvent: {}
+[90.869854] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/local_map_update__struct.hpp\n'}
+[90.916218] (-) TimerEvent: {}
+[90.950261] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/local_map_update__traits.hpp\n'}
+[91.016364] (-) TimerEvent: {}
+[91.029000] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/local_map_update__type_support.hpp\n'}
+[91.116799] (-) TimerEvent: {}
+[91.123193] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/predicted_map__builder.hpp\n'}
+[91.205899] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/predicted_map__struct.hpp\n'}
+[91.216994] (-) TimerEvent: {}
+[91.291918] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/predicted_map__traits.hpp\n'}
+[91.317398] (-) TimerEvent: {}
+[91.419145] (-) TimerEvent: {}
+[91.436553] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/predicted_map__type_support.hpp\n'}
+[91.519998] (-) TimerEvent: {}
+[91.622126] (-) TimerEvent: {}
+[91.683659] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/environment_state.hpp\n'}
+[91.722516] (-) TimerEvent: {}
+[91.823773] (-) TimerEvent: {}
+[91.868529] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/guidance_field.hpp\n'}
+[91.924106] (-) TimerEvent: {}
+[91.947683] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/local_map_update.hpp\n'}
+[92.024404] (-) TimerEvent: {}
+[92.034058] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/predicted_map.hpp\n'}
+[92.124629] (-) TimerEvent: {}
+[92.144636] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[92.225297] (-) TimerEvent: {}
+[92.327008] (-) TimerEvent: {}
+[92.429171] (-) TimerEvent: {}
+[92.530591] (-) TimerEvent: {}
+[92.611100] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/agent_state__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[92.630747] (-) TimerEvent: {}
+[92.697938] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/environment_state__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[92.731139] (-) TimerEvent: {}
+[92.782042] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/guidance_field__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[92.831629] (-) TimerEvent: {}
+[92.874577] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/local_map_update__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[92.931847] (-) TimerEvent: {}
+[92.964557] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/predicted_map__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[93.032384] (-) TimerEvent: {}
+[93.057394] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[93.133362] (-) TimerEvent: {}
+[93.235157] (-) TimerEvent: {}
+[93.337234] (-) TimerEvent: {}
+[93.439634] (-) TimerEvent: {}
+[93.541910] (-) TimerEvent: {}
+[93.643968] (-) TimerEvent: {}
+[93.746308] (-) TimerEvent: {}
+[93.813502] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/agent_state__rosidl_typesupport_introspection_cpp.hpp\n'}
+[93.846558] (-) TimerEvent: {}
+[93.949798] (-) TimerEvent: {}
+[93.979133] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/environment_state__rosidl_typesupport_introspection_cpp.hpp\n'}
+[94.050352] (-) TimerEvent: {}
+[94.069648] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/guidance_field__rosidl_typesupport_introspection_cpp.hpp\n'}
+[94.151177] (-) TimerEvent: {}
+[94.178592] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/local_map_update__rosidl_typesupport_introspection_cpp.hpp\n'}
+[94.251362] (-) TimerEvent: {}
+[94.267304] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/include/environment_msgs/environment_msgs/msg/detail/predicted_map__rosidl_typesupport_introspection_cpp.hpp\n'}
+[94.351224] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/environment/pythonpath.sh\n'}
+[94.352159] (-) TimerEvent: {}
+[94.452665] (-) TimerEvent: {}
+[94.462172] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/environment/pythonpath.dsv\n'}
+[94.552841] (-) TimerEvent: {}
+[94.601414] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs-0.0.0-py3.12.egg-info/PKG-INFO\n'}
+[94.653070] (-) TimerEvent: {}
+[94.753678] (-) TimerEvent: {}
+[94.784486] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs-0.0.0-py3.12.egg-info/SOURCES.txt\n'}
+[94.853860] (-) TimerEvent: {}
+[94.954589] (-) TimerEvent: {}
+[95.008502] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs-0.0.0-py3.12.egg-info/dependency_links.txt\n'}
+[95.054891] (-) TimerEvent: {}
+[95.156111] (-) TimerEvent: {}
+[95.257700] (-) TimerEvent: {}
+[95.298469] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs-0.0.0-py3.12.egg-info/top_level.txt\n'}
+[95.357913] (-) TimerEvent: {}
+[95.458499] (-) TimerEvent: {}
+[95.559035] (-) TimerEvent: {}
+[95.659480] (-) TimerEvent: {}
+[95.759968] (-) TimerEvent: {}
+[95.860732] (-) TimerEvent: {}
+[95.961958] (-) TimerEvent: {}
+[96.051146] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/__init__.py\n'}
+[96.062321] (-) TimerEvent: {}
+[96.163371] (-) TimerEvent: {}
+[96.264102] (-) TimerEvent: {}
+[96.270907] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/_environment_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[96.364356] (-) TimerEvent: {}
+[96.465227] (-) TimerEvent: {}
+[96.466524] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/_environment_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[96.565388] (-) TimerEvent: {}
+[96.642405] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/_environment_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[96.665582] (-) TimerEvent: {}
+[96.766126] (-) TimerEvent: {}
+[96.838353] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/environment_msgs_s__rosidl_typesupport_c.so\n'}
+[96.866278] (-) TimerEvent: {}
+[96.966876] (-) TimerEvent: {}
+[97.011472] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/environment_msgs_s__rosidl_typesupport_fastrtps_c.so\n'}
+[97.066989] (-) TimerEvent: {}
+[97.167468] (-) TimerEvent: {}
+[97.189799] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/environment_msgs_s__rosidl_typesupport_introspection_c.so\n'}
+[97.267582] (-) TimerEvent: {}
+[97.368306] (-) TimerEvent: {}
+[97.397006] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/msg/__init__.py\n'}
+[97.468442] (-) TimerEvent: {}
+[97.569100] (-) TimerEvent: {}
+[97.587785] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/msg/_agent_state.py\n'}
+[97.669247] (-) TimerEvent: {}
+[97.770287] (-) TimerEvent: {}
+[97.871052] (-) TimerEvent: {}
+[97.972182] (-) TimerEvent: {}
+[98.073768] (-) TimerEvent: {}
+[98.160786] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/msg/_agent_state_s.c\n'}
+[98.173939] (-) TimerEvent: {}
+[98.275377] (-) TimerEvent: {}
+[98.376378] (-) TimerEvent: {}
+[98.476884] (-) TimerEvent: {}
+[98.574212] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/msg/_environment_state.py\n'}
+[98.577025] (-) TimerEvent: {}
+[98.677726] (-) TimerEvent: {}
+[98.757722] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/msg/_environment_state_s.c\n'}
+[98.777818] (-) TimerEvent: {}
+[98.878440] (-) TimerEvent: {}
+[98.954325] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/msg/_guidance_field.py\n'}
+[98.978556] (-) TimerEvent: {}
+[99.079307] (-) TimerEvent: {}
+[99.138821] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/msg/_guidance_field_s.c\n'}
+[99.179433] (-) TimerEvent: {}
+[99.279897] (-) TimerEvent: {}
+[99.311904] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/msg/_local_map_update.py\n'}
+[99.380142] (-) TimerEvent: {}
+[99.480731] (-) TimerEvent: {}
+[99.581743] (-) TimerEvent: {}
+[99.683193] (-) TimerEvent: {}
+[99.748206] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/msg/_local_map_update_s.c\n'}
+[99.783407] (-) TimerEvent: {}
+[99.884312] (-) TimerEvent: {}
+[99.985943] (-) TimerEvent: {}
+[100.087396] (-) TimerEvent: {}
+[100.189261] (-) TimerEvent: {}
+[100.290582] (-) TimerEvent: {}
+[100.392035] (-) TimerEvent: {}
+[100.444574] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/msg/_predicted_map.py\n'}
+[100.492115] (-) TimerEvent: {}
+[100.592634] (-) TimerEvent: {}
+[100.624317] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/msg/_predicted_map_s.c\n'}
+[100.692742] (-) TimerEvent: {}
+[100.793234] (-) TimerEvent: {}
+[100.859757] (environment_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/environment_msgs_s__rosidl_typesupport_fastrtps_c.so\n'}
+[100.893338] (-) TimerEvent: {}
+[100.920770] (environment_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/environment_msgs_s__rosidl_typesupport_introspection_c.so\n'}
+[100.980714] (environment_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/environment_msgs_s__rosidl_typesupport_c.so\n'}
+[100.993445] (-) TimerEvent: {}
+[101.001815] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/msg/EnvironmentState.idl\n'}
+[101.093584] (-) TimerEvent: {}
+[101.187725] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/msg/AgentState.idl\n'}
+[101.193662] (-) TimerEvent: {}
+[101.294142] (-) TimerEvent: {}
+[101.394200] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/msg/LocalMapUpdate.idl\n'}
+[101.395431] (-) TimerEvent: {}
+[101.495862] (-) TimerEvent: {}
+[101.564126] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/msg/PredictedMap.idl\n'}
+[101.595996] (-) TimerEvent: {}
+[101.696476] (-) TimerEvent: {}
+[101.748555] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/msg/GuidanceField.idl\n'}
+[101.796609] (-) TimerEvent: {}
+[101.897284] (-) TimerEvent: {}
+[101.925654] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/msg/EnvironmentState.msg\n'}
+[101.997437] (-) TimerEvent: {}
+[102.098197] (-) TimerEvent: {}
+[102.144672] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/msg/AgentState.msg\n'}
+[102.198332] (-) TimerEvent: {}
+[102.298878] (-) TimerEvent: {}
+[102.375886] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/msg/LocalMapUpdate.msg\n'}
+[102.399014] (-) TimerEvent: {}
+[102.499779] (-) TimerEvent: {}
+[102.556373] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/msg/PredictedMap.msg\n'}
+[102.600146] (-) TimerEvent: {}
+[102.701442] (-) TimerEvent: {}
+[102.803046] (-) TimerEvent: {}
+[102.904706] (-) TimerEvent: {}
+[103.006194] (-) TimerEvent: {}
+[103.107634] (-) TimerEvent: {}
+[103.208752] (-) TimerEvent: {}
+[103.214705] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/msg/GuidanceField.msg\n'}
+[103.308908] (-) TimerEvent: {}
+[103.409497] (-) TimerEvent: {}
+[103.416763] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/ament_index/resource_index/package_run_dependencies/environment_msgs\n'}
+[103.509664] (-) TimerEvent: {}
+[103.610312] (-) TimerEvent: {}
+[103.635330] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/ament_index/resource_index/parent_prefix_path/environment_msgs\n'}
+[103.710455] (-) TimerEvent: {}
+[103.811404] (-) TimerEvent: {}
+[103.828066] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/environment/ament_prefix_path.sh\n'}
+[103.911688] (-) TimerEvent: {}
+[104.012711] (-) TimerEvent: {}
+[104.014952] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/environment/ament_prefix_path.dsv\n'}
+[104.112998] (-) TimerEvent: {}
+[104.213709] (-) TimerEvent: {}
+[104.314918] (-) TimerEvent: {}
+[104.388376] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/environment/path.sh\n'}
+[104.415119] (-) TimerEvent: {}
+[104.516754] (-) TimerEvent: {}
+[104.618366] (-) TimerEvent: {}
+[104.719985] (-) TimerEvent: {}
+[104.821251] (-) TimerEvent: {}
+[104.869550] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/environment/path.dsv\n'}
+[104.921392] (-) TimerEvent: {}
+[105.021922] (-) TimerEvent: {}
+[105.063496] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/local_setup.bash\n'}
+[105.122049] (-) TimerEvent: {}
+[105.222542] (-) TimerEvent: {}
+[105.242512] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/local_setup.sh\n'}
+[105.322668] (-) TimerEvent: {}
+[105.423147] (-) TimerEvent: {}
+[105.425960] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/local_setup.zsh\n'}
+[105.523319] (-) TimerEvent: {}
+[105.596916] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/local_setup.dsv\n'}
+[105.623443] (-) TimerEvent: {}
+[105.723927] (-) TimerEvent: {}
+[105.767052] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/package.dsv\n'}
+[105.824177] (-) TimerEvent: {}
+[105.924751] (-) TimerEvent: {}
+[105.961248] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/ament_index/resource_index/packages/environment_msgs\n'}
+[106.024900] (-) TimerEvent: {}
+[106.125382] (-) TimerEvent: {}
+[106.163736] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[106.225515] (-) TimerEvent: {}
+[106.326219] (-) TimerEvent: {}
+[106.345492] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[106.426284] (-) TimerEvent: {}
+[106.514994] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[106.526399] (-) TimerEvent: {}
+[106.627068] (-) TimerEvent: {}
+[106.719571] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[106.727229] (-) TimerEvent: {}
+[106.827715] (-) TimerEvent: {}
+[106.928667] (-) TimerEvent: {}
+[107.020060] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[107.028927] (-) TimerEvent: {}
+[107.129648] (-) TimerEvent: {}
+[107.228724] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[107.229653] (-) TimerEvent: {}
+[107.330133] (-) TimerEvent: {}
+[107.416827] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[107.430253] (-) TimerEvent: {}
+[107.530876] (-) TimerEvent: {}
+[107.596311] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/environment_msgsConfig.cmake\n'}
+[107.631094] (-) TimerEvent: {}
+[107.731845] (-) TimerEvent: {}
+[107.817963] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/environment_msgsConfig-version.cmake\n'}
+[107.832219] (-) TimerEvent: {}
+[107.933231] (-) TimerEvent: {}
+[108.013676] (environment_msgs) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/package.xml\n'}
+[108.033474] (-) TimerEvent: {}
+[108.134317] (-) TimerEvent: {}
+[108.190518] (environment_msgs) StdoutLine: {'line': b'-- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/libenvironment_msgs__rosidl_generator_c.so\n'}
+[108.234495] (-) TimerEvent: {}
+[108.308511] (environment_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/libenvironment_msgs__rosidl_generator_c.so" to ""\n'}
+[108.330995] (environment_msgs) StdoutLine: {'line': b'-- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/libenvironment_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[108.334650] (-) TimerEvent: {}
+[108.435336] (-) TimerEvent: {}
+[108.450410] (environment_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/libenvironment_msgs__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[108.473920] (environment_msgs) StdoutLine: {'line': b'-- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/libenvironment_msgs__rosidl_typesupport_introspection_c.so\n'}
+[108.535553] (-) TimerEvent: {}
+[108.587432] (environment_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/libenvironment_msgs__rosidl_typesupport_introspection_c.so" to ""\n'}
+[108.612580] (environment_msgs) StdoutLine: {'line': b'-- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/libenvironment_msgs__rosidl_typesupport_c.so\n'}
+[108.635828] (-) TimerEvent: {}
+[108.736852] (-) TimerEvent: {}
+[108.751697] (environment_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/libenvironment_msgs__rosidl_typesupport_c.so" to ""\n'}
+[108.783281] (environment_msgs) StdoutLine: {'line': b'-- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/libenvironment_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[108.837114] (-) TimerEvent: {}
+[108.931749] (environment_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/libenvironment_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[108.937325] (-) TimerEvent: {}
+[108.961497] (environment_msgs) StdoutLine: {'line': b'-- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/libenvironment_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[109.037654] (-) TimerEvent: {}
+[109.093009] (environment_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/libenvironment_msgs__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[109.120149] (environment_msgs) StdoutLine: {'line': b'-- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/libenvironment_msgs__rosidl_typesupport_cpp.so\n'}
+[109.137923] (-) TimerEvent: {}
+[109.238925] (-) TimerEvent: {}
+[109.243999] (environment_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/libenvironment_msgs__rosidl_typesupport_cpp.so" to ""\n'}
+[109.339282] (-) TimerEvent: {}
+[109.440641] (-) TimerEvent: {}
+[109.542995] (-) TimerEvent: {}
+[109.644802] (-) TimerEvent: {}
+[109.746963] (-) TimerEvent: {}
+[109.848516] (-) TimerEvent: {}
+[109.950986] (-) TimerEvent: {}
+[110.052990] (-) TimerEvent: {}
+[110.154319] (-) TimerEvent: {}
+[110.255702] (-) TimerEvent: {}
+[110.357318] (-) TimerEvent: {}
+[110.458645] (-) TimerEvent: {}
+[110.559252] (-) TimerEvent: {}
+[110.660016] (-) TimerEvent: {}
+[110.761038] (-) TimerEvent: {}
+[110.861718] (-) TimerEvent: {}
+[110.962384] (-) TimerEvent: {}
+[111.063166] (-) TimerEvent: {}
+[111.163983] (-) TimerEvent: {}
+[111.264787] (-) TimerEvent: {}
+[111.360988] (environment_msgs) StdoutLine: {'line': b"Listing '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs'...\n"}
+[111.361798] (environment_msgs) StdoutLine: {'line': b"Compiling '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/__init__.py'...\n"}
+[111.362646] (environment_msgs) StdoutLine: {'line': b"Listing '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/msg'...\n"}
+[111.363391] (environment_msgs) StdoutLine: {'line': b"Compiling '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/msg/__init__.py'...\n"}
+[111.364055] (environment_msgs) StdoutLine: {'line': b"Compiling '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/msg/_agent_state.py'...\n"}
+[111.364621] (environment_msgs) StdoutLine: {'line': b"Compiling '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/msg/_environment_state.py'...\n"}
+[111.365184] (-) TimerEvent: {}
+[111.365411] (environment_msgs) StdoutLine: {'line': b"Compiling '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/msg/_guidance_field.py'...\n"}
+[111.366297] (environment_msgs) StdoutLine: {'line': b"Compiling '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/msg/_local_map_update.py'...\n"}
+[111.367166] (environment_msgs) StdoutLine: {'line': b"Compiling '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages/environment_msgs/msg/_predicted_map.py'...\n"}
+[111.385915] (environment_msgs) StdoutLine: {'line': b'-- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/libenvironment_msgs__rosidl_generator_py.so\n'}
+[111.465587] (-) TimerEvent: {}
+[111.526020] (environment_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/libenvironment_msgs__rosidl_generator_py.so" to ""\n'}
+[111.565893] (-) TimerEvent: {}
+[111.592506] (environment_msgs) StdoutLine: {'line': b'-- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/export_environment_msgs__rosidl_generator_cExport.cmake\n'}
+[111.666333] (-) TimerEvent: {}
+[111.767794] (-) TimerEvent: {}
+[111.869736] (-) TimerEvent: {}
+[111.971915] (-) TimerEvent: {}
+[112.074091] (-) TimerEvent: {}
+[112.114225] (environment_msgs) StdoutLine: {'line': b'-- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/export_environment_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[112.174431] (-) TimerEvent: {}
+[112.276420] (-) TimerEvent: {}
+[112.378467] (-) TimerEvent: {}
+[112.480444] (-) TimerEvent: {}
+[112.582526] (-) TimerEvent: {}
+[112.677795] (environment_msgs) StdoutLine: {'line': b'-- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/export_environment_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[112.682932] (-) TimerEvent: {}
+[112.784823] (-) TimerEvent: {}
+[112.886445] (-) TimerEvent: {}
+[112.988005] (-) TimerEvent: {}
+[113.089699] (-) TimerEvent: {}
+[113.191498] (-) TimerEvent: {}
+[113.224843] (environment_msgs) StdoutLine: {'line': b'-- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/export_environment_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[113.292165] (-) TimerEvent: {}
+[113.394394] (-) TimerEvent: {}
+[113.496327] (-) TimerEvent: {}
+[113.598389] (-) TimerEvent: {}
+[113.700031] (-) TimerEvent: {}
+[113.767036] (environment_msgs) StdoutLine: {'line': b'-- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/environment_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[113.800397] (-) TimerEvent: {}
+[113.895236] (environment_msgs) StdoutLine: {'line': b'-- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/environment_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[113.900519] (-) TimerEvent: {}
+[114.001730] (-) TimerEvent: {}
+[114.103302] (-) TimerEvent: {}
+[114.205280] (-) TimerEvent: {}
+[114.270878] (environment_msgs) StdoutLine: {'line': b'-- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/environment_msgs__rosidl_typesupport_cExport.cmake\n'}
+[114.305688] (-) TimerEvent: {}
+[114.407275] (-) TimerEvent: {}
+[114.481426] (environment_msgs) StdoutLine: {'line': b'-- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/environment_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[114.507699] (-) TimerEvent: {}
+[114.606635] (environment_msgs) StdoutLine: {'line': b'-- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/export_environment_msgs__rosidl_generator_cppExport.cmake\n'}
+[114.607786] (-) TimerEvent: {}
+[114.708780] (-) TimerEvent: {}
+[114.716397] (environment_msgs) StdoutLine: {'line': b'-- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/export_environment_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[114.809530] (-) TimerEvent: {}
+[114.910838] (-) TimerEvent: {}
+[115.012597] (-) TimerEvent: {}
+[115.071668] (environment_msgs) StdoutLine: {'line': b'-- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/export_environment_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[115.112950] (-) TimerEvent: {}
+[115.210383] (environment_msgs) StdoutLine: {'line': b'-- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/environment_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[115.213065] (-) TimerEvent: {}
+[115.313793] (-) TimerEvent: {}
+[115.322833] (environment_msgs) StdoutLine: {'line': b'-- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/environment_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[115.414147] (-) TimerEvent: {}
+[115.450503] (environment_msgs) StdoutLine: {'line': b'-- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/environment_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[115.514517] (-) TimerEvent: {}
+[115.615652] (-) TimerEvent: {}
+[115.637474] (environment_msgs) StdoutLine: {'line': b'-- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/environment_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[115.716009] (-) TimerEvent: {}
+[115.752971] (environment_msgs) StdoutLine: {'line': b'-- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/export_environment_msgs__rosidl_generator_pyExport.cmake\n'}
+[115.816377] (-) TimerEvent: {}
+[115.860395] (environment_msgs) StdoutLine: {'line': b'-- Installing: /mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/cmake/export_environment_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[115.916764] (-) TimerEvent: {}
+[115.965143] (environment_msgs) CommandEnded: {'returncode': 0}
+[116.017015] (-) TimerEvent: {}
+[116.117587] (-) TimerEvent: {}
+[116.218623] (-) TimerEvent: {}
+[116.319942] (-) TimerEvent: {}
+[116.421521] (-) TimerEvent: {}
+[116.523544] (-) TimerEvent: {}
+[116.624924] (-) TimerEvent: {}
+[116.726508] (-) TimerEvent: {}
+[116.828078] (-) TimerEvent: {}
+[116.929626] (-) TimerEvent: {}
+[117.031175] (-) TimerEvent: {}
+[117.132179] (-) TimerEvent: {}
+[117.233452] (-) TimerEvent: {}
+[117.334737] (-) TimerEvent: {}
+[117.435904] (-) TimerEvent: {}
+[117.536577] (-) TimerEvent: {}
+[117.637476] (-) TimerEvent: {}
+[117.738811] (-) TimerEvent: {}
+[117.840218] (-) TimerEvent: {}
+[117.941420] (-) TimerEvent: {}
+[118.042904] (-) TimerEvent: {}
+[118.143658] (-) TimerEvent: {}
+[118.245154] (-) TimerEvent: {}
+[118.347042] (-) TimerEvent: {}
+[118.448814] (-) TimerEvent: {}
+[118.549779] (-) TimerEvent: {}
+[118.650440] (-) TimerEvent: {}
+[118.751810] (-) TimerEvent: {}
+[118.852617] (-) TimerEvent: {}
+[118.953811] (-) TimerEvent: {}
+[119.055566] (-) TimerEvent: {}
+[119.156721] (-) TimerEvent: {}
+[119.258999] (-) TimerEvent: {}
+[119.361467] (-) TimerEvent: {}
+[119.463316] (-) TimerEvent: {}
+[119.565131] (-) TimerEvent: {}
+[119.666688] (-) TimerEvent: {}
+[119.769004] (-) TimerEvent: {}
+[119.870237] (-) TimerEvent: {}
+[119.971029] (-) TimerEvent: {}
+[120.071989] (-) TimerEvent: {}
+[120.172648] (-) TimerEvent: {}
+[120.273509] (-) TimerEvent: {}
+[120.375142] (-) TimerEvent: {}
+[120.476877] (-) TimerEvent: {}
+[120.577919] (-) TimerEvent: {}
+[120.682272] (-) TimerEvent: {}
+[120.783562] (-) TimerEvent: {}
+[120.884177] (-) TimerEvent: {}
+[120.889144] (environment_msgs) JobEnded: {'identifier': 'environment_msgs', 'rc': 0}
+[120.907183] (my_agent) JobStarted: {'identifier': 'my_agent'}
+[120.984654] (-) TimerEvent: {}
+[121.086008] (-) TimerEvent: {}
+[121.187339] (-) TimerEvent: {}
+[121.288768] (-) TimerEvent: {}
+[121.389435] (-) TimerEvent: {}
+[121.491067] (-) TimerEvent: {}
+[121.593088] (-) TimerEvent: {}
+[121.694628] (-) TimerEvent: {}
+[121.795910] (-) TimerEvent: {}
+[121.897288] (-) TimerEvent: {}
+[121.999365] (-) TimerEvent: {}
+[122.101259] (-) TimerEvent: {}
+[122.202876] (-) TimerEvent: {}
+[122.303846] (-) TimerEvent: {}
+[122.405552] (-) TimerEvent: {}
+[122.507534] (-) TimerEvent: {}
+[122.609638] (-) TimerEvent: {}
+[122.712145] (-) TimerEvent: {}
+[122.814722] (-) TimerEvent: {}
+[122.916513] (-) TimerEvent: {}
+[123.018117] (-) TimerEvent: {}
+[123.119592] (-) TimerEvent: {}
+[123.220980] (-) TimerEvent: {}
+[123.323515] (-) TimerEvent: {}
+[123.425586] (-) TimerEvent: {}
+[123.527820] (-) TimerEvent: {}
+[123.629235] (-) TimerEvent: {}
+[123.730715] (-) TimerEvent: {}
+[123.831155] (-) TimerEvent: {}
+[123.932053] (-) TimerEvent: {}
+[124.032532] (-) TimerEvent: {}
+[124.133553] (-) TimerEvent: {}
+[124.234192] (-) TimerEvent: {}
+[124.335385] (-) TimerEvent: {}
+[124.436073] (-) TimerEvent: {}
+[124.536606] (-) TimerEvent: {}
+[124.637166] (-) TimerEvent: {}
+[124.738462] (-) TimerEvent: {}
+[124.840000] (-) TimerEvent: {}
+[124.941631] (-) TimerEvent: {}
+[125.043670] (-) TimerEvent: {}
+[125.146000] (-) TimerEvent: {}
+[125.248115] (-) TimerEvent: {}
+[125.350088] (-) TimerEvent: {}
+[125.451387] (-) TimerEvent: {}
+[125.551877] (-) TimerEvent: {}
+[125.653083] (-) TimerEvent: {}
+[125.754249] (-) TimerEvent: {}
+[125.854829] (-) TimerEvent: {}
+[125.955999] (-) TimerEvent: {}
+[126.057305] (-) TimerEvent: {}
+[126.158702] (-) TimerEvent: {}
+[126.259960] (-) TimerEvent: {}
+[126.361210] (-) TimerEvent: {}
+[126.462555] (-) TimerEvent: {}
+[126.564146] (-) TimerEvent: {}
+[126.665420] (-) TimerEvent: {}
+[126.767066] (-) TimerEvent: {}
+[126.868179] (-) TimerEvent: {}
+[126.969564] (-) TimerEvent: {}
+[127.071292] (-) TimerEvent: {}
+[127.172326] (-) TimerEvent: {}
+[127.195636] (my_agent) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/mnt/c/Users/lcata/organic_ws/build/my_agent/build', '--no-deps', 'symlink_data'], 'cwd': '/mnt/c/Users/lcata/organic_ws/build/my_agent', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'lcata', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib:/opt/ros/kilted/opt/zenoh_cpp_vendor/lib:/opt/ros/kilted/opt/gz_math_vendor/lib:/opt/ros/kilted/opt/gz_utils_vendor/lib:/opt/ros/kilted/opt/rviz_ogre_vendor/lib:/opt/ros/kilted/lib/x86_64-linux-gnu:/opt/ros/kilted/opt/gz_cmake_vendor/lib:/opt/ros/kilted/lib', 'HOME': '/home/lcata', 'OLDPWD': '/mnt/c/Users/lcata', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/mnt/c/Users/lcata/organic_ws/install', 'ROS_DISTRO': 'kilted', 'LOGNAME': 'lcata', 'NAME': 'LaptopStudio', 'WSL_INTEROP': '/run/WSL/7434_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/opt/ros/kilted/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/mnt/c/Program Files/MATLAB/R2023b/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/lcata/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/lcata/.dotnet/tools:/mnt/c/Users/lcata/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/lcata/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/lcata/AppData/Local/Programs/MiKTeX/miktex/bin/x64/:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/mnt/c/Users/lcata/organic_ws/install/my_agent:/mnt/c/Users/lcata/organic_ws/install/environment_msgs:/opt/ros/kilted', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/mnt/c/Users/lcata/organic_ws/build/my_agent', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/mnt/c/Users/lcata/organic_ws/build/my_agent/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/mnt/c/Users/lcata/organic_ws/install/my_agent/lib/python3.12/site-packages:/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages:/mnt/c/Users/lcata/organic_ws/build/my_agent:/mnt/c/Users/lcata/organic_ws/install/my_agent/lib/python3.12/site-packages:/opt/ros/kilted/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/mnt/c/Users/lcata/organic_ws/install/environment_msgs:/opt/ros/kilted/opt/gz_math_vendor:/opt/ros/kilted/opt/gz_utils_vendor:/opt/ros/kilted/opt/gz_cmake_vendor', 'WSLENV': ''}, 'shell': False}
+[127.272856] (-) TimerEvent: {}
+[127.374174] (-) TimerEvent: {}
+[127.475838] (-) TimerEvent: {}
+[127.576660] (-) TimerEvent: {}
+[127.677865] (-) TimerEvent: {}
+[127.779231] (-) TimerEvent: {}
+[127.880463] (-) TimerEvent: {}
+[127.981983] (-) TimerEvent: {}
+[128.083579] (-) TimerEvent: {}
+[128.184699] (-) TimerEvent: {}
+[128.286226] (-) TimerEvent: {}
+[128.388297] (-) TimerEvent: {}
+[128.490190] (-) TimerEvent: {}
+[128.592616] (-) TimerEvent: {}
+[128.694175] (-) TimerEvent: {}
+[128.794653] (-) TimerEvent: {}
+[128.895094] (-) TimerEvent: {}
+[128.995493] (-) TimerEvent: {}
+[129.095952] (-) TimerEvent: {}
+[129.100271] (my_agent) StdoutLine: {'line': b'running develop\n'}
+[129.196058] (-) TimerEvent: {}
+[129.296653] (-) TimerEvent: {}
+[129.397072] (-) TimerEvent: {}
+[129.497584] (-) TimerEvent: {}
+[129.598525] (-) TimerEvent: {}
+[129.678869] (my_agent) StdoutLine: {'line': b'running egg_info\n'}
+[129.680137] (my_agent) StdoutLine: {'line': b'creating my_agent.egg-info\n'}
+[129.698674] (-) TimerEvent: {}
+[129.709562] (my_agent) StdoutLine: {'line': b'writing my_agent.egg-info/PKG-INFO\n'}
+[129.726652] (my_agent) StdoutLine: {'line': b'writing dependency_links to my_agent.egg-info/dependency_links.txt\n'}
+[129.735036] (my_agent) StdoutLine: {'line': b'writing entry points to my_agent.egg-info/entry_points.txt\n'}
+[129.746410] (my_agent) StdoutLine: {'line': b'writing requirements to my_agent.egg-info/requires.txt\n'}
+[129.750592] (my_agent) StdoutLine: {'line': b'writing top-level names to my_agent.egg-info/top_level.txt\n'}
+[129.755686] (my_agent) StdoutLine: {'line': b"writing manifest file 'my_agent.egg-info/SOURCES.txt'\n"}
+[129.798893] (-) TimerEvent: {}
+[129.899487] (-) TimerEvent: {}
+[129.919354] (my_agent) StdoutLine: {'line': b"reading manifest file 'my_agent.egg-info/SOURCES.txt'\n"}
+[129.999603] (-) TimerEvent: {}
+[130.004113] (my_agent) StdoutLine: {'line': b"writing manifest file 'my_agent.egg-info/SOURCES.txt'\n"}
+[130.058193] (my_agent) StdoutLine: {'line': b'running build_ext\n'}
+[130.060098] (my_agent) StdoutLine: {'line': b'Creating /mnt/c/Users/lcata/organic_ws/install/my_agent/lib/python3.12/site-packages/my-agent.egg-link (link to .)\n'}
+[130.089627] (my_agent) StdoutLine: {'line': b'Installing agent_node script to /mnt/c/Users/lcata/organic_ws/install/my_agent/lib/my_agent\n'}
+[130.099703] (-) TimerEvent: {}
+[130.111709] (my_agent) StdoutLine: {'line': b'Installing environment_publisher script to /mnt/c/Users/lcata/organic_ws/install/my_agent/lib/my_agent\n'}
+[130.144878] (my_agent) StdoutLine: {'line': b'Installing swarm_cli script to /mnt/c/Users/lcata/organic_ws/install/my_agent/lib/my_agent\n'}
+[130.186165] (my_agent) StdoutLine: {'line': b'Installing swarm_visualizer script to /mnt/c/Users/lcata/organic_ws/install/my_agent/lib/my_agent\n'}
+[130.199959] (-) TimerEvent: {}
+[130.242106] (my_agent) StdoutLine: {'line': b'\n'}
+[130.244084] (my_agent) StdoutLine: {'line': b'Installed /mnt/c/Users/lcata/organic_ws/build/my_agent\n'}
+[130.251823] (my_agent) StdoutLine: {'line': b'running symlink_data\n'}
+[130.271150] (my_agent) StdoutLine: {'line': b'creating /mnt/c/Users/lcata/organic_ws/install/my_agent/share/ament_index\n'}
+[130.275252] (my_agent) StdoutLine: {'line': b'creating /mnt/c/Users/lcata/organic_ws/install/my_agent/share/ament_index/resource_index\n'}
+[130.282244] (my_agent) StdoutLine: {'line': b'creating /mnt/c/Users/lcata/organic_ws/install/my_agent/share/ament_index/resource_index/packages\n'}
+[130.300142] (-) TimerEvent: {}
+[130.313602] (my_agent) StdoutLine: {'line': b'symbolically linking /mnt/c/Users/lcata/organic_ws/build/my_agent/resource/my_agent -> /mnt/c/Users/lcata/organic_ws/install/my_agent/share/ament_index/resource_index/packages\n'}
+[130.334840] (my_agent) StdoutLine: {'line': b'symbolically linking /mnt/c/Users/lcata/organic_ws/build/my_agent/package.xml -> /mnt/c/Users/lcata/organic_ws/install/my_agent/share/my_agent\n'}
+[130.343193] (my_agent) StdoutLine: {'line': b'creating /mnt/c/Users/lcata/organic_ws/install/my_agent/share/my_agent/launch\n'}
+[130.362874] (my_agent) StdoutLine: {'line': b'symbolically linking /mnt/c/Users/lcata/organic_ws/build/my_agent/launch/multi_agent.launch.py -> /mnt/c/Users/lcata/organic_ws/install/my_agent/share/my_agent/launch\n'}
+[130.400392] (-) TimerEvent: {}
+[130.408346] (my_agent) CommandEnded: {'returncode': 0}
+[130.500501] (-) TimerEvent: {}
+[130.600975] (-) TimerEvent: {}
+[130.701337] (-) TimerEvent: {}
+[130.779139] (my_agent) JobEnded: {'identifier': 'my_agent', 'rc': 0}
+[130.790400] (-) EventReactorShutdown: {}

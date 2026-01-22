@@ -1,0 +1,16 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from environment_msgs/msg/GuidanceField.msg
+// generated code does not contain a copyright notice
+
+
+module environment_msgs {
+  module msg {
+    struct GuidanceField {
+      int32 width;
+
+      int32 height;
+
+      sequence<float> data;
+    };
+  };
+};
