@@ -90,9 +90,6 @@ class EnvironmentPublisher(Node):
 
         self.get_logger().info(f'Published environment step {self.step}')
         self.step += 1
-        self.get_logger().info(
-            f'Land cells: {np.sum(self.forbidden)}'
-        )
     
     def generate_land(self, height, width, goal=(32,32)):
         forbidden = np.zeros((height, width), dtype=bool)

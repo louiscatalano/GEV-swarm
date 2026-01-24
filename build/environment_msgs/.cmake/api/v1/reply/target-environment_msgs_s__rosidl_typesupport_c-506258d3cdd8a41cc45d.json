@@ -415,16 +415,16 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 44,
-			"id" : "environment_msgs__rosidl_typesupport_c::@6890427a1f51a3e7e1df"
+			"backtrace" : 8,
+			"id" : "environment_msgs__rosidl_generator_py::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 8,
 			"id" : "environment_msgs__rosidl_generator_c::@6890427a1f51a3e7e1df"
 		},
 		{
-			"backtrace" : 8,
-			"id" : "environment_msgs__rosidl_generator_py::@6890427a1f51a3e7e1df"
+			"backtrace" : 44,
+			"id" : "environment_msgs__rosidl_typesupport_c::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 44,

@@ -515,12 +515,12 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 55,
-			"id" : "environment_msgs__cpp::@6890427a1f51a3e7e1df"
-		},
-		{
 			"backtrace" : 10,
 			"id" : "environment_msgs__rosidl_generator_c::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 55,
+			"id" : "environment_msgs__cpp::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "environment_msgs__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",

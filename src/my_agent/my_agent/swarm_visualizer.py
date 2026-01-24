@@ -46,36 +46,46 @@ class SwarmVisualizer(Node):
     def env_callback(self, msg):
         field = np.array(msg.data).reshape(msg.height, msg.width)
 
-        # Draw land
+        # --- Clear frame ---
+        self.ax.clear()
+
+        # --- Environment field ---
         land_mask = ~np.isfinite(field)
         viz_field = field.copy()
         viz_field[land_mask] = np.nan
 
-        self.ax.clear()
-        self.im = self.ax.imshow(viz_field, origin='lower', cmap='viridis')
-        
+        self.ax.imshow(
+            viz_field,
+            origin='lower',
+            cmap='viridis'
+        )
+
+        # --- Land overlay ---
         land_overlay = np.zeros((*land_mask.shape, 4))
-        land_overlay[land_mask] = [0.2, 0.2, 0.2, 1.0]  # Dark gray for land
+        land_overlay[land_mask] = [0.2, 0.2, 0.2, 1.0]
         self.ax.imshow(land_overlay, origin='lower')
 
-        # Draw agents
+        # --- Agents ---
         for aid, (i, j) in self.agent_positions.items():
             self.ax.scatter(j, i, c='red', s=40)
             self.ax.text(j + 0.5, i + 0.5, str(aid), color='white')
 
-        # Draw goal
-        self.ax.scatter(32, 32, c='yellow', s=100, marker='*', label='Goal')
+        # --- Goal ---
+        self.ax.scatter(32, 32, c='yellow', s=100, marker='*')
+
+        # --- Axis discipline (prevents teleport illusion) ---
+        self.ax.set_xlim(0, msg.width)
+        self.ax.set_ylim(0, msg.height)
+        self.ax.set_aspect('equal')
 
         self.ax.set_title('GEV Swarm State')
         plt.pause(0.001)
-
 
 def main():
     rclpy.init()
     node = SwarmVisualizer()
     rclpy.spin(node)
     rclpy.shutdown()
-
 
 if __name__ == '__main__':
     main()
