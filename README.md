@@ -2,10 +2,12 @@
 
   ![GEV](https://github.com/user-attachments/assets/28bee322-1f18-4b8f-84f4-bc3cf1ea138c)
 
-Unmanned Ground Effect Vehicles (UGEVs), also called Ekranoplans, are autonomous craft that utilize an aerodynamic phenomenon that increases lift and decreases drag when flying just above the surface of water. Despite its increased flight efficiency, GEVs have been disregarded primarily due to challenges with craft stability and control. However, with the increasing development in autonomous systems, UGEVs offer new capabilities to improve the reliability and safety of this unique craft. Applications of UGEVs include:
-- Military reconnaissance,
-- Supply/personnel transport,
-- and offensive strike capabilities with low-detectability flight profile.
+Unmanned Ground Effect Vehicles (UGEVs), also called Ekranoplans, are autonomous craft that utilize an aerodynamic phenomenon that increases lift and decreases drag when flying just above the surface of water. Despite its increased flight efficiency, GEVs have been disregarded primarily due to challenges with craft stability and control. However, with the increasing development of autonomous systems, UGEVs offer new capabilities to improve the reliability and safety of this unique craft. Due to its high speed and low-detectability flight profile, applications of UGEVs include:
+- Military reconnaissance
+- Supply/personnel transport
+- Mine laying/anti-mine warfare
+- Antisubmarine warfare
+- Surface warfare via strike and kamikaze tactics
 
 However, there is limited research into autonomous multi-craft or multi-agent UGEV navigation. UGEV swarms have the potential to benefit from increased aerodynamic efficiency in formation flight, cooperative navigation through simultaneous localization and mapping (SLAM), as well as improved cost awareness and optimization. GEVs are impacted by many environmental factors such as inclement weather, waves, significant wind, land formations, and obstacles which hinder safety and impede efficient aerodynamic efficiency. The introduction of multi-agent UGEV navigation can help mitigate these hazards and improve the reliability of UGEVs.
 
