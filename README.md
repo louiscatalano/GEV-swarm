@@ -2,7 +2,7 @@
 
   ![GEV](https://github.com/user-attachments/assets/28bee322-1f18-4b8f-84f4-bc3cf1ea138c)
 
-Unmanned Ground Effect Vehicles (UGEVs), also called Ekranoplans, are autonomous craft that utilize are aerodynamic phenomenon that increases lift and decreases drag when flying just above the surface of water. Despite its increased flight efficiency, GEVs have been disregarded primarily due to challenges with craft stability and control. However, with the increasing development in autonomous systems, UGEVs offer new capabilities to improve the reliability and safety of this unique craft. Applications of UGEVs include:
+Unmanned Ground Effect Vehicles (UGEVs), also called Ekranoplans, are autonomous craft that utilize an aerodynamic phenomenon that increases lift and decreases drag when flying just above the surface of water. Despite its increased flight efficiency, GEVs have been disregarded primarily due to challenges with craft stability and control. However, with the increasing development in autonomous systems, UGEVs offer new capabilities to improve the reliability and safety of this unique craft. Applications of UGEVs include:
 - Military reconnaissance,
 - Supply/personnel transport,
 - and offensive strike capabilities with low-detectability flight profile.
