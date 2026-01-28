@@ -15,6 +15,11 @@ However, there is limited research into autonomous multi-craft or multi-agent UG
 
 Figure 1. Example simulation of multi-agent UGEV environment
 
+
+<img width="228" height="880" alt="block_diagram" src="https://github.com/user-attachments/assets/f3988f8c-67a5-4248-90f9-a030430f7663" />
+
+Figure 2. GEV Swarm system block diagram
+
 # Build 
 rm -rf build install log
 colcon build --symlink-install --parallel-workers 4
