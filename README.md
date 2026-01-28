@@ -2,12 +2,12 @@
 
   ![GEV](https://github.com/user-attachments/assets/28bee322-1f18-4b8f-84f4-bc3cf1ea138c)
 
-Unmanned Ground Effect Vehicles (UGEVs), also called Ekranoplans, are autonomous craft that utilize are aerodynamic phenomenon that increases lift and decreases drag when flying just above the surface of water. Despite its increased flight efficiency, GEVs have been disregarded primarily due to challenges with craft stability and control. However, with the increasing development in autonmous systems, UGEVs offer new capabilities to improve the reliability and safety of this unique craft. Applications of UGEVs include:
+Unmanned Ground Effect Vehicles (UGEVs), also called Ekranoplans, are autonomous craft that utilize are aerodynamic phenomenon that increases lift and decreases drag when flying just above the surface of water. Despite its increased flight efficiency, GEVs have been disregarded primarily due to challenges with craft stability and control. However, with the increasing development in autonomous systems, UGEVs offer new capabilities to improve the reliability and safety of this unique craft. Applications of UGEVs include:
 - Military reconnaissance,
 - Supply/personnel transport,
-- and offensive strike capabilities with low-detectablity flight profile.
+- and offensive strike capabilities with low-detectability flight profile.
 
-However, there is limited research into autonomous multi-craft or multi-agent UGEV navigation. UGEV swarms have the potential to benefit from increased aerodynamic efficiency in formation flight, cooperative navigation through simulataneous localization and mapping (SLAM), as well as improved cost awareness and optiimization. GEVs are impacted by many environmental factors such as inclement weather, waves, significant wind, land formations, and obstacles which hinder safety and impede efficient aerodynamic efficiency. The introduction of multi-agent UGEV navigation can help mitigate these hazards and improve the reliability of UGEVs.
+However, there is limited research into autonomous multi-craft or multi-agent UGEV navigation. UGEV swarms have the potential to benefit from increased aerodynamic efficiency in formation flight, cooperative navigation through simultaneous localization and mapping (SLAM), as well as improved cost awareness and optimization. GEVs are impacted by many environmental factors such as inclement weather, waves, significant wind, land formations, and obstacles which hinder safety and impede efficient aerodynamic efficiency. The introduction of multi-agent UGEV navigation can help mitigate these hazards and improve the reliability of UGEVs.
 
 # Multi-Agent UGEV Navigation
 
