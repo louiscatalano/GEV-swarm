@@ -91,7 +91,7 @@ class EnvironmentPublisher(Node):
         self.get_logger().info(f'Published environment step {self.step}')
         self.step += 1
     
-    def generate_land(self, height, width, goal=(32,32)):
+    def generate_land(self, height, width, goal=(32,32), max_retries=10):
         forbidden = np.zeros((height, width), dtype=bool)
 
         p_no_land = 0.5
@@ -124,9 +124,13 @@ class EnvironmentPublisher(Node):
             else:
                 continue  # failed to place body
 
+            remaining_land = max_land_cells - total_land
+            if remaining_land < min_body_size:
+                break
+
             target_size = random.randint(
                 min_body_size,
-                max_land_cells - total_land
+                remaining_land
             )
 
             queue = deque()
@@ -155,7 +159,11 @@ class EnvironmentPublisher(Node):
 
         gi, gj = goal
         if forbidden[gi, gj]:
-            return self.generate_land(height, width, goal)
+            if max_retries > 0:
+                return self.generate_land(height, width, goal, max_retries - 1)
+            else:
+                self.get_logger().warn('Failed to generate land without blocking goal after retries')
+                return np.zeros((height, width), dtype=bool)  # fallback to no land
         return forbidden
         
 

@@ -92,6 +92,7 @@ class AgentNode(Node):
         self.other_agents = {}
         self.other_intents = {}
         self.shared_map = {}
+        self.agent_timeout = 2.0  # seconds
         
         # Initial mode
         self.mode = "TRANSIT"
@@ -103,10 +104,19 @@ class AgentNode(Node):
         if msg.agent_id == self.agent_id:
             return
 
-        self.other_agents[msg.agent_id] = (msg.i, msg.j)
+        timestamp = self.get_clock().now()
+        self.other_agents[msg.agent_id] = (msg.i, msg.j, timestamp)
 
         if msg.intent_i >= 0 and msg.intent_j >= 0:
             self.other_intents[msg.agent_id] = (msg.intent_i, msg.intent_j)
+
+    def get_valid_agents(self):
+        current_time = self.get_clock().now()
+        valid_agents = {}
+        for aid, (i, j, timestamp) in self.other_agents.items():
+            if (current_time - timestamp).nanoseconds < self.agent_timeout * 1e9:
+                valid_agents[aid] = (i, j)
+        return valid_agents
 
     # Callback for local map updates from other agents
     def local_map_callback(self, msg):
@@ -139,8 +149,9 @@ class AgentNode(Node):
         neighbors = [(-1,0),(1,0),(0,-1),(0,1),(-1,-1),(-1,1),(1,-1),(1,1)]
 
         forbidden = set()
+        forbidden.add((self.i, self.j))  # also avoid own current position
 
-        for oid, (oi, oj) in self.other_agents.items():
+        for oid, (oi, oj) in self.get_valid_agents().items():
             for di, dj in [
                 (-1,-1),(-1,0),(-1,1),
                 (0,-1),(0,0),(0,1),
@@ -149,7 +160,6 @@ class AgentNode(Node):
                 fi = oi + di
                 fj = oj + dj
                 forbidden.add((fi, fj))
-                forbidden.add((self.i, self.j))  # also avoid own current position
 
         if self.mode == "LOITER":
             pass  # already defined neighbors
@@ -181,6 +191,8 @@ class AgentNode(Node):
 
             # --- cost components ---
             v_env = field[ni, nj]
+            if not np.isfinite(v_env):
+                continue  # skip non-navigable cells
 
             v_pred = 0.0
             if hasattr(self, 'predicted_field'):

@@ -1,0 +1,195 @@
+[0.276s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install', '--parallel-workers', '4']
+[0.276s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7432d66fd5b0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7432d66256a0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7432d66256a0>>)
+[0.370s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.372s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.372s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.373s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.374s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.375s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.375s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/mnt/c/Users/lcata/organic_ws'
+[0.382s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.383s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.390s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.391s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.393s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.439s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.442s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.444s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.459s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.460s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.465s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.478s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.508s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.509s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.515s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.525s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.526s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.528s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.531s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.532s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.534s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.535s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.537s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.537s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.542s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.543s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.545s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.548s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.549s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.563s] Level 1:colcon.colcon_core.package_identification:_identify(src/environment_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.565s] Level 1:colcon.colcon_core.package_identification:_identify(src/environment_msgs) by extension 'ignore'
+[0.568s] Level 1:colcon.colcon_core.package_identification:_identify(src/environment_msgs) by extension 'ignore_ament_install'
+[0.575s] Level 1:colcon.colcon_core.package_identification:_identify(src/environment_msgs) by extensions ['colcon_pkg']
+[0.576s] Level 1:colcon.colcon_core.package_identification:_identify(src/environment_msgs) by extension 'colcon_pkg'
+[0.580s] Level 1:colcon.colcon_core.package_identification:_identify(src/environment_msgs) by extensions ['colcon_meta']
+[0.581s] Level 1:colcon.colcon_core.package_identification:_identify(src/environment_msgs) by extension 'colcon_meta'
+[0.588s] Level 1:colcon.colcon_core.package_identification:_identify(src/environment_msgs) by extensions ['ros']
+[0.589s] Level 1:colcon.colcon_core.package_identification:_identify(src/environment_msgs) by extension 'ros'
+[0.632s] DEBUG:colcon.colcon_core.package_identification:Package 'src/environment_msgs' with type 'ros.ament_cmake' and name 'environment_msgs'
+[0.638s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_agent) by extensions ['ignore', 'ignore_ament_install']
+[0.639s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_agent) by extension 'ignore'
+[0.640s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_agent) by extension 'ignore_ament_install'
+[0.642s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_agent) by extensions ['colcon_pkg']
+[0.642s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_agent) by extension 'colcon_pkg'
+[0.643s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_agent) by extensions ['colcon_meta']
+[0.644s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_agent) by extension 'colcon_meta'
+[0.646s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_agent) by extensions ['ros']
+[0.647s] Level 1:colcon.colcon_core.package_identification:_identify(src/my_agent) by extension 'ros'
+[0.666s] DEBUG:colcon.colcon_core.package_identification:Package 'src/my_agent' with type 'ros.ament_python' and name 'my_agent'
+[0.666s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.667s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.667s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.667s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.668s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.704s] Level 5:colcon.colcon_core.verb:set package 'environment_msgs' build argument 'cmake_args' from command line to 'None'
+[0.705s] Level 5:colcon.colcon_core.verb:set package 'environment_msgs' build argument 'cmake_target' from command line to 'None'
+[0.705s] Level 5:colcon.colcon_core.verb:set package 'environment_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.706s] Level 5:colcon.colcon_core.verb:set package 'environment_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.707s] Level 5:colcon.colcon_core.verb:set package 'environment_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.707s] Level 5:colcon.colcon_core.verb:set package 'environment_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.708s] Level 5:colcon.colcon_core.verb:set package 'environment_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.709s] Level 5:colcon.colcon_core.verb:set package 'environment_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.710s] Level 5:colcon.colcon_core.verb:set package 'environment_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.710s] DEBUG:colcon.colcon_core.verb:Building package 'environment_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/mnt/c/Users/lcata/organic_ws/build/environment_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/mnt/c/Users/lcata/organic_ws/install/environment_msgs', 'merge_install': False, 'path': '/mnt/c/Users/lcata/organic_ws/src/environment_msgs', 'symlink_install': True, 'test_result_base': None}
+[0.712s] Level 5:colcon.colcon_core.verb:set package 'my_agent' build argument 'cmake_args' from command line to 'None'
+[0.712s] Level 5:colcon.colcon_core.verb:set package 'my_agent' build argument 'cmake_target' from command line to 'None'
+[0.713s] Level 5:colcon.colcon_core.verb:set package 'my_agent' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.714s] Level 5:colcon.colcon_core.verb:set package 'my_agent' build argument 'cmake_clean_cache' from command line to 'False'
+[0.715s] Level 5:colcon.colcon_core.verb:set package 'my_agent' build argument 'cmake_clean_first' from command line to 'False'
+[0.716s] Level 5:colcon.colcon_core.verb:set package 'my_agent' build argument 'cmake_force_configure' from command line to 'False'
+[0.717s] Level 5:colcon.colcon_core.verb:set package 'my_agent' build argument 'ament_cmake_args' from command line to 'None'
+[0.718s] Level 5:colcon.colcon_core.verb:set package 'my_agent' build argument 'catkin_cmake_args' from command line to 'None'
+[0.718s] Level 5:colcon.colcon_core.verb:set package 'my_agent' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.719s] DEBUG:colcon.colcon_core.verb:Building package 'my_agent' with the following arguments: {'ament_cmake_args': None, 'build_base': '/mnt/c/Users/lcata/organic_ws/build/my_agent', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/mnt/c/Users/lcata/organic_ws/install/my_agent', 'merge_install': False, 'path': '/mnt/c/Users/lcata/organic_ws/src/my_agent', 'symlink_install': True, 'test_result_base': None}
+[0.720s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.723s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.725s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/mnt/c/Users/lcata/organic_ws/src/environment_msgs' with build type 'ament_cmake'
+[0.726s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/mnt/c/Users/lcata/organic_ws/src/environment_msgs'
+[0.733s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.734s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.742s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/mnt/c/Users/lcata/organic_ws/install/my_agent' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.746s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/mnt/c/Users/lcata/organic_ws/install/environment_msgs' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.750s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/mnt/c/Users/lcata/organic_ws/install/environment_msgs' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.958s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/Users/lcata/organic_ws/build/environment_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/mnt/c/Users/lcata/organic_ws/install/my_agent:/opt/ros/kilted /usr/bin/cmake /mnt/c/Users/lcata/organic_ws/src/environment_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/mnt/c/Users/lcata/organic_ws/install/environment_msgs
+[42.409s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/Users/lcata/organic_ws/build/environment_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/mnt/c/Users/lcata/organic_ws/install/my_agent:/opt/ros/kilted /usr/bin/cmake /mnt/c/Users/lcata/organic_ws/src/environment_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/mnt/c/Users/lcata/organic_ws/install/environment_msgs
+[42.447s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/Users/lcata/organic_ws/build/environment_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/mnt/c/Users/lcata/organic_ws/install/my_agent:/opt/ros/kilted /usr/bin/cmake --build /mnt/c/Users/lcata/organic_ws/build/environment_msgs -- -j8 -l8
+[63.989s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/Users/lcata/organic_ws/build/environment_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/mnt/c/Users/lcata/organic_ws/install/my_agent:/opt/ros/kilted /usr/bin/cmake --build /mnt/c/Users/lcata/organic_ws/build/environment_msgs -- -j8 -l8
+[64.077s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/Users/lcata/organic_ws/build/environment_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/mnt/c/Users/lcata/organic_ws/install/my_agent:/opt/ros/kilted /usr/bin/cmake --install /mnt/c/Users/lcata/organic_ws/build/environment_msgs
+[95.232s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(environment_msgs)
+[95.233s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/Users/lcata/organic_ws/build/environment_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/mnt/c/Users/lcata/organic_ws/install/my_agent:/opt/ros/kilted /usr/bin/cmake --install /mnt/c/Users/lcata/organic_ws/build/environment_msgs
+[95.235s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/lcata/organic_ws/install/environment_msgs' for CMake module files
+[95.606s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/lcata/organic_ws/install/environment_msgs' for CMake config files
+[97.064s] Level 1:colcon.colcon_core.shell:create_environment_hook('environment_msgs', 'cmake_prefix_path')
+[97.065s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/hook/cmake_prefix_path.dsv'
+[97.096s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/hook/cmake_prefix_path.sh'
+[97.116s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib'
+[97.120s] Level 1:colcon.colcon_core.shell:create_environment_hook('environment_msgs', 'ld_library_path_lib')
+[97.120s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/hook/ld_library_path_lib.dsv'
+[97.145s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/hook/ld_library_path_lib.sh'
+[97.163s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/bin'
+[97.165s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/pkgconfig/environment_msgs.pc'
+[97.169s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages'
+[97.173s] Level 1:colcon.colcon_core.shell:create_environment_hook('environment_msgs', 'pythonpath')
+[97.173s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/hook/pythonpath.dsv'
+[97.186s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/hook/pythonpath.sh'
+[97.205s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/bin'
+[97.207s] INFO:colcon.colcon_core.shell:Creating package descriptor '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/package.dsv'
+[97.224s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/package.sh'
+[97.240s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/package.bash'
+[97.252s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/package.zsh'
+[97.269s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/colcon-core/packages/environment_msgs)
+[97.301s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(environment_msgs)
+[97.302s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/lcata/organic_ws/install/environment_msgs' for CMake module files
+[98.028s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/lcata/organic_ws/install/environment_msgs' for CMake config files
+[99.192s] Level 1:colcon.colcon_core.shell:create_environment_hook('environment_msgs', 'cmake_prefix_path')
+[99.192s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/hook/cmake_prefix_path.dsv'
+[99.213s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/hook/cmake_prefix_path.sh'
+[99.239s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib'
+[99.244s] Level 1:colcon.colcon_core.shell:create_environment_hook('environment_msgs', 'ld_library_path_lib')
+[99.244s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/hook/ld_library_path_lib.dsv'
+[99.262s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/hook/ld_library_path_lib.sh'
+[99.280s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/bin'
+[99.282s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/pkgconfig/environment_msgs.pc'
+[99.284s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages'
+[99.286s] Level 1:colcon.colcon_core.shell:create_environment_hook('environment_msgs', 'pythonpath')
+[99.286s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/hook/pythonpath.dsv'
+[99.305s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/hook/pythonpath.sh'
+[99.325s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/bin'
+[99.327s] INFO:colcon.colcon_core.shell:Creating package descriptor '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/package.dsv'
+[99.345s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/package.sh'
+[99.358s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/package.bash'
+[99.375s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/environment_msgs/package.zsh'
+[99.388s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/mnt/c/Users/lcata/organic_ws/install/environment_msgs/share/colcon-core/packages/environment_msgs)
+[99.400s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/mnt/c/Users/lcata/organic_ws/src/my_agent' with build type 'ament_python'
+[99.401s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_agent', 'ament_prefix_path')
+[99.401s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/lcata/organic_ws/install/my_agent/share/my_agent/hook/ament_prefix_path.dsv'
+[99.441s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/lcata/organic_ws/install/my_agent/share/my_agent/hook/ament_prefix_path.sh'
+[99.462s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[101.181s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/mnt/c/Users/lcata/organic_ws/src/my_agent'
+[101.182s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[105.061s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/Users/lcata/organic_ws/build/my_agent': PYTHONPATH=/mnt/c/Users/lcata/organic_ws/build/my_agent/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/mnt/c/Users/lcata/organic_ws/install/my_agent/lib/python3.12/site-packages:/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages:/mnt/c/Users/lcata/organic_ws/build/my_agent:/mnt/c/Users/lcata/organic_ws/install/my_agent/lib/python3.12/site-packages:/opt/ros/kilted/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /mnt/c/Users/lcata/organic_ws/build/my_agent/build --no-deps symlink_data
+[109.839s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_agent', 'pythonpath_develop')
+[109.840s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/lcata/organic_ws/build/my_agent/share/my_agent/hook/pythonpath_develop.dsv'
+[109.841s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/Users/lcata/organic_ws/build/my_agent' returned '0': PYTHONPATH=/mnt/c/Users/lcata/organic_ws/build/my_agent/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/mnt/c/Users/lcata/organic_ws/install/my_agent/lib/python3.12/site-packages:/mnt/c/Users/lcata/organic_ws/install/environment_msgs/lib/python3.12/site-packages:/mnt/c/Users/lcata/organic_ws/build/my_agent:/mnt/c/Users/lcata/organic_ws/install/my_agent/lib/python3.12/site-packages:/opt/ros/kilted/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /mnt/c/Users/lcata/organic_ws/build/my_agent/build --no-deps symlink_data
+[109.898s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/lcata/organic_ws/build/my_agent/share/my_agent/hook/pythonpath_develop.sh'
+[109.935s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/lcata/organic_ws/install/my_agent' for CMake module files
+[110.122s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/lcata/organic_ws/install/my_agent' for CMake config files
+[110.406s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/lcata/organic_ws/install/my_agent/lib'
+[110.425s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/lcata/organic_ws/install/my_agent/bin'
+[110.431s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/lcata/organic_ws/install/my_agent/lib/pkgconfig/my_agent.pc'
+[110.441s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/lcata/organic_ws/install/my_agent/lib/python3.12/site-packages'
+[110.454s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_agent', 'pythonpath')
+[110.456s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/lcata/organic_ws/install/my_agent/share/my_agent/hook/pythonpath.dsv'
+[110.522s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/lcata/organic_ws/install/my_agent/share/my_agent/hook/pythonpath.sh'
+[110.593s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/lcata/organic_ws/install/my_agent/bin'
+[110.598s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(my_agent)
+[110.599s] INFO:colcon.colcon_core.shell:Creating package descriptor '/mnt/c/Users/lcata/organic_ws/install/my_agent/share/my_agent/package.dsv'
+[110.622s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/lcata/organic_ws/install/my_agent/share/my_agent/package.sh'
+[110.668s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/lcata/organic_ws/install/my_agent/share/my_agent/package.bash'
+[110.718s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/lcata/organic_ws/install/my_agent/share/my_agent/package.zsh'
+[110.766s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/mnt/c/Users/lcata/organic_ws/install/my_agent/share/colcon-core/packages/my_agent)
+[110.810s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[110.811s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[110.812s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[110.813s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[110.907s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[110.908s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[110.908s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[110.908s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[110.910s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[110.910s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[110.910s] INFO:colcon.colcon_core.shell:Creating prefix script '/mnt/c/Users/lcata/organic_ws/install/local_setup.sh'
+[110.915s] INFO:colcon.colcon_core.shell:Creating prefix util module '/mnt/c/Users/lcata/organic_ws/install/_local_setup_util_sh.py'
+[110.925s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/mnt/c/Users/lcata/organic_ws/install/setup.sh'
+[110.966s] INFO:colcon.colcon_core.shell:Creating prefix script '/mnt/c/Users/lcata/organic_ws/install/local_setup.bash'
+[110.973s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/mnt/c/Users/lcata/organic_ws/install/setup.bash'
+[111.005s] INFO:colcon.colcon_core.shell:Creating prefix script '/mnt/c/Users/lcata/organic_ws/install/local_setup.zsh'
+[111.012s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/mnt/c/Users/lcata/organic_ws/install/setup.zsh'

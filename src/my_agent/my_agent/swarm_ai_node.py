@@ -39,12 +39,6 @@ class SwarmAINode(Node):
             10
         )
 
-        self.guidance_pub = self.create_publisher(
-            GuidanceField,
-            '/swarm/guidance',
-            10
-        )
-
         self.get_logger().info('Swarm AI node started (no learning yet).')
 
     def local_map_callback(self, msg):
