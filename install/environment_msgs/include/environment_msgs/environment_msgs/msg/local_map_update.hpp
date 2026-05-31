@@ -1,1 +1,0 @@
-/mnt/c/Users/lcata/organic_ws/build/environment_msgs/rosidl_generator_cpp/environment_msgs/msg/local_map_update.hpp

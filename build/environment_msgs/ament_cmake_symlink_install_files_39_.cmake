@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_files("/mnt/c/Users/lcata/organic_ws/src/environment_msgs" FILES "/mnt/c/Users/lcata/organic_ws/build/environment_msgs/ament_cmake_core/environment_msgsConfig.cmake" "/mnt/c/Users/lcata/organic_ws/build/environment_msgs/ament_cmake_core/environment_msgsConfig-version.cmake" "DESTINATION" "share/environment_msgs/cmake")

@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_files("/mnt/c/Users/lcata/organic_ws/src/environment_msgs" FILES "/mnt/c/Users/lcata/organic_ws/build/environment_msgs/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/environment_msgs" "DESTINATION" "share/ament_index/resource_index/rosidl_interfaces")

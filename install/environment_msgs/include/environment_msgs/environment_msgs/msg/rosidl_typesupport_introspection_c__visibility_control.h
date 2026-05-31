@@ -1,1 +1,0 @@
-/mnt/c/Users/lcata/organic_ws/build/environment_msgs/rosidl_typesupport_introspection_c/environment_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h

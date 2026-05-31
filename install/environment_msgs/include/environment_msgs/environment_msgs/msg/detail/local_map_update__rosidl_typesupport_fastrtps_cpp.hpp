@@ -1,1 +1,0 @@
-/mnt/c/Users/lcata/organic_ws/build/environment_msgs/rosidl_typesupport_fastrtps_cpp/environment_msgs/msg/detail/local_map_update__rosidl_typesupport_fastrtps_cpp.hpp

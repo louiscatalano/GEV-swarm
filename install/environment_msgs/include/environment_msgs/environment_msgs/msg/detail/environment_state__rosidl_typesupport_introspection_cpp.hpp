@@ -1,1 +1,0 @@
-/mnt/c/Users/lcata/organic_ws/build/environment_msgs/rosidl_typesupport_introspection_cpp/environment_msgs/msg/detail/environment_state__rosidl_typesupport_introspection_cpp.hpp

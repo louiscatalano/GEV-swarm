@@ -1,1 +1,0 @@
-/mnt/c/Users/lcata/organic_ws/src/environment_msgs/msg/EnvironmentState.msg
