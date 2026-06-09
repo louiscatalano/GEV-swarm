@@ -67,6 +67,10 @@ class EnvironmentPublisher(Node):
         self.base_field = self._advect(self.base_field)
         self.field = self.base_field.copy()
         self.field[self.forbidden] = self.land_value
+        
+        # Absolute guarantee: goal cell is NEVER land, even if accidentally marked
+        self.field[32, 32] = self.base_field[32, 32]
+        self.forbidden[32, 32] = False
 
         msg = EnvironmentState()
         msg.step = self.step
@@ -82,7 +86,7 @@ class EnvironmentPublisher(Node):
     def generate_land(self, height, width, goal=(32,32), max_retries=10):
         forbidden = np.zeros((height, width), dtype=bool)
 
-        p_no_land = 0.1
+        p_no_land = 0.05
         max_coverage = 0.3
         min_body_frac = 0.05
         max_bodies = 2
@@ -152,6 +156,9 @@ class EnvironmentPublisher(Node):
             else:
                 self.get_logger().warn('Failed to generate land without blocking goal after retries')
                 return np.zeros((height, width), dtype=bool)  # fallback to no land
+        
+        # Absolute guarantee: goal is never forbidden
+        forbidden[gi, gj] = False
         return forbidden
         
 
