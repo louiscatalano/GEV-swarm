@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this repo is
 
-A ROS2 colcon workspace implementing multi-agent swarm navigation for Unmanned Ground Effect Vehicles (UGEVs) on a dynamic 2D grid environment. Agents cooperatively navigate from random start positions to a shared goal using path planning, ORCA collision avoidance, formation control, and distributed SLAM.
+A ROS2 colcon workspace implementing multi-agent swarm navigation for Unmanned Ground Effect Vehicles (UGEVs) on a dynamic 2D grid environment. Agents cooperatively navigate from random start positions to a shared goal using path planning, ORCA collision avoidance, and distributed SLAM.
 
 ## Build & run
 
@@ -21,7 +21,7 @@ source install/setup.bash
 # Run the environment publisher standalone
 ros2 run my_agent environment_publisher
 
-# Run the full multi-agent simulation (3–5 agents, random starts, V-formation)
+# Run the full multi-agent simulation (3–5 agents, random starts)
 ros2 launch my_agent multi_agent.launch.py
 
 # Run the SLAM node (not included in the launch file by default)
@@ -43,7 +43,6 @@ src/
       swarm_ai_node.py   # Distributed SLAM (EnhancedSLAM node)
       swarm_visualizer.py       # Matplotlib live display
       path_planner.py    # DStarLite and PotentialField classes
-      formation_control.py      # FormationController (V, line, diamond, echelon, column)
       orca.py            # ORCAAvoidance and orca_grid_move
     launch/
       multi_agent.launch.py
@@ -82,11 +81,7 @@ Each `AgentNode` runs one iteration per `/environment_state` message:
 4. **Mode switch**: `TRANSIT` → `LOITER` on goal arrival at `(goal_i, goal_j)` (default `(32, 32)`)
 5. **Publish**: `/agent_{id}/pose`, `/swarm/state`, `/swarm/local_map_update`
 
-Agent node parameters: `agent_id`, `i0`, `j0`, `goal_i`, `goal_j`, `planner_type` (`'dstar'` or `'potential'`), `enable_formation`, `formation_type`.
-
-## Formation control
-
-`FormationController` in `formation_control.py` implements a virtual-structure approach. Agent 0 is always the leader. Available formation types: `V` (default, aerodynamically efficient), `line`, `diamond`, `echelon`, `column`. Formation is initialized lazily once ≥2 agents are observed. Enable via `enable_formation: True` parameter.
+Agent node parameters: `agent_id`, `i0`, `j0`, `goal_i`, `goal_j`, `planner_type` (`'dstar'` or `'potential'`).
 
 ## SLAM node (swarm_ai_node.py)
 

@@ -27,9 +27,26 @@ def generate_launch_description():
                 remappings=[
                     ('environment_state', '/environment_state')
                 ],
-                parameters=[{'agent_id': idx, 'i0': i0, 'j0': j0, 'num_agents': num_agents}]
+                parameters=[{
+                    'agent_id': idx,
+                    'i0': i0,
+                    'j0': j0,
+                    'goal_i': 32,
+                    'goal_j': 32,
+                }]
             )
         )
+
+    # Distributed SLAM: aggregates local observations into a shared occupancy grid,
+    # predicted cost map, and exploration guidance field for all agents.
+    agents.append(
+        Node(
+            package='my_agent',
+            executable='swarm_ai_node',
+            name='swarm_ai_node',
+            parameters=[{'height': SIZE, 'width': SIZE}]
+        )
+    )
 
     # Launch the visualizer and pass num_agents so it receives the parameter
     agents.append(

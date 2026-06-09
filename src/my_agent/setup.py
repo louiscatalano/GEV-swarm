@@ -31,6 +31,7 @@ setup(
             'agent_node = my_agent.agent_node:main',
             'environment_publisher = my_agent.environment_publisher:main',
             'swarm_visualizer = my_agent.swarm_visualizer:main',
+            'swarm_ai_node = my_agent.swarm_ai_node:main',
             'swarm_cli = my_agent.swarm_cli:main',
         ],
     },

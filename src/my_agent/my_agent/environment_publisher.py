@@ -1,5 +1,3 @@
-# this node publishes a dynamic 2D environment state that changes over time
-
 import rclpy
 from rclpy.node import Node
 import numpy as np
@@ -19,16 +17,14 @@ class EnvironmentPublisher(Node):
         self.dt = 0.5  # seconds
         self.vx = 0.2  # grid cells per step (x)
         self.vy = 0.1  # grid cells per step (y)
-        self.agent_starts = []
         self.land_value = np.nan
         self.forbidden = self.generate_land(self.size, self.size, goal=(32,32))
-        for _ in range(6):
-            self.agent_starts.append(self.sample_free_cell())
 
         # --- State ---
         self.step = 0
         self.base_field = self._initialize_field()
         self.field = self.base_field.copy()
+        self.field[self.forbidden] = self.land_value
 
         # --- Publisher ---
         self.publisher = self.create_publisher(
@@ -42,14 +38,6 @@ class EnvironmentPublisher(Node):
 
         self.get_logger().info('Environment publisher started')
 
-    def sample_free_cell(self):
-        """Sample a random free cell not in forbidden"""
-        while True:
-            i = random.randint(0, self.size - 1)
-            j = random.randint(0, self.size - 1)
-            if not self.forbidden[i, j]:
-                return int(i), int(j)
-                        
     def _initialize_field(self):
         """Initial smooth random field"""
         field = np.random.rand(self.size, self.size)
@@ -94,7 +82,7 @@ class EnvironmentPublisher(Node):
     def generate_land(self, height, width, goal=(32,32), max_retries=10):
         forbidden = np.zeros((height, width), dtype=bool)
 
-        p_no_land = 0.5
+        p_no_land = 0.1
         max_coverage = 0.3
         min_body_frac = 0.05
         max_bodies = 2
