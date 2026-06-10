@@ -22,6 +22,7 @@ class AgentNode(Node):
         self.declare_parameter('goal_i', 32)
         self.declare_parameter('goal_j', 32)
         self.declare_parameter('planner_type', 'dstar')  # 'dstar' or 'potential'
+        self.declare_parameter('launch_id', 'default')
 
         self.agent_id = self.get_parameter('agent_id').value
         self.i = self.get_parameter('i0').value
@@ -30,12 +31,15 @@ class AgentNode(Node):
         self.goal_i = self.get_parameter('goal_i').value
         self.goal_j = self.get_parameter('goal_j').value
         self.planner_type = self.get_parameter('planner_type').value
+        self.launch_id = self.get_parameter('launch_id').value
         self.orca = ORCAAvoidance(time_horizon=1.5, agent_radius=0.5)
         self.position_snapshot = {}
         self.held_last_step = False
 
         self.intent = None
         self.guidance = None
+        self.predicted_field = None
+        self.orca_cost_this_step = None
 
         self.global_path = []
         self.replan_counter = 0
@@ -45,6 +49,9 @@ class AgentNode(Node):
         self.planner_initialized = False
         self.planner_goal = None
         self.planner_first_init = False
+        
+        self.control_cost_computed = False
+        self.control_cost_filename = None
 
         self.create_subscription(EnvironmentState, '/environment_state', self.environment_callback, 10)
 
@@ -55,13 +62,15 @@ class AgentNode(Node):
         self.create_subscription(AgentState, '/swarm/state', self.agent_state_callback, 10)
         self.create_subscription(PredictedMap, '/swarm/predicted_map', self.predicted_map_callback, 10)
         self.create_subscription(GuidanceField, '/swarm/guidance', self.guidance_callback, 10)
+        self.create_subscription(LocalMapUpdate, '/swarm/local_map_update', self.local_map_update_callback, 10)
+
+        self.observed_cells: set = set()
 
         self.other_agents = {}
         self.other_intents = {}
         self.agent_timeout = 2.0
 
-        self.csv_file = None
-        self.csv_writer = None
+        self.csv_filename = None
         self.step_counter = 0
         self.setup_logging()
 
@@ -73,11 +82,22 @@ class AgentNode(Node):
         log_dir = os.path.expanduser('~/.ros/swarm_logs')
         os.makedirs(log_dir, exist_ok=True)
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        filename = os.path.join(log_dir, f'agent_{self.agent_id}_log_{timestamp}.csv')
-        self.csv_file = open(filename, 'w', newline='')
-        self.csv_writer = csv.writer(self.csv_file)
-        self.csv_writer.writerow(['step', 'i', 'j', 'cost', 'goal_i', 'goal_j', 'path_len', 'replanned', 'num_neighbors'])
-        self.csv_file.flush()
+        filename = os.path.join(log_dir, f'launch_{self.launch_id}_{timestamp}.csv')
+        self.csv_filename = filename
+        
+        # Write header only if file is new
+        file_exists = os.path.exists(filename)
+        if not file_exists:
+            with open(filename, 'w', newline='') as f:
+                writer = csv.writer(f)
+                writer.writerow([
+                    'launch_id', 'timestamp', 'step', 'agent_id', 'i', 'j',
+                    'env_cost', 'goal_i', 'goal_j', 'ORCA_cost', 'SLAM_cover'
+                ])
+        
+        # Setup control cost filename (write happens later when computed)
+        control_filename = os.path.join(log_dir, f'launch_{self.launch_id}_control.csv')
+        self.control_cost_filename = control_filename
 
     def agent_state_callback(self, msg):
         if msg.agent_id == self.agent_id:
@@ -96,15 +116,20 @@ class AgentNode(Node):
 
     def predicted_map_callback(self, msg):
         self.predicted_field = np.array(msg.data).reshape(msg.height, msg.width)
+        self.predicted_field_size = msg.height * msg.width
 
     def guidance_callback(self, msg):
         self.guidance = np.array(msg.data).reshape(msg.height, msg.width)
+
+    def local_map_update_callback(self, msg):
+        self.observed_cells.add((msg.i, msg.j))
+
 
     def build_costmap(self, field):
         costmap = field.copy()
         finite = np.isfinite(costmap)
 
-        if hasattr(self, 'predicted_field'):
+        if self.predicted_field is not None:
             costmap[finite] += 0.5 * self.predicted_field[finite]
 
         if self.guidance is not None:
@@ -215,6 +240,9 @@ class AgentNode(Node):
         neighbors = self.get_valid_agents()
         live_agents = neighbors
         
+        # Track ORCA-intended position to calculate collision avoidance cost
+        orca_intended_pos = None
+        
         # Check for imminent collisions (neighbors very close)
         imminent_collision = any(
             max(abs(i - self.i), abs(j - self.j)) <= 1 
@@ -281,6 +309,8 @@ class AgentNode(Node):
             (self.i, self.j), desired_dir, neighbors, neighbor_vels,
             msg.height, msg.width, self.orca
         )
+        
+        orca_intended_pos = next_pos
 
         ni, nj = next_pos
         if not np.isfinite(costmap[ni, nj]):
@@ -294,6 +324,9 @@ class AgentNode(Node):
                 alt_i, alt_j = self.i + di, self.j + dj
                 if 0 <= alt_i < msg.height and 0 <= alt_j < msg.width:
                     if np.isfinite(costmap[alt_i, alt_j]) and not self.is_collision_risk((alt_i, alt_j), costmap, msg):
+                        # Collision avoidance occurred: calculate cost difference
+                        if orca_intended_pos and (alt_i, alt_j) != orca_intended_pos:
+                            self.orca_cost_this_step = costmap[orca_intended_pos] - costmap[alt_i, alt_j]
                         return (alt_i, alt_j)
             # No safe alternative, hold in place
             return (self.i, self.j)
@@ -315,6 +348,9 @@ class AgentNode(Node):
                                 if other_id != self.agent_id and other_id in live_agents
                             )
                             if not contested:
+                                # Collision avoidance occurred: calculate cost difference
+                                if orca_intended_pos and (alt_i, alt_j) != orca_intended_pos:
+                                    self.orca_cost_this_step = costmap[orca_intended_pos] - costmap[alt_i, alt_j]
                                 return (alt_i, alt_j)
                 return (self.i, self.j)
 
@@ -339,6 +375,8 @@ class AgentNode(Node):
         if not self.planner_initialized:
             self.planner = DStarLite(msg.height, msg.width) if self.planner_type == 'dstar' else PotentialField()
             self.planner_initialized = True
+            # Compute control cost once we have initialized planner and costmap
+            self.compute_and_log_control_cost(field)
 
         update = LocalMapUpdate()
         update.agent_id = self.agent_id
@@ -415,6 +453,55 @@ class AgentNode(Node):
 
         self.log_metrics(field)
 
+    def compute_and_log_control_cost(self, environment_field):
+        """Calculate optimal path cost from start to goal using environment field only (no SLAM)."""
+        if self.control_cost_computed:
+            return
+        
+        # Use environment field directly without SLAM/guidance additions
+        base_costmap = environment_field.copy()
+        finite = np.isfinite(base_costmap)
+        base_costmap[finite] = np.maximum(base_costmap[finite], 1e-3)
+        
+        # Plan optimal path from starting position to goal
+        if self.planner_type == 'dstar':
+            planner = DStarLite(environment_field.shape[0], environment_field.shape[1])
+            path = planner.plan((self.i, self.j), (self.goal_i, self.goal_j), base_costmap)
+        else:
+            planner = PotentialField()
+            path = planner.plan((self.i, self.j), (self.goal_i, self.goal_j), base_costmap)
+        
+        # Calculate total path cost as sum of visited cell costs
+        best_path_cost = 0.0
+        if path:
+            for pos in path:
+                pi, pj = pos
+                if np.isfinite(base_costmap[pi, pj]):
+                    best_path_cost += base_costmap[pi, pj]
+        
+        # Append to shared control CSV
+        control_file_exists = os.path.exists(self.control_cost_filename)
+        with open(self.control_cost_filename, 'a', newline='') as f:
+            writer = csv.writer(f)
+            # Write header only on first agent
+            if not control_file_exists:
+                writer.writerow(['launch_id', 'agent_id', 'start_i', 'start_j', 'goal_i', 'goal_j', 'best_path_cost'])
+            writer.writerow([
+                self.launch_id,
+                self.agent_id,
+                self.i,
+                self.j,
+                self.goal_i,
+                self.goal_j,
+                best_path_cost
+            ])
+        
+        self.get_logger().info(
+            f'Agent {self.agent_id} control cost computed: path cost={best_path_cost:.3f} '
+            f'from ({self.i},{self.j}) to ({self.goal_i},{self.goal_j})'
+        )
+        self.control_cost_computed = True
+
     def validate_path(self, path, costmap):
         if not path:
             return None
@@ -428,20 +515,34 @@ class AgentNode(Node):
         return valid_path if valid_path else None
 
     def log_metrics(self, costmap):
-        self.csv_writer.writerow([
-            self.step_counter,
-            self.i,
-            self.j,
-            costmap[self.i, self.j],
-            self.goal_i,
-            self.goal_j,
-            len(self.global_path) if self.global_path else 0,
-            1 if self.replan_counter == 0 else 0,
-            len(self.get_valid_agents()),
-        ])
-        self.csv_file.flush()
-        os.fsync(self.csv_file.fileno())
+        # Calculate SLAM coverage (fraction of observed cells)
+        slam_cover = len(self.observed_cells) / (64 * 64)
+        
+        # Get ORCA cost (0 if no collision avoidance this step)
+        orca_cost = self.orca_cost_this_step if self.orca_cost_this_step is not None else 0.0
+        
+        # Get current timestamp
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        
+        # Append row to shared CSV file
+        with open(self.csv_filename, 'a', newline='') as f:
+            writer = csv.writer(f)
+            writer.writerow([
+                self.launch_id,
+                timestamp,
+                self.step_counter,
+                self.agent_id,
+                self.i,
+                self.j,
+                costmap[self.i, self.j],
+                self.goal_i,
+                self.goal_j,
+                orca_cost,
+                slam_cover,
+            ])
+        
         self.step_counter += 1
+        self.orca_cost_this_step = None
 
 
 def main():
@@ -450,8 +551,6 @@ def main():
     try:
         rclpy.spin(node)
     finally:
-        if hasattr(node, 'csv_file') and node.csv_file:
-            node.csv_file.close()
         node.destroy_node()
     rclpy.shutdown()
 

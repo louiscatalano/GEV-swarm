@@ -1,38 +1,77 @@
 import rclpy
 from rclpy.node import Node
 import numpy as np
-from scipy.ndimage import gaussian_filter
+from scipy.spatial import cKDTree
 
 from environment_msgs.msg import LocalMapUpdate, PredictedMap, GuidanceField
 from nav_msgs.msg import OccupancyGrid
 
-class EnhancedSLAM(Node):
+
+class Observation:
+    """Timestamped observation in the buffer."""
+    def __init__(self, i, j, value, age, var):
+        self.i = i
+        self.j = j
+        self.value = value
+        self.age = age  # in steps
+        self.var = var  # variance
+
+
+class NowcastSLAM(Node):
 
     def __init__(self):
-        super().__init__('enhanced_slam')
+        super().__init__('nowcast_slam')
 
+        # Grid parameters
         self.declare_parameter('height', 64)
         self.declare_parameter('width', 64)
 
+        # Advection parameters (in cells per step)
+        self.declare_parameter('vx', 0.0)
+        self.declare_parameter('vy', 0.0)
+
+        # Observation variance model
+        self.declare_parameter('obs_var_init', 0.01)
+        self.declare_parameter('obs_var_growth_rate', 0.02)  # per step
+
+        # Interpolation parameters
+        self.declare_parameter('interp_sigma', 1.0)  # Gaussian kernel width (cells)
+
+        # Confidence parameters
+        self.declare_parameter('confidence_decay_tau', 5.0)  # steps, characteristic decay time
+        self.declare_parameter('confidence_distance_scale', 2.0)  # cells, spatial decay scale
+
+        # Buffer management
+        self.declare_parameter('max_buffer_age', 30)  # steps
+
+        # Optional OccupancyGrid publishing
+        self.declare_parameter('publish_occupancy_grid', False)
+
         self.height = self.get_parameter('height').value
         self.width = self.get_parameter('width').value
+        self.vx = self.get_parameter('vx').value
+        self.vy = self.get_parameter('vy').value
+        self.obs_var_init = self.get_parameter('obs_var_init').value
+        self.obs_var_growth_rate = self.get_parameter('obs_var_growth_rate').value
+        self.interp_sigma = self.get_parameter('interp_sigma').value
+        self.confidence_decay_tau = self.get_parameter('confidence_decay_tau').value
+        self.confidence_distance_scale = self.get_parameter('confidence_distance_scale').value
+        self.max_buffer_age = self.get_parameter('max_buffer_age').value
+        self.publish_occupancy_grid = self.get_parameter('publish_occupancy_grid').value
 
-        # Occupancy grid in log-odds space
-        # log-odds = log(p / (1-p))
-        # Allows for efficient Bayesian updates
-        self.log_odds = np.zeros((self.height, self.width))
-        
-        # Prior belief (0 = 50% occupied)
-        self.l0 = 0.0
-        
-        # Sensor model parameters (log-odds)
-        self.l_occ = np.log(0.9 / 0.1)   # Observed occupied
-        self.l_free = np.log(0.1 / 0.9)  # Observed free
-        
-        # Observation tracking
-        self.observation_count = np.zeros((self.height, self.width))
-        self.last_observed = np.full((self.height, self.width), -1.0)
-        
+        # Observation buffer: list of Observation objects
+        self.observations = []
+
+        # Land mask: static cells that are impassable (NaN observations)
+        self.land_mask = np.zeros((self.height, self.width), dtype=bool)
+
+        # Running advection offsets (sub-grid position accumulation)
+        self.offset_x = 0.0
+        self.offset_y = 0.0
+
+        # Current time (in steps)
+        self.current_step = 0
+
         # Subscribe to local observations
         self.create_subscription(
             LocalMapUpdate,
@@ -40,170 +79,253 @@ class EnhancedSLAM(Node):
             self.observation_callback,
             10
         )
-        
+
         # Publishers
-        self.map_pub = self.create_publisher(
-            OccupancyGrid,
-            '/swarm/occupancy_grid',
-            10
-        )
-        
         self.pred_pub = self.create_publisher(
             PredictedMap,
             '/swarm/predicted_map',
             10
         )
-        
-        self.guidance_pub = self.create_publisher(
+
+        self.confidence_pub = self.create_publisher(
             GuidanceField,
             '/swarm/guidance',
             10
         )
-        
-        # Periodic publishing
+
+        self.occ_grid_pub = self.create_publisher(
+            OccupancyGrid,
+            '/swarm/occupancy_grid',
+            10
+        )
+
+        # Periodic publishing (once per step callback or can be independent)
         self.create_timer(1.0, self.publish_maps)
-        
-        self.get_logger().info('Enhanced SLAM node started with Bayesian occupancy grids')
+
+        self.get_logger().info(
+            f'Nowcast SLAM started | Grid: {self.height}x{self.width} | '
+            f'Advection: ({self.vx}, {self.vy}) cells/step | '
+            f'Buffer age max: {self.max_buffer_age} steps'
+        )
 
     def observation_callback(self, msg):
+        """Process incoming local map update (global grid coordinates)."""
         i, j = msg.i, msg.j
         value = msg.value
-        
-        # Determine observation type
+
+        # Validate grid bounds
+        if not (0 <= i < self.height and 0 <= j < self.width):
+            return
+
+        # Increment time step (each observation callback is one step)
+        self.current_step += 1
+
+        # Advance advection offsets
+        self.offset_x += self.vx
+        self.offset_y += self.vy
+
+        # Extract integer shifts and update offsets
+        shift_i = int(np.floor(self.offset_x))
+        shift_j = int(np.floor(self.offset_y))
+        self.offset_x -= shift_i
+        self.offset_y -= shift_j
+
+        # Apply accumulated shifts to all observations in buffer
+        if shift_i != 0 or shift_j != 0:
+            self._shift_observations(shift_i, shift_j)
+
+        # Age all observations
+        for obs in self.observations:
+            obs.age += 1
+            # Grow variance with age
+            obs.var += self.obs_var_growth_rate
+
+        # Discard stale observations
+        self.observations = [obs for obs in self.observations if obs.age <= self.max_buffer_age]
+
+        # Process the new observation
         if not np.isfinite(value):
-            # NaN = obstacle/land (high confidence occupied)
-            delta_log_odds = self.l_occ
+            # NaN = land (immutable)
+            self.land_mask[i, j] = True
+            # Remove any non-land observations at this cell
+            self.observations = [obs for obs in self.observations if not (obs.i == i and obs.j == j)]
         else:
-            # Use cost value to infer occupancy
-            if value < 0.2:
-                # Very low cost = definitely free
-                delta_log_odds = self.l_free
-            elif value > 0.8:
-                # Very high cost = likely occupied
-                delta_log_odds = self.l_occ * 0.7
-            elif value > 0.5:
-                # Medium-high cost = somewhat occupied
-                delta_log_odds = self.l_occ * 0.3
-            else:
-                # Medium cost = slightly occupied
-                delta_log_odds = self.l_occ * 0.1
-        
-        # Bayesian update in log-odds space
-        self.log_odds[i, j] += delta_log_odds
-        
-        # Clamp to prevent numerical overflow
-        self.log_odds[i, j] = np.clip(self.log_odds[i, j], -10, 10)
-        
-        # Track observations
-        self.observation_count[i, j] += 1
-        self.last_observed[i, j] = self.get_clock().now().nanoseconds / 1e9
+            # Finite observation: add to buffer
+            obs = Observation(i, j, value, age=0, var=self.obs_var_init)
+            self.observations.append(obs)
 
-    def get_probability(self):
-        return 1.0 / (1.0 + np.exp(-self.log_odds))
+    def _shift_observations(self, shift_i, shift_j):
+        """Shift all observations by integer grid steps due to accumulated offset."""
+        for obs in self.observations:
+            obs.i += shift_i
+            obs.j += shift_j
 
-    def get_entropy(self):
-        p_safe = np.clip(self.get_probability(), 1e-10, 1 - 1e-10)
-        return -(p_safe * np.log(p_safe) + (1 - p_safe) * np.log(1 - p_safe))
+        # Also shift land_mask
+        if shift_i != 0 or shift_j != 0:
+            self.land_mask = np.roll(self.land_mask, shift_i, axis=0)
+            self.land_mask = np.roll(self.land_mask, shift_j, axis=1)
+            # Clear edges to prevent wrap-around artifacts
+            if shift_i > 0:
+                self.land_mask[:shift_i, :] = False
+            elif shift_i < 0:
+                self.land_mask[shift_i:, :] = False
+            if shift_j > 0:
+                self.land_mask[:, :shift_j] = False
+            elif shift_j < 0:
+                self.land_mask[:, shift_j:] = False
 
-    def interpolate_unknown_regions(self):
-        observed_mask = self.observation_count > 0
-        
-        if np.sum(observed_mask) < 10:
-            # Not enough data for interpolation
-            return self.get_probability()
-        
-        # Get probability map
-        prob = self.get_probability()
-        
-        # Create a version with unknown cells set to 0.5 (uncertain)
-        prob_filled = prob.copy()
-        prob_filled[~observed_mask] = 0.5
-        
-        # Apply Gaussian smoothing
-        # Sigma controls how far the influence spreads
-        sigma = 2.0
-        smoothed = gaussian_filter(prob_filled, sigma=sigma)
-        
-        # Blend: keep observed values, use smoothed for unknown
-        result = np.where(observed_mask, prob, smoothed)
-        
-        return result
+    def predict_field_and_confidence(self):
+        """
+        Predict the nowcast field and per-cell confidence by interpolating
+        advected observations onto the grid.
 
-    def predict_field(self):
-        prob = self.interpolate_unknown_regions()
-        max_entropy = -0.5 * np.log(0.5) * 2
-        uncertainty = self.get_entropy() / max_entropy
-        return 0.7 * prob + 0.3 * uncertainty
+        Returns:
+            nowcast_field (H x W): interpolated cost values
+            confidence_field (H x W): per-cell confidence in [0, 1]
+        """
+        nowcast = np.zeros((self.height, self.width), dtype=np.float32)
+        confidence = np.zeros((self.height, self.width), dtype=np.float32)
+
+        # Land cells: fixed, high confidence
+        nowcast[self.land_mask] = np.nan
+        confidence[self.land_mask] = 1.0
+
+        if len(self.observations) == 0:
+            # No observations: field is neutral and low confidence
+            return nowcast, confidence
+
+        # Prepare observation data for interpolation
+        obs_positions = np.array([[obs.i + self.offset_x, obs.j + self.offset_y] for obs in self.observations])
+        obs_values = np.array([obs.value for obs in self.observations])
+        obs_vars = np.array([obs.var for obs in self.observations])
+
+        # Build KD-tree for efficient neighbor queries
+        tree = cKDTree(obs_positions)
+
+        # Gaussian-weighted interpolation for each grid cell
+        for ii in range(self.height):
+            for jj in range(self.width):
+                if self.land_mask[ii, jj]:
+                    continue
+
+                cell_pos = np.array([ii, jj])
+
+                # Query nearby observations (within 3 * interp_sigma)
+                radius = 3.0 * self.interp_sigma
+                indices = tree.query_ball_point(cell_pos, r=radius)
+
+                if not indices:
+                    # No nearby observations: neutral value, low confidence
+                    nowcast[ii, jj] = 0.5
+                    confidence[ii, jj] = 0.0
+                    continue
+
+                # Compute weighted interpolation
+                weights = []
+                values = []
+                age_confidences = []
+
+                for idx in indices:
+                    obs = self.observations[idx]
+                    pos = np.array([obs.i + self.offset_x, obs.j + self.offset_y])
+
+                    # Gaussian spatial weight (decays with distance and age-grown variance)
+                    kernel_sigma = self.interp_sigma + 0.5 * np.sqrt(obs.var)
+                    spatial_dist_sq = np.sum((cell_pos - pos) ** 2)
+                    spatial_weight = np.exp(-spatial_dist_sq / (2.0 * kernel_sigma ** 2))
+
+                    # Age-based confidence: decay with age
+                    age_confidence = np.exp(-obs.age / max(self.confidence_decay_tau, 1.0))
+
+                    weights.append(spatial_weight * age_confidence)
+                    values.append(obs.value)
+                    age_confidences.append(age_confidence)
+
+                weights = np.array(weights)
+                values = np.array(values)
+                age_confidences = np.array(age_confidences)
+
+                # Normalize weights
+                weight_sum = np.sum(weights)
+                if weight_sum > 1e-6:
+                    normalized_weights = weights / weight_sum
+                    nowcast[ii, jj] = np.dot(normalized_weights, values)
+
+                    # Confidence: measure of support from fresh, nearby observations
+                    # Combine spatial weight and age decay
+                    max_possible_weight = 1.0  # Fresh observation at zero distance
+                    confidence[ii, jj] = np.clip(weight_sum / max_possible_weight, 0.0, 1.0)
+                else:
+                    nowcast[ii, jj] = 0.5
+                    confidence[ii, jj] = 0.0
+
+        return nowcast, confidence
 
     def publish_maps(self):
-        self.publish_occupancy_grid()
-        self.publish_predicted_map()
-        self.publish_guidance()
+        """Publish nowcast field and confidence field."""
+        nowcast, confidence = self.predict_field_and_confidence()
 
-    def publish_occupancy_grid(self):
+        # Publish predicted map (nowcast field)
+        pred_msg = PredictedMap()
+        pred_msg.height = self.height
+        pred_msg.width = self.width
+        pred_msg.data = nowcast.flatten().tolist()
+        self.pred_pub.publish(pred_msg)
+
+        # Publish confidence as guidance field
+        conf_msg = GuidanceField()
+        conf_msg.height = self.height
+        conf_msg.width = self.width
+        conf_msg.data = confidence.flatten().tolist()
+        self.confidence_pub.publish(conf_msg)
+
+        # Optionally publish occupancy grid (for external tools)
+        if self.publish_occupancy_grid:
+            self.publish_occupancy_grid_msg(nowcast, confidence)
+
+        self.get_logger().debug(
+            f'Published nowcast at step {self.current_step} | '
+            f'Observations: {len(self.observations)} | Land cells: {np.sum(self.land_mask)}'
+        )
+
+    def publish_occupancy_grid_msg(self, nowcast, confidence):
+        """Optionally publish OccupancyGrid for backward compatibility."""
         msg = OccupancyGrid()
         msg.header.stamp = self.get_clock().now().to_msg()
         msg.header.frame_id = 'world'
-        
-        # Map metadata
-        msg.info.resolution = 1.0  # 1 grid cell = 1 unit
+
+        msg.info.resolution = 1.0
         msg.info.width = self.width
         msg.info.height = self.height
         msg.info.origin.position.x = 0.0
         msg.info.origin.position.y = 0.0
         msg.info.origin.position.z = 0.0
+
+        # Convert nowcast field to occupancy: use confidence to scale
+        occupancy = np.zeros((self.height, self.width), dtype=np.int8)
         
-        # Convert probability to occupancy [0-100]
-        prob = self.get_probability()
-        occupancy = (prob * 100).astype(np.int8)
-        
-        # Mark unobserved cells as unknown (-1)
-        occupancy[self.observation_count == 0] = -1
-        
+        for ii in range(self.height):
+            for jj in range(self.width):
+                if self.land_mask[ii, jj]:
+                    occupancy[ii, jj] = 100  # Land = occupied
+                elif not np.isfinite(nowcast[ii, jj]):
+                    occupancy[ii, jj] = -1  # Unknown
+                else:
+                    # Map cost [0, 1] to occupancy [0, 100] scaled by confidence
+                    occ_val = int(nowcast[ii, jj] * 100.0 * confidence[ii, jj])
+                    occupancy[ii, jj] = np.clip(occ_val, 0, 100)
+
         msg.data = occupancy.flatten().tolist()
-        
-        self.map_pub.publish(msg)
-
-    def publish_predicted_map(self):
-        predicted = self.predict_field()
-        
-        msg = PredictedMap()
-        msg.height = self.height
-        msg.width = self.width
-        msg.data = predicted.flatten().tolist()
-        
-        self.pred_pub.publish(msg)
-
-    def publish_guidance(self):
-        max_entropy = -0.5 * np.log(0.5) * 2
-        uncertainty = self.get_entropy() / max_entropy
-        
-        # Guidance: negative cost for high uncertainty (encourage exploration)
-        # Only for cells that haven't been observed recently
-        current_time = self.get_clock().now().nanoseconds / 1e9
-        time_since_observation = current_time - self.last_observed
-        
-        # Cells not observed for >10 seconds get exploration bonus
-        exploration_mask = (time_since_observation > 10.0) | (self.observation_count == 0)
-        
-        guidance = np.zeros((self.height, self.width))
-        guidance[exploration_mask] = -0.3 * uncertainty[exploration_mask]
-        
-        msg = GuidanceField()
-        msg.width = self.width
-        msg.height = self.height
-        msg.data = guidance.flatten().tolist()
-        
-        self.guidance_pub.publish(msg)
+        self.occ_grid_pub.publish(msg)
 
 
 def main():
     rclpy.init()
-    node = EnhancedSLAM()
+    node = NowcastSLAM()
     rclpy.spin(node)
     node.destroy_node()
     rclpy.shutdown()
 
+
 if __name__ == '__main__':
     main()
-    

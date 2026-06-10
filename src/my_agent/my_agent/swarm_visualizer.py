@@ -19,7 +19,11 @@ class SwarmVisualizer(Node):
         self.guidance_field = None
 
         self.declare_parameter('num_agents', 6)
+        self.declare_parameter('goal_i', 32)
+        self.declare_parameter('goal_j', 32)
         self.num_agents = self.get_parameter('num_agents').value
+        self.goal_i = self.get_parameter('goal_i').value
+        self.goal_j = self.get_parameter('goal_j').value
         self.agent_colors = self._build_agent_color_map(self.num_agents)
 
         # Depth 1: drop stale env frames — only render the latest.
@@ -70,9 +74,20 @@ class SwarmVisualizer(Node):
 
         plt.ion()
         self.fig, self.ax = plt.subplots()
-        
-        # Second figure for SLAM/AI node view
-        self.fig_slam, self.ax_slam = plt.subplots()
+
+        # Second figure for SLAM/AI node view — colorbar created once here,
+        # never inside the render loop.
+        self.fig_slam, self.ax_slam = plt.subplots(constrained_layout=True)
+        _dummy = np.zeros((64, 64))
+        self.slam_im = self.ax_slam.imshow(_dummy, origin='lower', cmap='plasma')
+        self.slam_guidance_im = self.ax_slam.imshow(
+            np.zeros((64, 64, 4)), origin='lower'
+        )
+        self.slam_colorbar = self.fig_slam.colorbar(
+            self.slam_im, ax=self.ax_slam, label='Predicted Cost'
+        )
+        self.ax_slam.set_title('SLAM Node View: Predicted Map + Guidance Field')
+        self.ax_slam.set_aspect('equal')
 
     def predicted_map_callback(self, msg):
         self.predicted_map = np.array(msg.data).reshape(msg.height, msg.width)
@@ -164,8 +179,7 @@ class SwarmVisualizer(Node):
             self.ax.scatter(j, i, c=[color], s=60, edgecolors='black', linewidths=0.5, zorder=3)
             self.ax.text(j + 0.5, i + 0.5, str(aid), color='white', fontsize=7, zorder=4)
 
-        # Goal marker — j=32, i=32 → scatter(x=col, y=row)
-        self.ax.scatter(32, 32, c='yellow', s=100, marker='*', zorder=5)
+        self.ax.scatter(self.goal_j, self.goal_i, c='yellow', s=100, marker='*', zorder=5)
 
         legend_handles = [
             Line2D([0], [0], color=self._agent_color(aid), lw=2, marker='o', markersize=5, markerfacecolor=self._agent_color(aid), label=f'Agent {aid}')
@@ -189,22 +203,21 @@ class SwarmVisualizer(Node):
         """Render the predicted map and guidance field from the SLAM node."""
         if self.predicted_map is None or self.guidance_field is None:
             return
-        
-        self.ax_slam.clear()
-        
-        # Display predicted map
-        im = self.ax_slam.imshow(self.predicted_map, origin='lower', cmap='plasma')
-        
-        # Overlay guidance field with alpha
-        guidance_normalized = (self.guidance_field - self.guidance_field.min()) / (self.guidance_field.max() - self.guidance_field.min() + 1e-6)
+
+        self.slam_im.set_data(self.predicted_map)
+        self.slam_im.set_clim(
+            vmin=self.predicted_map.min(), vmax=self.predicted_map.max()
+        )
+
+        guidance_normalized = (
+            (self.guidance_field - self.guidance_field.min())
+            / (self.guidance_field.max() - self.guidance_field.min() + 1e-6)
+        )
         guidance_overlay = np.zeros((*self.guidance_field.shape, 4))
-        guidance_overlay[..., 0] = guidance_normalized  # red channel for positive guidance
-        guidance_overlay[..., 3] = 0.3 * np.abs(guidance_normalized)  # alpha based on magnitude
-        self.ax_slam.imshow(guidance_overlay, origin='lower')
-        
-        self.ax_slam.set_title('SLAM Node View: Predicted Map + Guidance Field')
-        self.ax_slam.set_aspect('equal')
-        
+        guidance_overlay[..., 0] = guidance_normalized
+        guidance_overlay[..., 3] = 0.3 * np.abs(guidance_normalized)
+        self.slam_guidance_im.set_data(guidance_overlay)
+
         self.fig_slam.canvas.draw()
         self.fig_slam.canvas.flush_events()
 
